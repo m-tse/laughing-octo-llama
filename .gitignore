@@ -1,0 +1,7 @@
+# Ignore for Mac OS X
+.DS_Store
+
+# Ignore wildcards and temp files
+*~
+*#
+.\#*
