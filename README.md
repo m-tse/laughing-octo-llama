@@ -16,6 +16,8 @@ Solar Systems
 Planets
 Moons
 
+Random comets/asteroids will serve as random apps
+
 similar genre apps are grouped together in solar systems, and they can be subcategoried further.  
 
 TODO:
