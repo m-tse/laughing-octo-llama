@@ -21,6 +21,9 @@ similar genre apps are grouped together in solar systems, and they can be subcat
 TODO:
 - parse data into a database
 - someone create a database to hold the data
+- simple server to access the database
 - (xcode) build animations for solar systems, planets, etc.
 - build logic to organize and sort data into galaxies/solar systems
 - need a Name for our team
+- learn SpriteKit
+- IO between spritekit and server
