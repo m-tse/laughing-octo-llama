@@ -25,6 +25,7 @@
 		62CF98BA17F5491E00E3C653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CF989217F5491D00E3C653 /* UIKit.framework */; };
 		62CF98C217F5491E00E3C653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62CF98C017F5491E00E3C653 /* InfoPlist.strings */; };
 		62CF98C417F5491E00E3C653 /* iTunes_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98C317F5491E00E3C653 /* iTunes_ExplorerTests.m */; };
+		62CF98D917F57D0000E3C653 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98D817F57D0000E3C653 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,9 @@
 		62CF98BF17F5491E00E3C653 /* iTunes ExplorerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTunes ExplorerTests-Info.plist"; sourceTree = "<group>"; };
 		62CF98C117F5491E00E3C653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		62CF98C317F5491E00E3C653 /* iTunes_ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunes_ExplorerTests.m; sourceTree = "<group>"; };
+		62CF98D717F57D0000E3C653 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		62CF98D817F57D0000E3C653 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		62CF98E817F636EB00E3C653 /* NetworkConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				62CF989F17F5491D00E3C653 /* AppDelegate.h */,
+				62CF98D717F57D0000E3C653 /* Utility.h */,
+				62CF98E817F636EB00E3C653 /* NetworkConstants.h */,
+				62CF98D817F57D0000E3C653 /* Utility.m */,
 				62CF98A017F5491D00E3C653 /* AppDelegate.m */,
 				62CF98A217F5491E00E3C653 /* Main_iPhone.storyboard */,
 				62CF98A517F5491E00E3C653 /* Main_iPad.storyboard */,
@@ -268,6 +275,7 @@
 			files = (
 				62CF98AD17F5491E00E3C653 /* MyScene.m in Sources */,
 				62CF98AA17F5491E00E3C653 /* ViewController.m in Sources */,
+				62CF98D917F57D0000E3C653 /* Utility.m in Sources */,
 				62CF98A117F5491D00E3C653 /* AppDelegate.m in Sources */,
 				62CF989D17F5491D00E3C653 /* main.m in Sources */,
 			);
