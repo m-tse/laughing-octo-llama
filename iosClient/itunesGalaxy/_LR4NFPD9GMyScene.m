@@ -11,13 +11,10 @@
 #import "DistantSuperCluster.h"
 #import "Galaxy.h"
 
-
 @implementation _LR4NFPD9GMyScene
 
 
 NSInteger NUM_GALAXIES = 1;
-
-
 
 - (SKSpriteNode *)sun
 {
@@ -40,7 +37,6 @@ static inline CGFloat skRandf() {
 static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return skRandf() * (high - low) + low;
 }
-
 
 
 - (SKEmitterNode *)galaxy
@@ -180,6 +176,11 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
             [node removeFromParent];
     }];
 }
+
+- (void)didEvaluateActions {
+    
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
@@ -205,6 +206,18 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        
 //        [self addChild:sprite];
     }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    
 }
 
 -(void)update:(CFTimeInterval)currentTime {

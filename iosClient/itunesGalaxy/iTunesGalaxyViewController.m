@@ -1,5 +1,5 @@
 //
-//  _LR4NFPD9GViewController.m
+//  iTunesGalaxyViewController.m
 //  itunesGalaxy
 //
 //  Created by Matthew on 9/26/13.
