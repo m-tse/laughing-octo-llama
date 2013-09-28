@@ -12,6 +12,7 @@
 		23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E2F17F6281200B3E64F /* DistantSuperCluster.m */; };
 		23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E3417F62B1A00B3E64F /* Galaxy.m */; };
 		23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E3617F62D0000B3E64F /* GalaxyArm.sks */; };
+		23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E3917F7603600B3E64F /* DistantCluster.sks */; };
 		2397573617F5103F008BA6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573517F5103F008BA6F3 /* Foundation.framework */; };
 		2397573817F5103F008BA6F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573717F5103F008BA6F3 /* CoreGraphics.framework */; };
 		2397573A17F5103F008BA6F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573917F5103F008BA6F3 /* UIKit.framework */; };
@@ -53,6 +54,7 @@
 		23149E3317F62B1A00B3E64F /* Galaxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Galaxy.h; sourceTree = "<group>"; };
 		23149E3417F62B1A00B3E64F /* Galaxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Galaxy.m; sourceTree = "<group>"; };
 		23149E3617F62D0000B3E64F /* GalaxyArm.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GalaxyArm.sks; sourceTree = "<group>"; };
+		23149E3917F7603600B3E64F /* DistantCluster.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DistantCluster.sks; sourceTree = "<group>"; };
 		2397573217F5103F008BA6F3 /* itunesGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itunesGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2397573517F5103F008BA6F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2397573717F5103F008BA6F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +136,7 @@
 				2397577317F51E7F008BA6F3 /* MyParticle.sks */,
 				23149E3617F62D0000B3E64F /* GalaxyArm.sks */,
 				23149E2317F536F600B3E64F /* Sun.sks */,
+				23149E3917F7603600B3E64F /* DistantCluster.sks */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			files = (
 				2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */,
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
+				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
 				2397577217F517F6008BA6F3 /* planet.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,

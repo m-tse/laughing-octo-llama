@@ -15,7 +15,7 @@
 @implementation _LR4NFPD9GMyScene
 
 
-NSInteger NUM_GALAXIES = 1;
+NSInteger NUM_GALAXIES = 3;
 
 
 
@@ -40,7 +40,6 @@ static inline CGFloat skRandf() {
 static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return skRandf() * (high - low) + low;
 }
-
 
 
 - (SKEmitterNode *)galaxy
@@ -83,6 +82,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     
     return galaxySpawner;
 }
+
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -127,6 +127,11 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        galaxySpawner = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyPath];
 //        galaxySpawner.position = CGPointMake(200, 200);
 //        galaxySpawner.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:galaxySpawner.size];
+        
+        SKNode * supercluster = [[Galaxy alloc] init];
+        supercluster.position = CGPointMake(500, 500);
+        [self addChild:supercluster];
+        
         for(int i=0;i<NUM_GALAXIES;i++)
         {
             CGPoint position = CGPointMake(skRand(50, 900), skRand(50,900));
@@ -140,34 +145,15 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
             SKPhysicsJointLimit *fixedJoint = [SKPhysicsJointLimit jointWithBodyA:galaxySpawner.physicsBody bodyB:galaxyLabel.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
             fixedJoint.maxLength = 100;
             [self.physicsWorld addJoint:fixedJoint];
-//        [galaxySpawner.physicsBody applyAngularImpulse:-.5];
         }
         
         
-        SKNode * supercluster = [[Galaxy alloc] Galaxy];
-        supercluster.position = CGPointMake(500, 500);
-        [self addChild:supercluster];
-        
-//        SKEmitterNode *sunEmitter = [self sunEmitter];
-//        sunEmitter.position = CGPointMake(150 , 150);
-//        [self addChild:sunEmitter];
-//        NSLog(self.children);
-        
-//        SKPhysicsJointLimit* spring = [SKPhysicsJointLimit jointWithBodyA:galaxySpawner.physicsBody bodyB:sunEmitter.physicsBody anchorA:CGPointMake(600, 600) anchorB:CGPointMake(500, 500)];
-//        spring.maxLength = 200;
-//        [self.physicsWorld addJoint:spring];
-//        [galaxySpawner.physicsBody applyForce:CGVectorMake(0, 100)];
-//        [sunEmitter.physicsBody applyAngularImpulse:0.1];
-//        [galaxySpawner.physicsBody applyAngularImpulse:0.1];
-//        galaxySpawner.physicsBody.angularVelocity = 1;
 
-//        [self addChild:spring];
         
-//        SKAction *makeRocks = [SKAction sequence: @[
-//                                                    [SKAction performSelector:@selector(addRock) onTarget:self],
-//                                                    [SKAction waitForDuration:0.10 withRange:0.15]
-//                                                    ]];
-//        [self runAction: [SKAction repeatActionForever:makeRocks]];
+
+        
+        
+        
     }
     return self;
 }
@@ -175,10 +161,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 
 -(void)didSimulatePhysics
 {
-    [self enumerateChildNodesWithName:@"rock" usingBlock:^(SKNode *node, BOOL *stop) {
-        if (node.position.y < 0)
-            [node removeFromParent];
-    }];
+
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
@@ -193,17 +176,9 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
             
             // Present the scene.
             [self.scene.view presentScene:clusterScene];
-
+            break;
         }
-//        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-//        
-//        sprite.position = location;
-//        
-//        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-//        
-//        [sprite runAction:[SKAction repeatActionForever:action]];
-//        
-//        [self addChild:sprite];
+
     }
 }
 
@@ -226,28 +201,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         
         [node.physicsBody applyImpulse:CGVectorMake(xImpulse,yImpulse)];
     }];
-//    for(SKNode* node in self.children)
-//    {
-////        NSLog(@"x:%f y:%f", node.position.x, node.position.y);
-//        CGFloat xImpulse = skRand(-0.5,0.5);
-//        CGFloat yImpulse = skRand(-0.5, 0.5);
-//        if(node.position.x<0){
-//            xImpulse = (CGFloat) 0.5;
-//        }
-//        if(node.position.x>self.scene.size.width){
-//            xImpulse = (CGFloat) -0.5;
-//        }
-//        if(node.position.y<0){
-//            yImpulse = (CGFloat) 0.5;
-//        }
-//        if(node.position.y>self.scene.size.height){
-//            yImpulse = (CGFloat) -0.5;
-//        }
-//
-//        [node.physicsBody applyImpulse:CGVectorMake(xImpulse,yImpulse)];
-//        NSLog(@"%f,%f", xImpulse, yImpulse);
-//        [node.physicsBody applyAngularImpulse:skRand(-0.001,0.001)];
-//    }
+
   
     /* Called before each frame is rendered */
 }
