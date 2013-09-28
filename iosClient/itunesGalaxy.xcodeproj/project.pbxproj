@@ -40,6 +40,10 @@
 		2397577217F517F6008BA6F3 /* planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577117F517F6008BA6F3 /* planet.png */; };
 		2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2397577317F51E7F008BA6F3 /* MyParticle.sks */; };
 		2397577617F51E7F008BA6F3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577417F51E7F008BA6F3 /* spark.png */; };
+		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
+		A81BE79217F7702700F4040F /* smoke_particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79117F7702700F4040F /* smoke_particle.png */; };
+		A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79317F7759E00F4040F /* sunImages.atlas */; };
+		A81BE79717F77E9300F4040F /* Sun.m in Sources */ = {isa = PBXBuildFile; fileRef = A81BE79617F77E9300F4040F /* Sun.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,11 @@
 		2397577117F517F6008BA6F3 /* planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet.png; sourceTree = "<group>"; };
 		2397577317F51E7F008BA6F3 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		2397577417F51E7F008BA6F3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
+		A81BE79117F7702700F4040F /* smoke_particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke_particle.png; sourceTree = "<group>"; };
+		A81BE79317F7759E00F4040F /* sunImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sunImages.atlas; sourceTree = "<group>"; };
+		A81BE79517F77E9300F4040F /* Sun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sun.h; sourceTree = "<group>"; };
+		A81BE79617F77E9300F4040F /* Sun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sun.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +153,8 @@
 				23149E2F17F6281200B3E64F /* DistantSuperCluster.m */,
 				23149E3317F62B1A00B3E64F /* Galaxy.h */,
 				23149E3417F62B1A00B3E64F /* Galaxy.m */,
+				A81BE79517F77E9300F4040F /* Sun.h */,
+				A81BE79617F77E9300F4040F /* Sun.m */,
 			);
 			name = HeavenlyBodies;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				2397577317F51E7F008BA6F3 /* MyParticle.sks */,
+				A81BE78F17F76DF800F4040F /* Background.sks */,
 				23149E3617F62D0000B3E64F /* GalaxyArm.sks */,
 				23149E2317F536F600B3E64F /* Sun.sks */,
 				23149E3917F7603600B3E64F /* DistantCluster.sks */,
@@ -175,6 +187,7 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				A81BE79317F7759E00F4040F /* sunImages.atlas */,
 				23149E3817F62D0500B3E64F /* Particles */,
 				2397577417F51E7F008BA6F3 /* spark.png */,
 				073F811D17F73F86008A9EE4 /* choose-custom-music.png */,
@@ -223,6 +236,7 @@
 				2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */,
 				23149E3217F629F600B3E64F /* Scenes */,
 				2397575217F5103F008BA6F3 /* Spaceship.png */,
+				A81BE79117F7702700F4040F /* smoke_particle.png */,
 				2397575417F5103F008BA6F3 /* Images.xcassets */,
 				2397573E17F5103F008BA6F3 /* Supporting Files */,
 			);
@@ -339,11 +353,14 @@
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
 				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
 				2397577217F517F6008BA6F3 /* planet.png in Resources */,
+				A81BE79217F7702700F4040F /* smoke_particle.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
+				A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */,
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,
 				23149E2417F536F600B3E64F /* Sun.sks in Resources */,
 				2397575517F5103F008BA6F3 /* Images.xcassets in Resources */,
 				2397575317F5103F008BA6F3 /* Spaceship.png in Resources */,
+				A81BE79017F76DF900F4040F /* Background.sks in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
 			);
@@ -364,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81BE79717F77E9300F4040F /* Sun.m in Sources */,
 				2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
@@ -505,6 +523,7 @@
 					"$(inherited)",
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
 					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
+					"/Users/challenge/Downloads/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
@@ -525,6 +544,7 @@
 					"$(inherited)",
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
 					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
+					"/Users/challenge/Downloads/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";

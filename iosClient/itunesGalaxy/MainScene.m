@@ -14,14 +14,7 @@
 
 @implementation MainScene
 
-
 NSInteger NUM_GALAXIES = 3;
-
-- (SKSpriteNode *)sun
-{
-    SKSpriteNode *body = [SKSpriteNode spriteNodeWithImageNamed:@"planet.png"];
-    return body;
-}
 
 - (SKSpriteNode *)planet
 {
@@ -100,6 +93,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         
         self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.20 alpha:1.0];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
+        
 //        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
 //        myLabel.text = @"Hello, World!";
@@ -138,6 +132,14 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        galaxySpawner.position = CGPointMake(200, 200);
 //        galaxySpawner.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:galaxySpawner.size];
         
+        // Create background particles
+        NSString *backgroundPath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"sks"];
+        SKEmitterNode * spawnBackground;
+        spawnBackground = [NSKeyedUnarchiver unarchiveObjectWithFile:backgroundPath];
+        spawnBackground.position = CGPointMake(500, 500);
+        [self addChild:spawnBackground];
+        
+        // Create supercluster
         SKNode * supercluster = [[Galaxy alloc] init];
         supercluster.position = CGPointMake(500, 500);
         [self addChild:supercluster];
