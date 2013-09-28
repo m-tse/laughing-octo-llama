@@ -40,6 +40,7 @@
 		2397577217F517F6008BA6F3 /* planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577117F517F6008BA6F3 /* planet.png */; };
 		2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2397577317F51E7F008BA6F3 /* MyParticle.sks */; };
 		2397577617F51E7F008BA6F3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577417F51E7F008BA6F3 /* spark.png */; };
+		239DF82217F764B500F2607E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82117F764B500F2607E /* Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		2397577117F517F6008BA6F3 /* planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet.png; sourceTree = "<group>"; };
 		2397577317F51E7F008BA6F3 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		2397577417F51E7F008BA6F3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		239DF82017F764B500F2607E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		239DF82117F764B500F2607E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +224,8 @@
 				2397574917F5103F008BA6F3 /* Main.storyboard */,
 				2397574C17F5103F008BA6F3 /* iTunesGalaxyViewController.h */,
 				2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */,
+				239DF82017F764B500F2607E /* Util.h */,
+				239DF82117F764B500F2607E /* Util.m */,
 				23149E3217F629F600B3E64F /* Scenes */,
 				2397575217F5103F008BA6F3 /* Spaceship.png */,
 				2397575417F5103F008BA6F3 /* Images.xcassets */,
@@ -369,6 +374,7 @@
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
+				239DF82217F764B500F2607E /* Util.m in Sources */,
 				2397575117F5103F008BA6F3 /* MainScene.m in Sources */,
 				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Track.m in Sources */,
