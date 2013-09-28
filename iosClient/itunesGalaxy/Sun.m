@@ -8,13 +8,15 @@
 
 #import "Sun.h"
 
-@implementation Sun
+@implementation Sun {
+    
+}
 
 -(id)init {
     if(self = [super init]){
         
-        SKSpriteNode *body;
-        
+//        SKSpriteNode *body;
+//        
 //        // Set up animation
 //        NSMutableArray *animationFrames = [NSMutableArray array];
 //        SKTextureAtlas *sunAnimatedAtlas = [SKTextureAtlas atlasNamed:@"sunImages"];
@@ -25,7 +27,7 @@
 //            [animationFrames addObject:temp];
 //        SKTexture *temp = _sunAnimation[0];
 //        body = [SKSpriteNode spriteNodeWithTexture:temp];
-//
+////
 //        SKEmitterNode * Sun;
 //        NSString *galaxyPath = [[NSBundle mainBundle] pathForResource:@"Sun" ofType:@"sks"];
 //        Sun = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyPath];
