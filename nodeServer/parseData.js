@@ -49,7 +49,7 @@ if (true) {
     var count = 0;
     data.toString().split('\n').forEach(function(line) {
       count += 1;
-      if (count > 1000) {
+      if (count > 10) {
         return;
       }
       attributes = line.toString().split(/\s+/)

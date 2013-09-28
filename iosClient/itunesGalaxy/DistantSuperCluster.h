@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface DistantSuperCluster : SKNode
-- (SKNode*) DistantSuperCluster;
+
 @end
