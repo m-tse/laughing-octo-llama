@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
 		073F811017F6A637008A9EE4 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Track.m */; };
 		073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* TestScene.m */; };
 		073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 073F811D17F73F86008A9EE4 /* choose-custom-music.png */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07204B3317F771E900101F4D /* Galaxy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Galaxy.sks; sourceTree = "<group>"; };
 		073F810E17F6A637008A9EE4 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		073F810F17F6A637008A9EE4 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		073F811A17F72DB2008A9EE4 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestScene.h; path = ../TestScene.h; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		23149E3817F62D0500B3E64F /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				07204B3317F771E900101F4D /* Galaxy.sks */,
 				2397577317F51E7F008BA6F3 /* MyParticle.sks */,
 				23149E3617F62D0000B3E64F /* GalaxyArm.sks */,
 				23149E2317F536F600B3E64F /* Sun.sks */,
@@ -339,6 +342,7 @@
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,
 				23149E2417F536F600B3E64F /* Sun.sks in Resources */,
 				2397575517F5103F008BA6F3 /* Images.xcassets in Resources */,
+				07204B3417F771E900101F4D /* Galaxy.sks in Resources */,
 				2397575317F5103F008BA6F3 /* Spaceship.png in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
