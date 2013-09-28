@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073F811017F6A637008A9EE4 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Track.m */; };
 		23149E2417F536F600B3E64F /* Sun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E2317F536F600B3E64F /* Sun.sks */; };
 		23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E2917F61F7800B3E64F /* SuperClusterScene.m */; };
 		23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E2F17F6281200B3E64F /* DistantSuperCluster.m */; };
@@ -18,9 +19,9 @@
 		2397573C17F5103F008BA6F3 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573B17F5103F008BA6F3 /* SpriteKit.framework */; };
 		2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2397574017F5103F008BA6F3 /* InfoPlist.strings */; };
 		2397574417F5103F008BA6F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574317F5103F008BA6F3 /* main.m */; };
-		2397574817F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574717F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.m */; };
+		2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574717F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m */; };
 		2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2397574917F5103F008BA6F3 /* Main.storyboard */; };
-		2397574E17F5103F008BA6F3 /* _LR4NFPD9GViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574D17F5103F008BA6F3 /* _LR4NFPD9GViewController.m */; };
+		2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */; };
 		2397575117F5103F008BA6F3 /* _LR4NFPD9GMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397575017F5103F008BA6F3 /* _LR4NFPD9GMyScene.m */; };
 		2397575317F5103F008BA6F3 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397575217F5103F008BA6F3 /* Spaceship.png */; };
 		2397575517F5103F008BA6F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2397575417F5103F008BA6F3 /* Images.xcassets */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		073F810E17F6A637008A9EE4 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		073F810F17F6A637008A9EE4 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		23149E2317F536F600B3E64F /* Sun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Sun.sks; sourceTree = "<group>"; };
 		23149E2817F61F7800B3E64F /* SuperClusterScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperClusterScene.h; sourceTree = "<group>"; };
 		23149E2917F61F7800B3E64F /* SuperClusterScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperClusterScene.m; sourceTree = "<group>"; };
@@ -62,11 +65,11 @@
 		2397574117F5103F008BA6F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2397574317F5103F008BA6F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2397574517F5103F008BA6F3 /* itunesGalaxy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "itunesGalaxy-Prefix.pch"; sourceTree = "<group>"; };
-		2397574617F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LR4NFPD9GAppDelegate.h; sourceTree = "<group>"; };
-		2397574717F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _LR4NFPD9GAppDelegate.m; sourceTree = "<group>"; };
+		2397574617F5103F008BA6F3 /* iTunesGalaxyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunesGalaxyAppDelegate.h; sourceTree = "<group>"; };
+		2397574717F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunesGalaxyAppDelegate.m; sourceTree = "<group>"; };
 		2397574A17F5103F008BA6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2397574C17F5103F008BA6F3 /* _LR4NFPD9GViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LR4NFPD9GViewController.h; sourceTree = "<group>"; };
-		2397574D17F5103F008BA6F3 /* _LR4NFPD9GViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _LR4NFPD9GViewController.m; sourceTree = "<group>"; };
+		2397574C17F5103F008BA6F3 /* iTunesGalaxyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunesGalaxyViewController.h; sourceTree = "<group>"; };
+		2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunesGalaxyViewController.m; sourceTree = "<group>"; };
 		2397574F17F5103F008BA6F3 /* _LR4NFPD9GMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LR4NFPD9GMyScene.h; sourceTree = "<group>"; };
 		2397575017F5103F008BA6F3 /* _LR4NFPD9GMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _LR4NFPD9GMyScene.m; sourceTree = "<group>"; };
 		2397575217F5103F008BA6F3 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
@@ -106,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073F810D17F6A543008A9EE4 /* iTunesCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				073F810E17F6A637008A9EE4 /* Track.h */,
+				073F810F17F6A637008A9EE4 /* Track.m */,
+			);
+			name = iTunesCatalog;
+			sourceTree = "<group>";
+		};
 		23149E3117F629DC00B3E64F /* HeavenlyBodies */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,13 +186,14 @@
 		2397573D17F5103F008BA6F3 /* itunesGalaxy */ = {
 			isa = PBXGroup;
 			children = (
+				073F810D17F6A543008A9EE4 /* iTunesCatalog */,
 				23149E3117F629DC00B3E64F /* HeavenlyBodies */,
 				2397577117F517F6008BA6F3 /* planet.png */,
-				2397574617F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.h */,
-				2397574717F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.m */,
+				2397574617F5103F008BA6F3 /* iTunesGalaxyAppDelegate.h */,
+				2397574717F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m */,
 				2397574917F5103F008BA6F3 /* Main.storyboard */,
-				2397574C17F5103F008BA6F3 /* _LR4NFPD9GViewController.h */,
-				2397574D17F5103F008BA6F3 /* _LR4NFPD9GViewController.m */,
+				2397574C17F5103F008BA6F3 /* iTunesGalaxyViewController.h */,
+				2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */,
 				23149E3217F629F600B3E64F /* Scenes */,
 				2397575217F5103F008BA6F3 /* Spaceship.png */,
 				2397575417F5103F008BA6F3 /* Images.xcassets */,
@@ -322,13 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2397574E17F5103F008BA6F3 /* _LR4NFPD9GViewController.m in Sources */,
+				2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
-				2397574817F5103F008BA6F3 /* _LR4NFPD9GAppDelegate.m in Sources */,
+				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
 				2397575117F5103F008BA6F3 /* _LR4NFPD9GMyScene.m in Sources */,
 				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
+				073F811017F6A637008A9EE4 /* Track.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

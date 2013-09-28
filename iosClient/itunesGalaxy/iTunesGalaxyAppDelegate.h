@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface _LR4NFPD9GAppDelegate : UIResponder <UIApplicationDelegate>
+@interface iTunesGalaxyAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

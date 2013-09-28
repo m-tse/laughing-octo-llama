@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "_LR4NFPD9GAppDelegate.h"
+#import "iTunesGalaxyAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([_LR4NFPD9GAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([iTunesGalaxyAppDelegate class]));
     }
 }

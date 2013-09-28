@@ -1,14 +1,14 @@
 //
-//  _LR4NFPD9GAppDelegate.m
+//  iTunesGalaxyAppDelegate.m
 //  itunesGalaxy
 //
 //  Created by Matthew on 9/26/13.
 //  Copyright (c) 2013 MTA. All rights reserved.
 //
 
-#import "_LR4NFPD9GAppDelegate.h"
+#import "iTunesGalaxyAppDelegate.h"
 
-@implementation _LR4NFPD9GAppDelegate
+@implementation iTunesGalaxyAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

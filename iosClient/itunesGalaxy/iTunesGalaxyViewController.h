@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface _LR4NFPD9GViewController : UIViewController
+@interface iTunesGalaxyViewController : UIViewController
 
 @end
