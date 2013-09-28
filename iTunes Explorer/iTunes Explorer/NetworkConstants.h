@@ -10,6 +10,7 @@
 #define iTunes_Explorer_NetworkConstants_h
 
 #define HOST @"Andrew's IP address"
+#define ITUNES @"http://itunes.apple.com/lookup?"
 
 #define GET @"GET"
 #define POST @"POST"
