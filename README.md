@@ -29,3 +29,4 @@ TODO:
 - need a Name for our team
 - learn SpriteKit
 - IO between spritekit and server
+- Utilize AT&T speech to text API to win AT&T laptops
