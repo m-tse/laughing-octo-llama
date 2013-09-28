@@ -1,5 +1,5 @@
 //
-//  _LR4NFPD9GViewController.h
+//  iTunesGalaxyViewController.h
 //  itunesGalaxy
 //
 
