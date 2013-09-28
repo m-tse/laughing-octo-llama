@@ -32,10 +32,10 @@ int CLUSTERPHYSICSBODYSIZE = 30;
     return cluster;
 }
 
-- (SKNode*) clusterLabel {
+- (SKNode*) clusterLabel:(NSString*) text {
     SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     label.name = @"super_cluser_label";
-    label.text = @"LABEL";
+    label.text = text;
     label.fontSize = 30;
     SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
     label.physicsBody = physicsBody;
@@ -75,6 +75,8 @@ int CLUSTERPHYSICSBODYSIZE = 30;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];
         }
+        SKNode* label = [self clusterLabel:@"Apps"];
+        [self addChild:label];
 
     }
     return self;

@@ -7,7 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "AbstractSpaceScene.h"
 
-@interface SuperClusterScene : SKScene
+@interface SuperClusterScene : AbstractSpaceScene
 
 @end

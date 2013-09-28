@@ -19,11 +19,7 @@
 NSInteger NUM_GALAXIES = 5;
 float RANDOM_MOTION_IMPLUSE = 0.3;
 
-- (SKSpriteNode *)sun
-{
-    SKSpriteNode *body = [SKSpriteNode spriteNodeWithImageNamed:@"planet.png"];
-    return body;
-}
+
 
 - (SKSpriteNode *)planet
 {
@@ -100,9 +96,20 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     if (self = [super initWithSize:size]) {
 
         
-        self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.20 alpha:1.0];
+        self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.1 alpha:1.0];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
-
+        
+        // Create background particles
+        NSString *backgroundPath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"sks"];
+        SKEmitterNode * spawnBackground;
+        spawnBackground = [NSKeyedUnarchiver unarchiveObjectWithFile:backgroundPath];
+        spawnBackground.position = CGPointMake(500, 500);
+        [self addChild:spawnBackground];
+        
+        // Create supercluster
+//        SKNode * supercluster = [[Galaxy alloc] init];
+//        supercluster.position = CGPointMake(500, 500);
+//        [self addChild:supercluster];
 
         
         for(int i=0;i<NUM_GALAXIES;i++)
@@ -124,7 +131,6 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         
         
 
-//        [self addChild:distantCluster];
         
 
         
@@ -156,19 +162,24 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    
+        
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         SKPhysicsBody* body = [self.physicsWorld bodyAtPoint:location];
         SKNode * node = body.node;
-        if([[node name] isEqual:@"BM_distantSuperCluster"]){
-            SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size];
-            clusterScene.scaleMode = SKSceneScaleModeAspectFill;
+        while(node != NULL){
+            if([[node name] isEqual:@"BM_distantSuperCluster"]){
+                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size];
+                clusterScene.scaleMode = SKSceneScaleModeAspectFill;
+                
+
+                [self.scene.view presentScene:clusterScene];
+                break;
+            }
+            node = node.parent;
             
-            // Present the scene.
-            [self.scene.view presentScene:clusterScene];
-            break;
         }
+
 
 //        if ([[node name] isEqual:@"testScene"]) {
 //            SKScene *testScene = [[TestScene alloc] initWithSize:self.size];
