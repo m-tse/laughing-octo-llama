@@ -29,3 +29,19 @@ TODO:
 - need a Name for our team
 - learn SpriteKit
 - IO between spritekit and server
+- Utilize AT&T speech to text API to win AT&T laptops
+
+Levels to zoom in:
+1. Categories (apps, music, movies, books)
+2. genres (rock, classical, etc.)
+3. Variables
+- a. Artists
+- b. songs
+
+
+Universe levels:
+1. Supercluster
+2. Galaxies
+3. Solar Systems
+4. Planets
+5. Moons
