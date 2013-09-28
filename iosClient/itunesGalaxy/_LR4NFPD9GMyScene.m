@@ -10,6 +10,7 @@
 #import "SuperClusterScene.h"
 #import "DistantSuperCluster.h"
 #import "Galaxy.h"
+#import "TestScene.h"
 
 
 @implementation _LR4NFPD9GMyScene
@@ -84,6 +85,17 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return galaxySpawner;
 }
 
+-(SKLabelNode *)createTestSceneButton {
+    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"TEST"];
+    label.name = @"testScene";
+    label.text = @"TEST";
+    label.fontSize = 30;
+    SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:2.0];
+    label.physicsBody = physicsBody;
+    physicsBody.affectedByGravity = false;
+    return label;
+}
+
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -148,6 +160,10 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         supercluster.position = CGPointMake(500, 500);
         [self addChild:supercluster];
         
+        SKLabelNode *testLabel = [self createTestSceneButton];
+        testLabel.position = CGPointMake(400, 400);
+        [self addChild:testLabel];
+        
 //        SKEmitterNode *sunEmitter = [self sunEmitter];
 //        sunEmitter.position = CGPointMake(150 , 150);
 //        [self addChild:sunEmitter];
@@ -195,6 +211,12 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
             [self.scene.view presentScene:clusterScene];
 
         }
+        if ([[node name] isEqual:@"testScene"]) {
+            SKScene *testScene = [[TestScene alloc] initWithSize:self.size];
+            testScene.scaleMode = SKSceneScaleModeAspectFit;
+            [self.scene.view presentScene:testScene transition:[SKTransition fadeWithDuration:1.0]];
+            return;
+        }
 //        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
 //        
 //        sprite.position = location;
@@ -228,7 +250,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     }];
 //    for(SKNode* node in self.children)
 //    {
-////        NSLog(@"x:%f y:%f", node.position.x, node.position.y);
+//        NSLog(@"x:%f y:%f", node.position.x, node.position.y);
 //        CGFloat xImpulse = skRand(-0.5,0.5);
 //        CGFloat yImpulse = skRand(-0.5, 0.5);
 //        if(node.position.x<0){
