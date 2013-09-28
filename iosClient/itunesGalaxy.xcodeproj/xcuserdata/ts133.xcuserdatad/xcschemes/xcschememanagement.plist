@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>iTunes Explorer.xcscheme</key>
+		<key>itunesGalaxy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>62CF988A17F5491D00E3C653</key>
+		<key>2397573117F5103F008BA6F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62CF98B517F5491E00E3C653</key>
+		<key>2397575917F5103F008BA6F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62CF988A17F5491D00E3C653"
-               BuildableName = "iTunes Explorer.app"
-               BlueprintName = "iTunes Explorer"
-               ReferencedContainer = "container:iTunes Explorer.xcodeproj">
+               BlueprintIdentifier = "2397573117F5103F008BA6F3"
+               BuildableName = "itunesGalaxy.app"
+               BlueprintName = "itunesGalaxy"
+               ReferencedContainer = "container:itunesGalaxy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62CF98B517F5491E00E3C653"
-               BuildableName = "iTunes ExplorerTests.xctest"
-               BlueprintName = "iTunes ExplorerTests"
-               ReferencedContainer = "container:iTunes Explorer.xcodeproj">
+               BlueprintIdentifier = "2397575917F5103F008BA6F3"
+               BuildableName = "itunesGalaxyTests.xctest"
+               BlueprintName = "itunesGalaxyTests"
+               ReferencedContainer = "container:itunesGalaxy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62CF988A17F5491D00E3C653"
-            BuildableName = "iTunes Explorer.app"
-            BlueprintName = "iTunes Explorer"
-            ReferencedContainer = "container:iTunes Explorer.xcodeproj">
+            BlueprintIdentifier = "2397573117F5103F008BA6F3"
+            BuildableName = "itunesGalaxy.app"
+            BlueprintName = "itunesGalaxy"
+            ReferencedContainer = "container:itunesGalaxy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62CF988A17F5491D00E3C653"
-            BuildableName = "iTunes Explorer.app"
-            BlueprintName = "iTunes Explorer"
-            ReferencedContainer = "container:iTunes Explorer.xcodeproj">
+            BlueprintIdentifier = "2397573117F5103F008BA6F3"
+            BuildableName = "itunesGalaxy.app"
+            BlueprintName = "itunesGalaxy"
+            ReferencedContainer = "container:itunesGalaxy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62CF988A17F5491D00E3C653"
-            BuildableName = "iTunes Explorer.app"
-            BlueprintName = "iTunes Explorer"
-            ReferencedContainer = "container:iTunes Explorer.xcodeproj">
+            BlueprintIdentifier = "2397573117F5103F008BA6F3"
+            BuildableName = "itunesGalaxy.app"
+            BlueprintName = "itunesGalaxy"
+            ReferencedContainer = "container:itunesGalaxy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
