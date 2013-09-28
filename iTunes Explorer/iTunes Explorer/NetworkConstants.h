@@ -9,7 +9,7 @@
 #ifndef iTunes_Explorer_NetworkConstants_h
 #define iTunes_Explorer_NetworkConstants_h
 
-#define HOST @"Andrew's IP address"
+#define HOST @"152.3.43.156:8080?"
 #define ITUNES @"http://itunes.apple.com/lookup?"
 
 #define GET @"GET"
@@ -17,4 +17,6 @@
 #define PUT @"PUT"
 #define DELETE @"DELETE"
 
+#define RECIEVED_RESPONSE @"didReceiveResponse"
+#define CONNECTION_ERROR @"connectionDidFailWithError"
 #endif

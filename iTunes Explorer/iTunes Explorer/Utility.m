@@ -9,10 +9,18 @@
 #import "Utility.h"
 #import "NetworkConstants.h"
 
+@interface Utility()
+@property NSMutableData *data;
+@end
+
 @implementation Utility
 
-// HTTP string to define a maximum # of results
+@synthesize data = _data;
+
+// CONSTANTS
 NSString *const REQUEST_LIMIT = @"&limit=";
+NSString *const GENRE_QUERY = @"&genre=";
+int const MAX_LIMIT = 1000;
 
 static NSString *serverAddress;
 
@@ -25,61 +33,64 @@ static NSString *serverAddress;
     serverAddress = address;
 }
 
-+ (NSMutableArray *)getRelatedGenres:(NSString *)genre
++ (NSMutableArray *)getTracksInGenre:(NSString *)genre
                         numRequested:(int)numRequested {
     
     NSMutableString *url = [[NSMutableString alloc] init];
     [url appendString:[Utility serverAddress]];
+    [url appendString:GENRE_QUERY];
+    [url appendString:genre];
     
-    if (numRequested <= 0) {
-        NSMutableString *limit = [[NSMutableString alloc] init];
-        [limit appendString:REQUEST_LIMIT];
-        [limit appendString:[NSString stringWithFormat:@"%i", numRequested]];
-    }
+    NSMutableString *limit = [[NSMutableString alloc] init];
+    [limit appendString:REQUEST_LIMIT];
     
+    if (numRequested >= 0) [limit appendString:[NSString stringWithFormat:@"%i", numRequested]];
+    else [limit appendString:[NSString stringWithFormat:@"%i", MAX_LIMIT]];
     
+    [url appendString:limit];
     
     return NULL;
 }
 
-+ (NSMutableArray *)getSongsInGenre:(NSString *)genre
-                       numRequested:(int)numRequested {
-    return NULL;
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+        NSLog(RECIEVED_RESPONSE);
+        [self.data setLength:0];
 }
 
-+ (void)incrementGenreCount:(NSString *)genre {
-    //    NSString *url =
-    //    NSString *count = [passData];
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+        [self.data appendData:data];
 }
 
-- (NSString *) passData:(NSString *)url
-                   data: (NSData*) body
-      getIfTrueElsePost: (BOOL) httpGetIfTruePostIfFalse {
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+        NSLog(CONNECTION_ERROR);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"connectionDidFinishLoading");
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    // convert to JSON
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingMutableLeaves error:&myError];
     
-    if(httpGetIfTruePostIfFalse) {
-        [request setHTTPMethod:GET];
-    } else {
-        // Depends on implementation
-        [request setHTTPMethod:POST];
-        [request setHTTPBody:body];
-        [request setValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+    // show all values
+    for(id key in res) {
+        
+        id value = [res objectForKey:key];
+        
+        NSString *keyAsString = (NSString *)key;
+        NSString *valueAsString = (NSString *)value;
+        
+        NSLog(@"key: %@", keyAsString);
+        NSLog(@"value: %@", valueAsString);
     }
     
-    [request setURL:[NSURL URLWithString:url]];
+    // extract specific value...
+    NSArray *results = [res objectForKey:@"results"];
     
-    NSError *error = [[NSError alloc] init];
-    NSHTTPURLResponse *responseCode = nil;
-    
-    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
-    
-    if([responseCode statusCode] != 200){
-        NSLog(@"Error getting %@, HTTP status code %i", url, [responseCode statusCode]);
-        return nil;
+    for (NSDictionary *result in results) {
+        NSString *icon = [result objectForKey:@"icon"];
+        NSLog(@"icon: %@", icon);
     }
-    
-    return [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
 }
 
 @end

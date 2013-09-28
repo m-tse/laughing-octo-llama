@@ -13,16 +13,17 @@
 // HTTP string to define a maximum # of results
 extern NSString *const REQUEST_LIMIT;
 
+// HTTP string to define genre search query
+extern NSString *const GENRE_QUERY;
+
+// Max limit of results to be returned
+extern int const MAX_LIMIT;
+
 + (NSString *) serverAddress;
 + (void) setServerAddress: (NSString *) address;
 
 // Get Data from server
-+ (NSMutableArray *) getRelatedGenres:(NSString *)genre
-                         numRequested:(int)numRequested;
-+ (NSMutableArray *) getSongsInGenre:(NSString *)genre
+
++ (NSMutableArray *) getTracksInGenre:(NSString *)genre
                         numRequested:(int)numRequested;
-
-// If we are to remember a user's preferences in our explorer
-+ (void) incrementGenreCount:(NSString *)genre;
-
 @end

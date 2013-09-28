@@ -13,12 +13,6 @@
 		62CF989517F5491D00E3C653 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CF989417F5491D00E3C653 /* SpriteKit.framework */; };
 		62CF989B17F5491D00E3C653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62CF989917F5491D00E3C653 /* InfoPlist.strings */; };
 		62CF989D17F5491D00E3C653 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF989C17F5491D00E3C653 /* main.m */; };
-		62CF98A117F5491D00E3C653 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98A017F5491D00E3C653 /* AppDelegate.m */; };
-		62CF98A417F5491E00E3C653 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CF98A217F5491E00E3C653 /* Main_iPhone.storyboard */; };
-		62CF98A717F5491E00E3C653 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CF98A517F5491E00E3C653 /* Main_iPad.storyboard */; };
-		62CF98AA17F5491E00E3C653 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98A917F5491E00E3C653 /* ViewController.m */; };
-		62CF98AD17F5491E00E3C653 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98AC17F5491E00E3C653 /* MyScene.m */; };
-		62CF98AF17F5491E00E3C653 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CF98AE17F5491E00E3C653 /* Spaceship.png */; };
 		62CF98B117F5491E00E3C653 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CF98B017F5491E00E3C653 /* Images.xcassets */; };
 		62CF98B817F5491E00E3C653 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CF98B717F5491E00E3C653 /* XCTest.framework */; };
 		62CF98B917F5491E00E3C653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CF988E17F5491D00E3C653 /* Foundation.framework */; };
@@ -27,7 +21,6 @@
 		62CF98C417F5491E00E3C653 /* iTunes_ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98C317F5491E00E3C653 /* iTunes_ExplorerTests.m */; };
 		62CF98D917F57D0000E3C653 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98D817F57D0000E3C653 /* Utility.m */; };
 		62CF98EB17F64B1E00E3C653 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98EA17F64B1E00E3C653 /* Track.m */; };
-		62CF98F517F653A000E3C653 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CF98F417F6539F00E3C653 /* Application.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,15 +43,6 @@
 		62CF989A17F5491D00E3C653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		62CF989C17F5491D00E3C653 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62CF989E17F5491D00E3C653 /* iTunes Explorer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTunes Explorer-Prefix.pch"; sourceTree = "<group>"; };
-		62CF989F17F5491D00E3C653 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		62CF98A017F5491D00E3C653 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		62CF98A317F5491E00E3C653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		62CF98A617F5491E00E3C653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		62CF98A817F5491E00E3C653 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		62CF98A917F5491E00E3C653 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		62CF98AB17F5491E00E3C653 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		62CF98AC17F5491E00E3C653 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		62CF98AE17F5491E00E3C653 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		62CF98B017F5491E00E3C653 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		62CF98B617F5491E00E3C653 /* iTunes ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CF98B717F5491E00E3C653 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -70,8 +54,6 @@
 		62CF98E817F636EB00E3C653 /* NetworkConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConstants.h; sourceTree = "<group>"; };
 		62CF98E917F64B1E00E3C653 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		62CF98EA17F64B1E00E3C653 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
-		62CF98F317F6539F00E3C653 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
-		62CF98F417F6539F00E3C653 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,22 +115,11 @@
 		62CF989617F5491D00E3C653 /* iTunes Explorer */ = {
 			isa = PBXGroup;
 			children = (
-				62CF989F17F5491D00E3C653 /* AppDelegate.h */,
-				62CF98D717F57D0000E3C653 /* Utility.h */,
 				62CF98E917F64B1E00E3C653 /* Track.h */,
 				62CF98EA17F64B1E00E3C653 /* Track.m */,
-				62CF98F317F6539F00E3C653 /* Application.h */,
-				62CF98F417F6539F00E3C653 /* Application.m */,
 				62CF98E817F636EB00E3C653 /* NetworkConstants.h */,
+				62CF98D717F57D0000E3C653 /* Utility.h */,
 				62CF98D817F57D0000E3C653 /* Utility.m */,
-				62CF98A017F5491D00E3C653 /* AppDelegate.m */,
-				62CF98A217F5491E00E3C653 /* Main_iPhone.storyboard */,
-				62CF98A517F5491E00E3C653 /* Main_iPad.storyboard */,
-				62CF98A817F5491E00E3C653 /* ViewController.h */,
-				62CF98A917F5491E00E3C653 /* ViewController.m */,
-				62CF98AB17F5491E00E3C653 /* MyScene.h */,
-				62CF98AC17F5491E00E3C653 /* MyScene.m */,
-				62CF98AE17F5491E00E3C653 /* Spaceship.png */,
 				62CF98B017F5491E00E3C653 /* Images.xcassets */,
 				62CF989717F5491D00E3C653 /* Supporting Files */,
 			);
@@ -260,10 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62CF98AF17F5491E00E3C653 /* Spaceship.png in Resources */,
 				62CF98B117F5491E00E3C653 /* Images.xcassets in Resources */,
-				62CF98A717F5491E00E3C653 /* Main_iPad.storyboard in Resources */,
-				62CF98A417F5491E00E3C653 /* Main_iPhone.storyboard in Resources */,
 				62CF989B17F5491D00E3C653 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,11 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62CF98EB17F64B1E00E3C653 /* Track.m in Sources */,
-				62CF98AD17F5491E00E3C653 /* MyScene.m in Sources */,
-				62CF98F517F653A000E3C653 /* Application.m in Sources */,
-				62CF98AA17F5491E00E3C653 /* ViewController.m in Sources */,
 				62CF98D917F57D0000E3C653 /* Utility.m in Sources */,
-				62CF98A117F5491D00E3C653 /* AppDelegate.m in Sources */,
 				62CF989D17F5491D00E3C653 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,22 +282,6 @@
 				62CF989A17F5491D00E3C653 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		62CF98A217F5491E00E3C653 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62CF98A317F5491E00E3C653 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		62CF98A517F5491E00E3C653 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62CF98A617F5491E00E3C653 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		62CF98C017F5491E00E3C653 /* InfoPlist.strings */ = {
