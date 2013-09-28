@@ -7,7 +7,7 @@
 //
 
 #import "iTunesGalaxyViewController.h"
-#import "_LR4NFPD9GMyScene.h"
+#import "MainScene.h"
 #import "TestScene.h"
 
 @implementation iTunesGalaxyViewController
@@ -22,7 +22,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [TestScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [MainScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.

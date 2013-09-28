@@ -20,6 +20,7 @@
 		23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E2F17F6281200B3E64F /* DistantSuperCluster.m */; };
 		23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E3417F62B1A00B3E64F /* Galaxy.m */; };
 		23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E3617F62D0000B3E64F /* GalaxyArm.sks */; };
+		23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E3917F7603600B3E64F /* DistantCluster.sks */; };
 		2397573617F5103F008BA6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573517F5103F008BA6F3 /* Foundation.framework */; };
 		2397573817F5103F008BA6F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573717F5103F008BA6F3 /* CoreGraphics.framework */; };
 		2397573A17F5103F008BA6F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573917F5103F008BA6F3 /* UIKit.framework */; };
@@ -29,7 +30,7 @@
 		2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574717F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m */; };
 		2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2397574917F5103F008BA6F3 /* Main.storyboard */; };
 		2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */; };
-		2397575117F5103F008BA6F3 /* _LR4NFPD9GMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397575017F5103F008BA6F3 /* _LR4NFPD9GMyScene.m */; };
+		2397575117F5103F008BA6F3 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397575017F5103F008BA6F3 /* MainScene.m */; };
 		2397575317F5103F008BA6F3 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397575217F5103F008BA6F3 /* Spaceship.png */; };
 		2397575517F5103F008BA6F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2397575417F5103F008BA6F3 /* Images.xcassets */; };
 		2397575C17F5103F008BA6F3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397575B17F5103F008BA6F3 /* XCTest.framework */; };
@@ -71,6 +72,7 @@
 		23149E3317F62B1A00B3E64F /* Galaxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Galaxy.h; sourceTree = "<group>"; };
 		23149E3417F62B1A00B3E64F /* Galaxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Galaxy.m; sourceTree = "<group>"; };
 		23149E3617F62D0000B3E64F /* GalaxyArm.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GalaxyArm.sks; sourceTree = "<group>"; };
+		23149E3917F7603600B3E64F /* DistantCluster.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DistantCluster.sks; sourceTree = "<group>"; };
 		2397573217F5103F008BA6F3 /* itunesGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itunesGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2397573517F5103F008BA6F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2397573717F5103F008BA6F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,8 +87,8 @@
 		2397574A17F5103F008BA6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2397574C17F5103F008BA6F3 /* iTunesGalaxyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunesGalaxyViewController.h; sourceTree = "<group>"; };
 		2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunesGalaxyViewController.m; sourceTree = "<group>"; };
-		2397574F17F5103F008BA6F3 /* _LR4NFPD9GMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LR4NFPD9GMyScene.h; sourceTree = "<group>"; };
-		2397575017F5103F008BA6F3 /* _LR4NFPD9GMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _LR4NFPD9GMyScene.m; sourceTree = "<group>"; };
+		2397574F17F5103F008BA6F3 /* MainScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		2397575017F5103F008BA6F3 /* MainScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		2397575217F5103F008BA6F3 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		2397575417F5103F008BA6F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2397575A17F5103F008BA6F3 /* itunesGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itunesGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,8 +155,8 @@
 			children = (
 				073F811A17F72DB2008A9EE4 /* TestScene.h */,
 				073F811B17F72DB2008A9EE4 /* TestScene.m */,
-				2397574F17F5103F008BA6F3 /* _LR4NFPD9GMyScene.h */,
-				2397575017F5103F008BA6F3 /* _LR4NFPD9GMyScene.m */,
+				2397574F17F5103F008BA6F3 /* MainScene.h */,
+				2397575017F5103F008BA6F3 /* MainScene.m */,
 				23149E2817F61F7800B3E64F /* SuperClusterScene.h */,
 				23149E2917F61F7800B3E64F /* SuperClusterScene.m */,
 			);
@@ -168,6 +170,7 @@
 				2397577317F51E7F008BA6F3 /* MyParticle.sks */,
 				23149E3617F62D0000B3E64F /* GalaxyArm.sks */,
 				23149E2317F536F600B3E64F /* Sun.sks */,
+				23149E3917F7603600B3E64F /* DistantCluster.sks */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */,
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
+				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
 				2397577217F517F6008BA6F3 /* planet.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,
@@ -369,7 +373,7 @@
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
-				2397575117F5103F008BA6F3 /* _LR4NFPD9GMyScene.m in Sources */,
+				2397575117F5103F008BA6F3 /* MainScene.m in Sources */,
 				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Track.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
@@ -503,7 +507,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient",
+					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
+					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
@@ -522,7 +527,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient",
+					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
+					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
