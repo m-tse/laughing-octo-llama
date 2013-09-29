@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
+		07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3617F7EDF500101F4D /* iTunesNode.m */; };
 		073F811017F6A637008A9EE4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Song.m */; };
 		073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* TestScene.m */; };
 		073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 073F811D17F73F86008A9EE4 /* choose-custom-music.png */; };
@@ -69,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		07204B3317F771E900101F4D /* Galaxy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Galaxy.sks; sourceTree = "<group>"; };
+		07204B3517F7EDF500101F4D /* iTunesNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesNode.h; sourceTree = "<group>"; };
+		07204B3617F7EDF500101F4D /* iTunesNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNode.m; sourceTree = "<group>"; };
 		073F810E17F6A637008A9EE4 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		073F810F17F6A637008A9EE4 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		073F811A17F72DB2008A9EE4 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestScene.h; path = ../TestScene.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				23149E3217F629F600B3E64F /* Scenes */,
 				2397575417F5103F008BA6F3 /* Images.xcassets */,
 				2397573E17F5103F008BA6F3 /* Supporting Files */,
+				07204B3517F7EDF500101F4D /* iTunesNode.h */,
+				07204B3617F7EDF500101F4D /* iTunesNode.m */,
 			);
 			path = itunesGalaxy;
 			sourceTree = "<group>";
@@ -395,7 +400,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */;
+			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -469,6 +474,7 @@
 				23149E3517F62B1A00B3E64F /* DistantGalaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
+				07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */,
 				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
 				239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
@@ -692,7 +698,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */ = {
+		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2397576917F5103F008BA6F3 /* Debug */,
