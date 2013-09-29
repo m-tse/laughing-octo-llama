@@ -36,14 +36,10 @@ int CLUSTERPHYSICSBODYSIZE = 30;
 }
 
 
--(void)setSetClusterLabel:(NSString*) label {
-    _labelNode.text = label;
-}
-
-
--(id)initWithScene:(SKScene *)scene {
+-(id)initWithScene:(SKScene *)scene withLabel:(NSString*) label{
     
     if(self = [super init]){
+        self.mediaType = label;
         self.name = @"BM_distantSuperCluster";
         SKPhysicsBody *cgPhysicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(COREPHYSICSBODYSIZE,COREPHYSICSBODYSIZE)];
         NSMutableArray * clusters;
@@ -65,7 +61,6 @@ int CLUSTERPHYSICSBODYSIZE = 30;
             [connectedCluster addChild:cluster];
             cluster.position = CGPointMake(0, 0);
             
-            
             SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0,0) anchorB:CGPointMake(0,0)];
             spring.frequency = 0.1;
             spring.damping = 50;
@@ -73,14 +68,8 @@ int CLUSTERPHYSICSBODYSIZE = 30;
             [clusters addObject:(cluster)];
         }
 
-
-        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
-        _labelNode.fontSize = 20;
-        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        _labelNode.physicsBody = physicsBody;
-        physicsBody.affectedByGravity = false;
+        SKLabelNode * myLabel = [[Label alloc] initWithFontSize:20 onNode:self inScene:scene withText:label];
         
-        [self addChild:_labelNode];
     }
     return self;
 }

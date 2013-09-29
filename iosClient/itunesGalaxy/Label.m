@@ -44,4 +44,22 @@ NSString *DEFAULT_FONT = @"BebasNeueu";
     }
     return self;
 }
+
+-(id)initWithFontSize:(int)fontSize onNode:(SKNode*) node inScene:(SKScene*) scene withText:(NSString*) text{
+    if(self = [super init]){
+        self.fontName = DEFAULT_FONT;
+        self.name = @"label_name";
+        self.text = text;
+        self.fontSize = fontSize;
+        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
+        self.physicsBody = physicsBody;
+        [node addChild:self];
+        SKPhysicsJointFixed *spring = [SKPhysicsJointFixed jointWithBodyA:self.physicsBody bodyB:node.physicsBody anchor:CGPointMake(0,0)];
+        [scene.physicsWorld addJoint:spring];
+        
+    }
+    return self;
+}
+
+
 @end

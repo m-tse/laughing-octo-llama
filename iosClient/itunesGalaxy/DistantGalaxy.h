@@ -15,6 +15,5 @@
 @property NSString *myGenreName;
 
 -(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName;
--(int)getRandomNumberBetween:(int)from to:(int)to;
 
 @end

@@ -28,17 +28,7 @@
         physicsBody.affectedByGravity = false;
         [self addChild:label];
         
-        
-        //    SKEmitterNode *asdf;
-        
-        
-        //    SKEmitterNode * galaxyArm;
-        //    NSString *galaxyArmPath = [[NSBundle mainBundle] pathForResource:@"GalaxyArm" ofType:@"sks"];
-        //    galaxyArm = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyArmPath];
-        //
-        //    SKPhysicsBody * GAphysBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(3,3)];
-        //    galaxyArm.physicsBody = GAphysBody;
-        //    [self addChild:galaxyArm];
+
         [scene addChild:self];
         
         

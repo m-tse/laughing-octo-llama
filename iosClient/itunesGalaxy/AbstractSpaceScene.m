@@ -37,22 +37,15 @@ int BROWNIAN_MOTION_IMPULSE = 1;
         CGFloat yImpulse = 0;
         CGPoint nodePositionInScene = [node.scene convertPoint:node.position fromNode:node.parent];
         if(nodePositionInScene.x<50){
-//            NSLog(@"right, %f", nodePositionInScene.x);
             xImpulse = (CGFloat) PUSH_FROM_EDGE_IMPULSE;
         }
         if(nodePositionInScene.x>self.scene.size.width-50){
-            
-//            NSLog(@"left, %f", nodePositionInScene.x);
             xImpulse = (CGFloat) -PUSH_FROM_EDGE_IMPULSE;
         }
         if(nodePositionInScene.y<50){
-//            NSLog(@"up, %f", nodePositionInScene.y);
-
             yImpulse = (CGFloat) PUSH_FROM_EDGE_IMPULSE;
         }
         if(nodePositionInScene.y>self.scene.size.height-50){
-//            NSLog(@"down, %f", nodePositionInScene.y);
-
             yImpulse = (CGFloat) -PUSH_FROM_EDGE_IMPULSE;
         }
         
@@ -60,7 +53,7 @@ int BROWNIAN_MOTION_IMPULSE = 1;
     }];
     
     
-    /* Called before each frame is rendered */
+
 }
 
 -(void)applyBrownianMotionInScene:(SKScene*) scene withNodeNames:(NSString*) name{

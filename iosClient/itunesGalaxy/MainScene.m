@@ -23,17 +23,11 @@
 NSInteger NUM_GALAXIES = 10;
 float RANDOM_MOTION_IMPLUSE = 0.3;
 
-
-
-
-
-
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         NSArray *mediaTypes = @[@"Apps", @"Songs", @"TV Shows"];
         for (NSString *mediaType in mediaTypes) {
-            DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self];
-            [distantCluster setSetClusterLabel:mediaType];
+            DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self withLabel:mediaType];
             [distantCluster setMediaType:mediaType];
             distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.frame.size.width-50],[Util randFloatFrom:50 to:self.frame.size.height-50]);
         }
@@ -68,10 +62,8 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    
     [super update:currentTime];
     [self applyBrownianMotionInScene:self withNodeNames:@"BM_distantSuperCluster"];
-
 }
 
 @end

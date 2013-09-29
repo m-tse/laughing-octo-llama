@@ -10,4 +10,6 @@
 
 @interface Label : SKLabelNode
 -(id)initWithFontSize:(int)fontSize onNode:(SKNode*) node inScene:(SKScene*) scene;
+-(id)initWithFontSize:(int)fontSize onNode:(SKNode*) node inScene:(SKScene*) scene withText:(NSString*) text;
+
 @end

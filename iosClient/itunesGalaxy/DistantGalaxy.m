@@ -7,6 +7,7 @@
 //
 
 #import "DistantGalaxy.h"
+#import "Util.h"
 
 @implementation DistantGalaxy
 
@@ -17,17 +18,17 @@
         self.name = @"distant_galaxy";
 
         // Set up galaxy
-        int galaxyNumber = [self getRandomNumberBetween:1 to:10];
+        int galaxyType = [Util randIntFrom:0 to:10];
         
         SKTextureAtlas *galaxyAnimatedAtlas = [SKTextureAtlas atlasNamed:@"galaxy"];
-        NSString *textureName = [NSString stringWithFormat:@"galaxy%d", galaxyNumber];
+        NSString *textureName = [NSString stringWithFormat:@"galaxy%d", galaxyType];
         SKTexture *temp = [galaxyAnimatedAtlas textureNamed:textureName];
         _galaxy = [SKSpriteNode spriteNodeWithTexture:temp];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _galaxy.physicsBody = physBody;
         
-        int randomNum = [self getRandomNumberBetween:3 to:5];
+        int randomNum = [Util randIntFrom:3 to:5];
         randomNum = randomNum/15.0;
         
         _galaxy.xScale = 0.3;
@@ -51,14 +52,11 @@
     return self;
 }
 
--(int)getRandomNumberBetween:(int)from to:(int)to {
-    return (int)from + arc4random() % (to-from+1);
-}
 
 -(void)animateGalaxy
 {
     [_galaxy runAction:[SKAction repeatActionForever:
-                        [SKAction rotateByAngle:([self getRandomNumberBetween:0 to:3] - 1.5)
+                        [SKAction rotateByAngle:([Util randIntFrom:0 to:3] - 1.5)
                                        duration:25]]];
     return;
 }
