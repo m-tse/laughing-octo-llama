@@ -43,6 +43,7 @@
 		2397577617F51E7F008BA6F3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577417F51E7F008BA6F3 /* spark.png */; };
 		239DF82217F764B500F2607E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82117F764B500F2607E /* Util.m */; };
 		239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82417F7858400F2607E /* AbstractSpaceScene.m */; };
+		239DF82817F7874800F2607E /* ZoomedSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82717F7874800F2607E /* ZoomedSuperCluster.m */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
 		A81BE79217F7702700F4040F /* smoke_particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79117F7702700F4040F /* smoke_particle.png */; };
 		A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79317F7759E00F4040F /* sunImages.atlas */; };
@@ -109,6 +110,8 @@
 		239DF82117F764B500F2607E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		239DF82317F7858400F2607E /* AbstractSpaceScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractSpaceScene.h; sourceTree = "<group>"; };
 		239DF82417F7858400F2607E /* AbstractSpaceScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSpaceScene.m; sourceTree = "<group>"; };
+		239DF82617F7874800F2607E /* ZoomedSuperCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedSuperCluster.h; sourceTree = "<group>"; };
+		239DF82717F7874800F2607E /* ZoomedSuperCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedSuperCluster.m; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		A81BE79117F7702700F4040F /* smoke_particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke_particle.png; sourceTree = "<group>"; };
 		A81BE79317F7759E00F4040F /* sunImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sunImages.atlas; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				23149E3417F62B1A00B3E64F /* Galaxy.m */,
 				A81BE79517F77E9300F4040F /* Sun.h */,
 				A81BE79617F77E9300F4040F /* Sun.m */,
+				239DF82617F7874800F2607E /* ZoomedSuperCluster.h */,
+				239DF82717F7874800F2607E /* ZoomedSuperCluster.m */,
 			);
 			name = HeavenlyBodies;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
 				239DF82217F764B500F2607E /* Util.m in Sources */,
+				239DF82817F7874800F2607E /* ZoomedSuperCluster.m in Sources */,
 				2397575117F5103F008BA6F3 /* MainScene.m in Sources */,
 				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,

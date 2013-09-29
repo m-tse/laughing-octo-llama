@@ -11,11 +11,20 @@
 
 @implementation SuperClusterScene
 
+-(void) upOneLevel{
+    NSLog(@"asf");
+}
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-
+        
+//        SKAction* upOneLevel = [[SKAction alloc] init];
+//        upOneLevel.
+        
+//        UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(upOneLevel)];
+//        [self.view addGestureRecognizer:(UIGestureRecognizer *)
 //    self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.60 alpha:1.0];
+        
     }
     return self;
 }

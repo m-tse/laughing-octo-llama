@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface ZoomedSuperCluster : SKNode
-
+- (id)initWithScene:(SKScene *)scene;
 @end
