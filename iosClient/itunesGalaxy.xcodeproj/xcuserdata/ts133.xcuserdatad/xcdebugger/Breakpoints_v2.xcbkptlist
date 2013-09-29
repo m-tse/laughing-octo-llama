@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "-setxScale:y:"
+            landmarkName = "-setxScale:yScale:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
