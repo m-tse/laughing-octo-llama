@@ -10,6 +10,7 @@
 #import "SuperClusterScene.h"
 #import "DistantSuperCluster.h"
 #import "Galaxy.h"
+#import "Sun.h"
 #import "TestScene.h"
 #import "Util.h"
 
@@ -35,8 +36,7 @@ static inline CGFloat skRandf() {
 
 static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return skRandf() * (high - low) + low;
-}
-
+}   
 
 - (SKEmitterNode *)galaxy
 {
@@ -55,7 +55,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 
 - (SKLabelNode *)galaxyLabel
 {
-    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
     label.name = @"label_name";
     label.text = @"Apps";
     label.fontSize = 30;
@@ -110,7 +110,11 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        SKNode * supercluster = [[Galaxy alloc] init];
 //        supercluster.position = CGPointMake(500, 500);
 //        [self addChild:supercluster];
-
+        
+        // Create supercluster
+        SKNode * sun = [[Sun alloc] init];
+        sun.position = CGPointMake(500, 500);
+        [self addChild:sun];
         
         for(int i=0;i<NUM_GALAXIES;i++)
         {
