@@ -25,4 +25,35 @@
     }
     return self;
 }
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    /* Called when a touch begins */
+    
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        SKPhysicsBody* body = [self.physicsWorld bodyAtPoint:location];
+        SKNode * node = body.node;
+        while(node != NULL){
+            if([[node name] isEqual:@"distant_galaxy"]){
+                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
+                galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
+                
+                
+                [self.scene.view presentScene:galaxyScene];
+                break;
+            }
+            node = node.parent;
+            
+        }
+        
+        
+        //        if ([[node name] isEqual:@"testScene"]) {
+        //            SKScene *testScene = [[TestScene alloc] initWithSize:self.size];
+        //            testScene.scaleMode = SKSceneScaleModeAspectFit;
+        //            [self.scene.view presentScene:testScene transition:[SKTransition fadeWithDuration:1.0]];
+        //            return;
+        //        }
+        
+    }
+}
 @end
