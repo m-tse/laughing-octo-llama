@@ -9,6 +9,8 @@
 #import "SongPlanetScene.h"
 #import <Firebase/Firebase.h>
 #import "Song.h"
+#import "iTunesCurrentNode.h"
+#import "SuperClusterScene.h"
 
 @implementation SongPlanetScene
 
@@ -31,6 +33,18 @@ int rotationCount;
         return self;
     }
     return nil;
+}
+
+- (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
+	if (recognizer.state == UIGestureRecognizerStateEnded) {
+        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
+        mainScene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.scene.view presentScene:mainScene];
+        
+        SKScene * galaxyScene = [[SuperClusterScene alloc] initWithSize:self.frame.size mediaType:@"Songs"];
+        galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.scene.view presentScene:galaxyScene];
+    }
 }
 
 

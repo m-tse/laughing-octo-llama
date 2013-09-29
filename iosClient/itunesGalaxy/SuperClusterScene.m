@@ -31,9 +31,10 @@
     }
 }
 
-
 -(id)initWithSize:(CGSize)size mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        
         NSString *firebaseUrl;
         if ([mediaType isEqualToString:@"Apps"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
@@ -46,14 +47,18 @@
         }
         Firebase *firebase = [[Firebase alloc] initWithUrl:firebaseUrl];
         [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+            int count = 0;
             for (id key in snapshot.value) {
+                if (count > 10) {
+                    break;
+                }
                 NSString *genreName = snapshot.value[key][@"name"];
                 SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName];
                 CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
                 galaxy.position = position;
+                ++count;
             }
         }];
-        
     }
     return self;
 }
@@ -72,7 +77,7 @@
                 NSString *genreName = [galaxy myGenreName];
                 SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genreName];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
-                
+
                 [self.scene.view presentScene:galaxyScene];
                 break;
             }
