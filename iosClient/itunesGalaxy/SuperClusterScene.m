@@ -14,6 +14,9 @@
 -(void) upOneLevel{
     NSLog(@"asf");
 }
+-(void)handlePinch:(UIPinchGestureRecognizer*)sender {
+    NSLog(@"asdf");
+}
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -21,8 +24,8 @@
 //        SKAction* upOneLevel = [[SKAction alloc] init];
 //        upOneLevel.
         
-//        UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(upOneLevel)];
-//        [self.view addGestureRecognizer:(UIGestureRecognizer *)
+        UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(upOneLevel)];
+        [self.view addGestureRecognizer:(pinchRecognizer)];
 //    self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.60 alpha:1.0];
         
     }

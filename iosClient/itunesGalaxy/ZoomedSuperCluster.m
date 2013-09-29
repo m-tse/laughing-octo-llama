@@ -10,13 +10,13 @@
 
 @implementation ZoomedSuperCluster
 
-int COREPHYSICSBODYSIZE = 100;
+int COREPHYSICSBODYSIZE2 = 100;
 
 -(id)initWithScene:(SKScene *)scene {
     
     if(self = [super init]){
         self.name = @"BM_distantSuperCluster";
-        SKPhysicsBody *cgPhysicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(COREPHYSICSBODYSIZE,COREPHYSICSBODYSIZE)];
+        SKPhysicsBody *cgPhysicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(COREPHYSICSBODYSIZE2,COREPHYSICSBODYSIZE2)];
         NSMutableArray * clusters;
         clusters = [NSMutableArray arrayWithObjects:self, nil];
         
