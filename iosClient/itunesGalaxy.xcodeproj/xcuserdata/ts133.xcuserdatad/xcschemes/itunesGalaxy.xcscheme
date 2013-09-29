@@ -17,7 +17,7 @@
                BlueprintIdentifier = "2397573117F5103F008BA6F3"
                BuildableName = "itunesGalaxy.app"
                BlueprintName = "itunesGalaxy"
-               ReferencedContainer = "container:iTunesGalaxy.xcodeproj">
+               ReferencedContainer = "container:itunesGalaxy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "2397575917F5103F008BA6F3"
                BuildableName = "itunesGalaxyTests.xctest"
                BlueprintName = "itunesGalaxyTests"
-               ReferencedContainer = "container:iTunesGalaxy.xcodeproj">
+               ReferencedContainer = "container:itunesGalaxy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "2397573117F5103F008BA6F3"
             BuildableName = "itunesGalaxy.app"
             BlueprintName = "itunesGalaxy"
-            ReferencedContainer = "container:iTunesGalaxy.xcodeproj">
+            ReferencedContainer = "container:itunesGalaxy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "2397573117F5103F008BA6F3"
             BuildableName = "itunesGalaxy.app"
             BlueprintName = "itunesGalaxy"
-            ReferencedContainer = "container:iTunesGalaxy.xcodeproj">
+            ReferencedContainer = "container:itunesGalaxy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "2397573117F5103F008BA6F3"
             BuildableName = "itunesGalaxy.app"
             BlueprintName = "itunesGalaxy"
-            ReferencedContainer = "container:iTunesGalaxy.xcodeproj">
+            ReferencedContainer = "container:itunesGalaxy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

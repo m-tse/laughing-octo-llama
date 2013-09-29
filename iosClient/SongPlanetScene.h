@@ -11,7 +11,9 @@
 @interface SongPlanetScene : SKScene
 
 @property bool contentCreated;
+@property SKScene *myParent;
+@property NSString *myGenre;
 
 -(void) createSceneContents;
-
+-(id) initWithSize:(CGSize)size genreName:(NSString *)genreName;
 @end

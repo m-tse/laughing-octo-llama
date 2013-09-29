@@ -12,6 +12,7 @@
 #import "Util.h"
 #import "GalaxyScene.h"
 #import "MainScene.h"
+#import "SongPlanetScene.h"
 #import <Firebase/Firebase.h>
 
 
@@ -69,7 +70,12 @@ int NUMGALAXIES = 10;
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"distant_galaxy"]){
-                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
+
+//                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
+
+                DistantGalaxy *galaxy = (DistantGalaxy *)node;
+                NSString *genreName = [galaxy myGenreName];
+                SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genreName];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
                 
                 

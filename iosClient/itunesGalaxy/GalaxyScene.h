@@ -10,6 +10,10 @@
 #import "AbstractSpaceScene.h"
 
 @interface GalaxyScene : AbstractSpaceScene
--(id)initWithSize:(CGSize)size;
+
+-(id)initWithSize:(CGSize)size genreName:(NSString*)genreName;
+
+//-(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent genreName:(NSString *)genreName;
+
 
 @end

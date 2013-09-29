@@ -12,6 +12,8 @@
 
 @implementation SongPlanetScene
 
+@synthesize myGenre;
+
 Firebase *firebase;
 SKShapeNode *innerCircle;
 SKNode *outerCircle;
@@ -19,16 +21,18 @@ NSMutableArray *invisibleSongNodes;
 NSMutableArray *visibleSongNodes;
 int rotationCount;
 
-
--(id)initWithSize:(CGSize)size {
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
     if (self = [super initWithSize:size]) {
+        [self setMyGenre:genreName];
         self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.05 alpha:1.0];
+        invisibleSongNodes = [[NSMutableArray alloc] init];
+        visibleSongNodes = [[NSMutableArray alloc] init];
+        rotationCount = 0;
+        return self;
     }
-    invisibleSongNodes = [[NSMutableArray alloc] init];
-    visibleSongNodes = [[NSMutableArray alloc] init];
-    rotationCount = 0;
-    return self;
+    return nil;
 }
+
 
 -(void) didMoveToView:(SKView *)view {
     if (!self.contentCreated) {
