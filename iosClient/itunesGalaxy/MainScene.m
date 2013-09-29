@@ -64,7 +64,7 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
 
 -(void)update:(CFTimeInterval)currentTime {
     [super update:currentTime];
-    [self applyBrownianMotionInScene:self withNodeNames:@"BM_distantSuperCluster"];
+    [self applyBrownianMotionInScene:self withNodeNames:@"BM_distantSuperCluster" withImpulseRange:1];
 }
 
 @end

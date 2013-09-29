@@ -37,9 +37,10 @@
         
         galaxy.xScale = 0.4;
         galaxy.yScale = 0.4;
-
-        [scene addChild:self];
+        
         [self addChild:galaxy];
+        [scene addChild:self];
+        
         [self animateGalaxy:galaxy];
         [self setMyGenreName:genreName];
         

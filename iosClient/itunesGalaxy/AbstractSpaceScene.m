@@ -8,8 +8,8 @@
 
 #import "AbstractSpaceScene.h"
 #import "Util.h"
-int PUSH_FROM_EDGE_IMPULSE=1;
-int BROWNIAN_MOTION_IMPULSE = 1;
+int PUSH_FROM_EDGE_IMPULSE=2;
+//int BROWNIAN_MOTION_IMPULSE = 1;
 
 
 @implementation AbstractSpaceScene
@@ -56,10 +56,11 @@ int BROWNIAN_MOTION_IMPULSE = 1;
 
 }
 
--(void)applyBrownianMotionInScene:(SKScene*) scene withNodeNames:(NSString*) name{
+-(void)applyBrownianMotionInScene:(SKScene*) scene withNodeNames:(NSString*) name withImpulseRange:(float) impulse{
     [scene enumerateChildNodesWithName:name usingBlock:^(SKNode *node, BOOL *stop) {
-        CGFloat xImpulse = [Util randFloatFrom:-BROWNIAN_MOTION_IMPULSE to:BROWNIAN_MOTION_IMPULSE];
-        CGFloat yImpulse = [Util randFloatFrom:-BROWNIAN_MOTION_IMPULSE to:BROWNIAN_MOTION_IMPULSE];
+        NSLog(@"Hello");
+        CGFloat xImpulse = [Util randFloatFrom:-impulse to:impulse];
+        CGFloat yImpulse = [Util randFloatFrom:-impulse to:impulse];
         [node.physicsBody applyImpulse:CGVectorMake(xImpulse, yImpulse)];
     }];
 }
