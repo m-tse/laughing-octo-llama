@@ -42,6 +42,7 @@
         label.physicsBody = physicsBody;
         physicsBody.affectedByGravity = false;
         [self addChild:label];
+        [scene addChild:self];
     }
     return self;
 }

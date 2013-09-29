@@ -19,7 +19,7 @@
 @implementation MainScene
 
 
-NSInteger NUM_GALAXIES = 5;
+NSInteger NUM_GALAXIES = 10;
 float RANDOM_MOTION_IMPLUSE = 0.3;
 
 
@@ -98,40 +98,30 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     if (self = [super initWithSize:size]) {
 
         
-        self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.1 alpha:1.0];
-        self.physicsWorld.gravity = CGVectorMake(0, 0);
-        
-        // Create background particles
-        NSString *backgroundPath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"sks"];
-        SKEmitterNode * spawnBackground;
-        spawnBackground = [NSKeyedUnarchiver unarchiveObjectWithFile:backgroundPath];
-        spawnBackground.position = CGPointMake(500, 500);
-        [self addChild:spawnBackground];
-        
         // Create supercluster
 //        SKNode * supercluster = [[Galaxy alloc] init];
 //        supercluster.position = CGPointMake(500, 500);
 //        [self addChild:supercluster];
         
-        // Create sun
-        SKNode * sun = [[Sun alloc] init];
-        sun.position = CGPointMake(300, 300);
-        [self addChild:sun];
-        
-        // Create moon
-        SKNode * moon = [[Moon alloc] init];
-        moon.position = CGPointMake(500, 500);
-        [self addChild:moon];
-        
-        // Create planet
-        SKNode * planet = [[Planet alloc] init];
-        planet.position = CGPointMake(700, 700);
-        [self addChild:planet];
-        
-        // Create galaxy
-        SKNode * galaxy = [[DistantGalaxy alloc] init];
-        galaxy.position = CGPointMake(200, 600);
-        [self addChild:galaxy];
+//        // Create sun
+//        SKNode * sun = [[Sun alloc] init];
+//        sun.position = CGPointMake(300, 300);
+//        [self addChild:sun];
+//        
+//        // Create moon
+//        SKNode * moon = [[Moon alloc] init];
+//        moon.position = CGPointMake(500, 500);
+//        [self addChild:moon];
+//        
+//        // Create planet
+//        SKNode * planet = [[Planet alloc] init];
+//        planet.position = CGPointMake(700, 700);
+//        [self addChild:planet];
+//        
+//        // Create galaxy
+//        SKNode * galaxy = [[DistantGalaxy alloc] init];
+//        galaxy.position = CGPointMake(200, 600);
+//        [self addChild:galaxy];
         
         for(int i=0;i<NUM_GALAXIES;i++)
         {
@@ -192,7 +182,8 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"BM_distantSuperCluster"]){
-                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size];
+                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParentScene:self];
+//                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParent:self];
                 clusterScene.scaleMode = SKSceneScaleModeAspectFill;
                 
 
@@ -228,26 +219,9 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 
 -(void)update:(CFTimeInterval)currentTime {
     
-    //Apply browniwn Motion
-    [self enumerateChildNodesWithName:@"//BM_distantSuperCluster" usingBlock:^(SKNode *node, BOOL *stop) {
-        CGFloat xImpulse = skRand(-RANDOM_MOTION_IMPLUSE,RANDOM_MOTION_IMPLUSE);
-        CGFloat yImpulse = skRand(-RANDOM_MOTION_IMPLUSE, RANDOM_MOTION_IMPLUSE);
-        if(node.position.x<50){
-            xImpulse = (CGFloat) RANDOM_MOTION_IMPLUSE;
-        }
-        if(node.position.x>self.scene.size.width-50){
-            xImpulse = (CGFloat) -RANDOM_MOTION_IMPLUSE;
-        }
-        if(node.position.y<50){
-            yImpulse = (CGFloat) RANDOM_MOTION_IMPLUSE;
-        }
-        if(node.position.y>self.scene.size.height-50){
-            yImpulse = (CGFloat) -RANDOM_MOTION_IMPLUSE;
-        }
-        
-        [node.physicsBody applyImpulse:CGVectorMake(xImpulse,yImpulse)];
-    }];
-
+    [super update:currentTime];
+    [self applyBrownianMotionInScene:self withNodeNames:@"BM_distantSuperCluster"];
+    
 
   
     /* Called before each frame is rendered */

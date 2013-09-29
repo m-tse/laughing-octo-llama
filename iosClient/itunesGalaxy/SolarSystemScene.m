@@ -11,7 +11,7 @@
 
 @implementation SolarSystemScene
 
--(id)initWithSize:(CGSize)size {
+-(id)initWithSize:(CGSize)size withParentScene:(SKScene*) parent{
     if (self = [super initWithSize:size]) {
         
         

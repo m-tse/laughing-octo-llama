@@ -191,12 +191,12 @@
 			children = (
 				073F811A17F72DB2008A9EE4 /* TestScene.h */,
 				073F811B17F72DB2008A9EE4 /* TestScene.m */,
+				239DF82317F7858400F2607E /* AbstractSpaceScene.h */,
+				239DF82417F7858400F2607E /* AbstractSpaceScene.m */,
 				2397574F17F5103F008BA6F3 /* MainScene.h */,
 				2397575017F5103F008BA6F3 /* MainScene.m */,
 				23149E2817F61F7800B3E64F /* SuperClusterScene.h */,
 				23149E2917F61F7800B3E64F /* SuperClusterScene.m */,
-				239DF82317F7858400F2607E /* AbstractSpaceScene.h */,
-				239DF82417F7858400F2607E /* AbstractSpaceScene.m */,
 				239DF82917F7BCB600F2607E /* GalaxyScene.h */,
 				239DF82A17F7BCB600F2607E /* GalaxyScene.m */,
 				239DF82F17F7BFF200F2607E /* SolarSystemScene.h */,
@@ -387,6 +387,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = MTA;
 				TargetAttributes = {
+					2397573117F5103F008BA6F3 = {
+						DevelopmentTeam = 2S3D8J8M3T;
+					};
 					2397575917F5103F008BA6F3 = {
 						TestTargetID = 2397573117F5103F008BA6F3;
 					};
@@ -598,6 +601,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
@@ -610,6 +615,7 @@
 				INFOPLIST_FILE = "itunesGalaxy/itunesGalaxy-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -621,6 +627,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
@@ -633,6 +641,7 @@
 				INFOPLIST_FILE = "itunesGalaxy/itunesGalaxy-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};

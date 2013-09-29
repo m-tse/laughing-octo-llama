@@ -23,6 +23,8 @@
 @property NSString *trackViewUrl;
 @property float angle;
 @property SKSpriteNode *songNode;
+@property NSString *songName;
+@property int songIndex;
 
 -(id) initSong:(NSString *)name index:(int)index;
 
