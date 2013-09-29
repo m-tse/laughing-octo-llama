@@ -43,6 +43,7 @@
 		2397577617F51E7F008BA6F3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577417F51E7F008BA6F3 /* spark.png */; };
 		239DF82217F764B500F2607E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82117F764B500F2607E /* Util.m */; };
 		239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82417F7858400F2607E /* AbstractSpaceScene.m */; };
+		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
 		A81BE79217F7702700F4040F /* smoke_particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79117F7702700F4040F /* smoke_particle.png */; };
 		A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79317F7759E00F4040F /* sunImages.atlas */; };
@@ -109,6 +110,7 @@
 		239DF82117F764B500F2607E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		239DF82317F7858400F2607E /* AbstractSpaceScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractSpaceScene.h; sourceTree = "<group>"; };
 		239DF82417F7858400F2607E /* AbstractSpaceScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSpaceScene.m; sourceTree = "<group>"; };
+		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		A81BE79117F7702700F4040F /* smoke_particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke_particle.png; sourceTree = "<group>"; };
 		A81BE79317F7759E00F4040F /* sunImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sunImages.atlas; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */,
 				A81BE79317F7759E00F4040F /* sunImages.atlas */,
 				23149E3817F62D0500B3E64F /* Particles */,
 				2397577417F51E7F008BA6F3 /* spark.png */,
@@ -338,7 +341,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */;
+			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -365,6 +368,7 @@
 				2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */,
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
 				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
+				622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */,
 				2397577217F517F6008BA6F3 /* planet.png in Resources */,
 				A81BE79217F7702700F4040F /* smoke_particle.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
@@ -540,6 +544,7 @@
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
 					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
 					"/Users/challenge/Downloads/laughing-octo-llama/iosClient/**",
+					"/Users/ts133/Documents/WorkSpace/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
@@ -561,6 +566,7 @@
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
 					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
 					"/Users/challenge/Downloads/laughing-octo-llama/iosClient/**",
+					"/Users/ts133/Documents/WorkSpace/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
@@ -617,7 +623,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */ = {
+		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2397576917F5103F008BA6F3 /* Debug */,
