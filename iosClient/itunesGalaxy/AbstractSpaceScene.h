@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface AbstractSpaceScene : SKScene
-
+-(void)applyBrownianMotionInScene:(SKScene*) scene withNodeNames:(NSString*) name;
 @end

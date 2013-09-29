@@ -12,7 +12,7 @@
 @implementation DistantSuperCluster
 
 int MAXRANDOMCLUSTERS = 20;
-int MINRAMDOMCLUSTERS = 7;
+int MINRAMDOMCLUSTERS = 10;
 float MAXCLUSTERSIZE = 0.1;
 float MINCLUSTERSIZE = 0.01;
 int CLUSTERSCALESPEEDFACTOR = 5;
@@ -56,20 +56,20 @@ int CLUSTERPHYSICSBODYSIZE = 30;
         
         [scene addChild:self];
         int numClusters = [Util randIntFrom:MINRAMDOMCLUSTERS to:MAXRANDOMCLUSTERS];
-        
         for(int i=0;i<numClusters;i++){
             int numClusters = [clusters count];
             int targetCluster = [Util randIntFrom:0 to:numClusters];
+            NSLog(@"%d", targetCluster);
             SKNode * connectedCluster = [clusters objectAtIndex:targetCluster];
             
             SKNode * cluster = [self cluster];
             SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(CLUSTERPHYSICSBODYSIZE,CLUSTERPHYSICSBODYSIZE)];
             cluster.physicsBody = physBody;
-            [self addChild:cluster];
+            [connectedCluster addChild:cluster];
             cluster.position = CGPointMake(0, 0);
             
             
-            SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
+            SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0,0) anchorB:CGPointMake(0,0)];
             spring.frequency = 0.1;
             spring.damping = 50;
             [scene.physicsWorld addJoint:spring];
