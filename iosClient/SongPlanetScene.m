@@ -9,6 +9,7 @@
 #import "SongPlanetScene.h"
 #import <Firebase/Firebase.h>
 #import "Song.h"
+#import "iTunesCurrentNode.h"
 
 @implementation SongPlanetScene
 
@@ -33,6 +34,14 @@ int rotationCount;
         return self;
     }
     return nil;
+}
+
+- (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
+	if (recognizer.state == UIGestureRecognizerStateEnded) {
+        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
+        mainScene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.scene.view presentScene:mainScene];
+    }
 }
 
 

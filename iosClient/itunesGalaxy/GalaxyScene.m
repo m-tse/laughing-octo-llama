@@ -9,6 +9,7 @@
 #import "GalaxyScene.h"
 #import "ZoomedGalaxy.h"
 #import "SuperClusterScene.h"
+#import "iTunesCurrentNode.h"
 
 @implementation GalaxyScene
 SKScene* myParent;
@@ -20,14 +21,11 @@ SKScene* myParent;
 
 - (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
 	if (recognizer.state == UIGestureRecognizerStateEnded) {
-        SKScene * mainScene = [[SuperClusterScene alloc] initWithSize:self.frame.size];
+        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
         mainScene.scaleMode = SKSceneScaleModeAspectFill;
         [self.scene.view presentScene:mainScene];
     }
 }
-
-
-
 
 -(id)initWithSize:(CGSize)size withParentScene:(SKScene*) parent{
     if (self = [super initWithSize:size]) {

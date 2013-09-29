@@ -13,6 +13,7 @@
 #import "GalaxyScene.h"
 #import "MainScene.h"
 #import "SongPlanetScene.h"
+#import "iTunesCurrentNode.h"
 #import <Firebase/Firebase.h>
 
 
@@ -34,8 +35,6 @@ SKScene* myParent;
     }
 }
 
-
-
 -(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
         myParent = parent;
@@ -51,21 +50,18 @@ SKScene* myParent;
         }
         Firebase *firebase = [[Firebase alloc] initWithUrl:firebaseUrl];
         [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+            int count = 0;
             for (id key in snapshot.value) {
+                if (count > 10) {
+                    break;
+                }
                 NSString *genreName = snapshot.value[key][@"name"];
                 SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName];
                 CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
                 galaxy.position = position;
+                ++count;
             }
         }];
-//        SKEmitterNode * cluster;
-//        NSString *clusterPath = [[NSBundle mainBundle] pathForResource:@"MyParticle" ofType:@"sks"];
-//        cluster = [NSKeyedUnarchiver unarchiveObjectWithFile:clusterPath];
-//        cluster.position = CGPointMake(100, 100);
-//        cluster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50, 50)];
-//        cluster.physicsBody.angularVelocity = 5;
-//        [self addChild:cluster];
-        
     }
     return self;
 }
@@ -84,7 +80,7 @@ SKScene* myParent;
                 SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size withParentScene:self genreName:genreName];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
                 
-                
+                [iTunesCurrentNode updateCurrentScene:galaxyScene];
                 [self.scene.view presentScene:galaxyScene];
                 break;
             }

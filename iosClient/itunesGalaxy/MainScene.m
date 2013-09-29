@@ -109,7 +109,7 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        galaxy.position = CGPointMake(200, 600);
 //        [self addChild:galaxy];
         
-        NSArray *mediaTypes = @[@"Apps", @"Songs", @"TV Shows"];
+        NSArray *mediaTypes = @[@"Apps", @"Songs"];
         for (NSString *mediaType in mediaTypes) {
             DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self];
             [distantCluster setSetClusterLabel:mediaType];
