@@ -8,7 +8,7 @@
 
 #import "Label.h"
 
-NSString *DEFAULT_FONT = @"BebasNeueu";
+NSString *DEFAULT_FONT = @"bebasneue";
 
 @implementation Label
 //-(id)initLabelNodewithFontSize:(int)fontSize onNode:(SKNode*) node inScene:(SKScene*) scene {
