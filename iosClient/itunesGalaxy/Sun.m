@@ -8,10 +8,7 @@
 
 #import "Sun.h"
 
-@implementation Sun {
-    SKSpriteNode *_sun;
-    NSArray *_sunAnimation;
-}
+@implementation Sun 
 
 -(id)init {
     if(self = [super init]){

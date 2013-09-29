@@ -8,6 +8,9 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Sun : SKNode
+@interface Sun : SKNode {
+    SKSpriteNode *_sun;
+    NSArray *_sunAnimation;
+}
 
 @end

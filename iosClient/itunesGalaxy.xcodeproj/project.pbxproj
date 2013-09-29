@@ -410,7 +410,6 @@
 				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
-				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
