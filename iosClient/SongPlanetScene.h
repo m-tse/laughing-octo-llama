@@ -13,6 +13,7 @@
 @property bool contentCreated;
 @property SKScene *myParent;
 @property NSString *myGenre;
+@property NSString *myGenreId;
 
 -(void) createSceneContents;
 -(id) initWithSize:(CGSize)size genreName:(NSString *)genreName;

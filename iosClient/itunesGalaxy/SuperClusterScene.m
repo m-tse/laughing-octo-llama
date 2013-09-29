@@ -37,7 +37,7 @@
         if ([mediaType isEqualToString:@"Apps"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
         } else if ([mediaType isEqualToString:@"Songs"]) {
-            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/songs";
+            firebaseUrl = @"https://igalaxy.firebaseio.com/songs";
         } else if ([mediaType isEqualToString:@"TV Shows"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/shows";
         } else {
@@ -50,7 +50,7 @@
                 if (count > 10) {
                     break;
                 }
-                NSString *genreName = snapshot.value[key][@"name"];
+                NSString *genreName = key;
                 SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName];
                 CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
                 galaxy.position = position;
@@ -75,8 +75,12 @@
                 NSString *genreName = [galaxy myGenreName];
                 SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genreName];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
-
-                [self.scene.view presentScene:galaxyScene];
+                SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];
+                SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];
+                SKAction *group = [SKAction group:@[zoom, fadeOut]];
+                [self runAction:group completion:^{
+                    [self.scene.view presentScene:galaxyScene];
+                }];
                 break;
             }
             node = node.parent;

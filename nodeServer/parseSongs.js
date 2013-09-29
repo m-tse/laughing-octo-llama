@@ -15,7 +15,6 @@ var songs = database.child('songs');
 var apps = database.child('apps');
 var genres = database.child('genres');
 var songGenres = genres.child('songs');
-var appGenres = genres.child('apps');
 
 function appleLookup(params, attributes, count, callback) {
 
@@ -74,55 +73,16 @@ function readSongs() {
             genreArray.push(data.primaryGenreName);
             console.log(genreArray.length);
           }
-          songs.push(data)
+          var songByGenre = songs.child(data.primaryGenreName);
+          songByGenre.push(data)
         }
       });
     })
   });
 }
-
-
-function readApps() {
-  var genreArray = []
-  fs.readFile('./appleData/application_popularity_per_genre', 'utf8', function (err, data) {
-    if (err) {
-      return console.log(err);
-    } 
-    var count = 0;
-    data.toString().split('\n').forEach(function(line) {
-/*      if (count > 10) {*/
-        //return;
-/*      }*/
-      attributes = line.toString().split(/\s+/)
-      count += 1;
-
-      appleLookup({
-        id: attributes[3]
-      }, attributes, count, function(data, params, count) {
-        if (data.length > 0 && params.length > 1) {
-          data = data[0];
-          data["id"] = params[3];
-          data["genre"] = params[2];
-          data["rank"] = params[4];
-          if (!_.contains(genreArray, data.primaryGenreName) && data.genre) {
-            var newGenre = {};
-            appGenres.push({name: data.primaryGenreName, id: data["genre"]});
-            genreArray.push(data.primaryGenreName);
-            console.log(genreArray.length);
-          }
-          apps.push(data)
-        }
-      });
-    })
-  });
-}
-
-
-
 
 if (true) {
   readSongs();
-  readApps();
 }
 
 return;

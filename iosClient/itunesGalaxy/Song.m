@@ -13,7 +13,9 @@
 const float RADIUS = 200.0;
 
 -(id) initSong:(NSString *)name index:(int)index {
-    NSLog(@"%@\n", name);
+    if ([name length] > 20) {
+        name = [[NSString alloc] initWithFormat:@"%@...",[name substringToIndex:20]]; 
+    }
     self.angle = M_PI/5*index;
     self.songNode = [SKSpriteNode spriteNodeWithImageNamed:@"choose-custom-music"];
     float x = RADIUS * cosf(M_PI/5*(index));
