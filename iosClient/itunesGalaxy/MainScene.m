@@ -9,7 +9,6 @@
 #import "MainScene.h"
 #import "SuperClusterScene.h"
 #import "DistantSuperCluster.h"
-#import "Galaxy.h"
 #import "Sun.h"
 #import "TestScene.h"
 #import "Util.h"

@@ -7,6 +7,7 @@
 //
 
 #import "ZoomedSuperCluster.h"
+//#import "Galaxy.h"
 
 @implementation ZoomedSuperCluster
 
@@ -23,6 +24,9 @@ int COREPHYSICSBODYSIZE2 = 100;
         self.physicsBody=cgPhysicsBody;
         
         [scene addChild:self];
+        
+//        SKNode *galaxy = [[Galaxy alloc] 
+        
 //        int numClusters = [Util randIntFrom:MINRAMDOMCLUSTERS to:MAXRANDOMCLUSTERS];
 //        
 //        for(int i=0;i<numClusters;i++){

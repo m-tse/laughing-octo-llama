@@ -18,7 +18,7 @@
 		23149E2417F536F600B3E64F /* Sun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E2317F536F600B3E64F /* Sun.sks */; };
 		23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E2917F61F7800B3E64F /* SuperClusterScene.m */; };
 		23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E2F17F6281200B3E64F /* DistantSuperCluster.m */; };
-		23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E3417F62B1A00B3E64F /* Galaxy.m */; };
+		23149E3517F62B1A00B3E64F /* DistantGalaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23149E3417F62B1A00B3E64F /* DistantGalaxy.m */; };
 		23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E3617F62D0000B3E64F /* GalaxyArm.sks */; };
 		23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23149E3917F7603600B3E64F /* DistantCluster.sks */; };
 		2397573617F5103F008BA6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573517F5103F008BA6F3 /* Foundation.framework */; };
@@ -43,7 +43,8 @@
 		2397577617F51E7F008BA6F3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577417F51E7F008BA6F3 /* spark.png */; };
 		239DF82217F764B500F2607E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82117F764B500F2607E /* Util.m */; };
 		239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82417F7858400F2607E /* AbstractSpaceScene.m */; };
-		239DF82817F7874800F2607E /* ZoomedSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82717F7874800F2607E /* ZoomedSuperCluster.m */; };
+		239DF82B17F7BCB600F2607E /* GalaxyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82A17F7BCB600F2607E /* GalaxyScene.m */; };
+		239DF82E17F7BD8900F2607E /* ZoomedGalaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82D17F7BD8900F2607E /* ZoomedGalaxy.m */; };
 		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
 		A81BE79217F7702700F4040F /* smoke_particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79117F7702700F4040F /* smoke_particle.png */; };
@@ -77,8 +78,8 @@
 		23149E2917F61F7800B3E64F /* SuperClusterScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperClusterScene.m; sourceTree = "<group>"; };
 		23149E2E17F6281200B3E64F /* DistantSuperCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistantSuperCluster.h; sourceTree = "<group>"; };
 		23149E2F17F6281200B3E64F /* DistantSuperCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistantSuperCluster.m; sourceTree = "<group>"; };
-		23149E3317F62B1A00B3E64F /* Galaxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Galaxy.h; sourceTree = "<group>"; };
-		23149E3417F62B1A00B3E64F /* Galaxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Galaxy.m; sourceTree = "<group>"; };
+		23149E3317F62B1A00B3E64F /* DistantGalaxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistantGalaxy.h; sourceTree = "<group>"; };
+		23149E3417F62B1A00B3E64F /* DistantGalaxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistantGalaxy.m; sourceTree = "<group>"; };
 		23149E3617F62D0000B3E64F /* GalaxyArm.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GalaxyArm.sks; sourceTree = "<group>"; };
 		23149E3917F7603600B3E64F /* DistantCluster.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DistantCluster.sks; sourceTree = "<group>"; };
 		2397573217F5103F008BA6F3 /* itunesGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itunesGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +112,10 @@
 		239DF82117F764B500F2607E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		239DF82317F7858400F2607E /* AbstractSpaceScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractSpaceScene.h; sourceTree = "<group>"; };
 		239DF82417F7858400F2607E /* AbstractSpaceScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSpaceScene.m; sourceTree = "<group>"; };
-		239DF82617F7874800F2607E /* ZoomedSuperCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedSuperCluster.h; sourceTree = "<group>"; };
-		239DF82717F7874800F2607E /* ZoomedSuperCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedSuperCluster.m; sourceTree = "<group>"; };
+		239DF82917F7BCB600F2607E /* GalaxyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalaxyScene.h; sourceTree = "<group>"; };
+		239DF82A17F7BCB600F2607E /* GalaxyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalaxyScene.m; sourceTree = "<group>"; };
+		239DF82C17F7BD8900F2607E /* ZoomedGalaxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedGalaxy.h; sourceTree = "<group>"; };
+		239DF82D17F7BD8900F2607E /* ZoomedGalaxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedGalaxy.m; sourceTree = "<group>"; };
 		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		A81BE79117F7702700F4040F /* smoke_particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke_particle.png; sourceTree = "<group>"; };
@@ -164,12 +167,12 @@
 			children = (
 				23149E2E17F6281200B3E64F /* DistantSuperCluster.h */,
 				23149E2F17F6281200B3E64F /* DistantSuperCluster.m */,
-				23149E3317F62B1A00B3E64F /* Galaxy.h */,
-				23149E3417F62B1A00B3E64F /* Galaxy.m */,
+				23149E3317F62B1A00B3E64F /* DistantGalaxy.h */,
+				23149E3417F62B1A00B3E64F /* DistantGalaxy.m */,
 				A81BE79517F77E9300F4040F /* Sun.h */,
 				A81BE79617F77E9300F4040F /* Sun.m */,
-				239DF82617F7874800F2607E /* ZoomedSuperCluster.h */,
-				239DF82717F7874800F2607E /* ZoomedSuperCluster.m */,
+				239DF82C17F7BD8900F2607E /* ZoomedGalaxy.h */,
+				239DF82D17F7BD8900F2607E /* ZoomedGalaxy.m */,
 			);
 			name = HeavenlyBodies;
 			sourceTree = "<group>";
@@ -185,6 +188,8 @@
 				23149E2917F61F7800B3E64F /* SuperClusterScene.m */,
 				239DF82317F7858400F2607E /* AbstractSpaceScene.h */,
 				239DF82417F7858400F2607E /* AbstractSpaceScene.m */,
+				239DF82917F7BCB600F2607E /* GalaxyScene.h */,
+				239DF82A17F7BCB600F2607E /* GalaxyScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -346,7 +351,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */;
+			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -406,14 +411,15 @@
 			files = (
 				A81BE79717F77E9300F4040F /* Sun.m in Sources */,
 				2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */,
+				239DF82B17F7BCB600F2607E /* GalaxyScene.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
+				239DF82E17F7BD8900F2607E /* ZoomedGalaxy.m in Sources */,
 				239DF82217F764B500F2607E /* Util.m in Sources */,
-				239DF82817F7874800F2607E /* ZoomedSuperCluster.m in Sources */,
 				2397575117F5103F008BA6F3 /* MainScene.m in Sources */,
-				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
+				23149E3517F62B1A00B3E64F /* DistantGalaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
@@ -631,7 +637,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */ = {
+		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2397576917F5103F008BA6F3 /* Debug */,

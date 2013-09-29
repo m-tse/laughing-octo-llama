@@ -8,5 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Galaxy : SKNode
+@interface DistantGalaxy : SKNode
+-(id)initWithScene:(SKScene *)scene;
 @end
