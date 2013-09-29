@@ -25,11 +25,13 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         NSArray *mediaTypes = @[@"Apps", @"Songs"];
+
         for (NSString *mediaType in mediaTypes) {
             DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self withLabel:mediaType];
             [distantCluster setMediaType:mediaType];
-            distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.frame.size.width-50],[Util randFloatFrom:50 to:self.frame.size.height-50]);
+            distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.frame.size.width-50],[Util randFloatFrom:50 to:self.frame.size.height-200]);
         }
     }
     return self;
@@ -62,7 +64,7 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
 
 -(void)update:(CFTimeInterval)currentTime {
     [super update:currentTime];
-    [self applyBrownianMotionInScene:self withNodeNames:@"BM_distantSuperCluster"];
+    [self applyBrownianMotionInScene:self withNodeNames:@"BM_distantSuperCluster" withImpulseRange:1];
 }
 
 @end

@@ -9,7 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Label : SKLabelNode
--(id)initWithFontSize:(int)fontSize onNode:(SKNode*) node inScene:(SKScene*) scene;
 -(id)initWithFontSize:(int)fontSize onNode:(SKNode*) node inScene:(SKScene*) scene withText:(NSString*) text;
-
+//-(void) linkLabelWithNode:(SKNode*) node inPhysicsWorld:(SKPhysicsWorld*) world;
 @end

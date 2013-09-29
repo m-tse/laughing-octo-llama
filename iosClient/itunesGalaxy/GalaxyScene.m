@@ -29,7 +29,7 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
         SKNode* galaxy = [[ZoomedGalaxy alloc] initWithScene:self];
         CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);

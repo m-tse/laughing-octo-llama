@@ -8,9 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface DistantGalaxy : SKNode {
-    SKSpriteNode *_galaxy;
-}
+@interface DistantGalaxy : SKNode
 
 @property NSString *myGenreName;
 

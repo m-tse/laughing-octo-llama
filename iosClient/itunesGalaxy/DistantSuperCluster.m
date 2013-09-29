@@ -14,15 +14,15 @@
 
 @synthesize mediaType;
 
-int MAXRANDOMCLUSTERS = 20;
-int MINRAMDOMCLUSTERS = 10;
+int MAXRANDOMCLUSTERS = 40;
+int MINRAMDOMCLUSTERS = 20;
 float MAXCLUSTERSIZE = 0.1;
 float MINCLUSTERSIZE = 0.01;
 int CLUSTERSCALESPEEDFACTOR = 5;
 //int MAXINTERCLUSTERDISTANCE = 150;
 //int MININTERCLUSTERDISTANCE = 10;
 int COREPHYSICSBODYSIZE = 100;
-int CLUSTERPHYSICSBODYSIZE = 30;
+int CLUSTERPHYSICSBODYSIZE = 15;
 
 - (SKNode*) cluster {
     SKEmitterNode * cluster;
@@ -49,6 +49,7 @@ int CLUSTERPHYSICSBODYSIZE = 30;
         self.physicsBody=cgPhysicsBody;
         
         [scene addChild:self];
+        
         int numClusters = [Util randIntFrom:MINRAMDOMCLUSTERS to:MAXRANDOMCLUSTERS];
         for(int i=0;i<numClusters;i++){
             int numClusters = [clusters count];
@@ -56,13 +57,14 @@ int CLUSTERPHYSICSBODYSIZE = 30;
             SKNode * connectedCluster = [clusters objectAtIndex:targetCluster];
             
             SKNode * cluster = [self cluster];
-            SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(CLUSTERPHYSICSBODYSIZE,CLUSTERPHYSICSBODYSIZE)];
+            CGFloat randFloat = [Util randFloatFrom:5 to:30];
+            SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(randFloat,randFloat)];
             cluster.physicsBody = physBody;
             [connectedCluster addChild:cluster];
             cluster.position = CGPointMake(0, 0);
             
-            SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0,0) anchorB:CGPointMake(0,0)];
-            spring.frequency = 0.1;
+            SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
+            spring.frequency = 2;
             spring.damping = 50;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];

@@ -8,6 +8,7 @@
 
 #import "DistantGalaxy.h"
 #import "Util.h"
+#import "Label.h"
 
 @implementation DistantGalaxy
 
@@ -15,50 +16,62 @@
 
 -(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName {
     if(self = [super init]){
+        SKSpriteNode *galaxy;
+
         self.name = @"distant_galaxy";
 
         // Set up galaxy
-        int galaxyType = [Util randIntFrom:0 to:10];
+        int galaxyType = [Util randIntFrom:1 to:10];
         
         SKTextureAtlas *galaxyAnimatedAtlas = [SKTextureAtlas atlasNamed:@"galaxy"];
         NSString *textureName = [NSString stringWithFormat:@"galaxy%d", galaxyType];
         SKTexture *temp = [galaxyAnimatedAtlas textureNamed:textureName];
-        _galaxy = [SKSpriteNode spriteNodeWithTexture:temp];
+        galaxy = [SKSpriteNode spriteNodeWithTexture:temp];
         
-        SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        _galaxy.physicsBody = physBody;
+        SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(15,15)];
+        galaxy.physicsBody = physBody;
         
 
         int randomNum = [Util randIntFrom:3 to:5];
         randomNum = randomNum/15.0;
         
-        _galaxy.xScale = 0.1;
-        _galaxy.yScale = 0.1;
-
+        galaxy.xScale = 0.4;
+        galaxy.yScale = 0.4;
         
-        [self addChild:_galaxy];
-        [self animateGalaxy];
+        [self addChild:galaxy];
+        [scene addChild:self];
+        
+        [self animateGalaxy:galaxy];
         [self setMyGenreName:genreName];
         
+
+//        Label* label = [[Label alloc] initWithFontSize:5 onNode:self inScene:scene withText:genreName];
+
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
         label.text = genreName;
-        label.fontSize = 5;
+        label.fontSize = 10;
+        label.horizontalAlignmentMode = 0;
+        label.verticalAlignmentMode = 0;
         
-        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_galaxy.size.width * 0.6];
+        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:galaxy.size.width * 0.6];
+
         label.physicsBody = physicsBody;
-        label.position = _galaxy.position;
-        physicsBody.affectedByGravity = false;
+//        label.position = _galaxy.position;
+//
         [self addChild:label];
-        [scene addChild:self];
+        SKPhysicsJointFixed *spring = [SKPhysicsJointFixed jointWithBodyA:physBody bodyB:physicsBody anchor:CGPointMake(0,0)];
+        [self.scene.physicsWorld addJoint:spring];
+
+//        [label linkLabelWithNode:self inPhysicsWorld:scene.physicsWorld];
     }
     return self;
 }
 
 
--(void)animateGalaxy
+-(void)animateGalaxy:(SKSpriteNode*) galaxy
 {
-    [_galaxy runAction:[SKAction repeatActionForever:
+    [galaxy runAction:[SKAction repeatActionForever:
                         [SKAction rotateByAngle:([Util randIntFrom:0 to:3] - 1.5)
                                        duration:25]]];
     return;
