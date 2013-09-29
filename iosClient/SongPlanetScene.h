@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface TestScene : SKScene
+@interface SongPlanetScene : SKScene
 
 @property bool contentCreated;
 

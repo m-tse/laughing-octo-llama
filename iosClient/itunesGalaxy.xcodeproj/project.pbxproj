@@ -10,7 +10,7 @@
 		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
 		07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3617F7EDF500101F4D /* iTunesNode.m */; };
 		073F811017F6A637008A9EE4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Song.m */; };
-		073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* TestScene.m */; };
+		073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* SongPlanetScene.m */; };
 		073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 073F811D17F73F86008A9EE4 /* choose-custom-music.png */; };
 		073F812017F74229008A9EE4 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073F811F17F74229008A9EE4 /* Firebase.framework */; };
 		073F812217F7424E008A9EE4 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 073F812117F7424E008A9EE4 /* libicucore.dylib */; };
@@ -74,8 +74,8 @@
 		07204B3617F7EDF500101F4D /* iTunesNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNode.m; sourceTree = "<group>"; };
 		073F810E17F6A637008A9EE4 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		073F810F17F6A637008A9EE4 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
-		073F811A17F72DB2008A9EE4 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestScene.h; path = ../TestScene.h; sourceTree = "<group>"; };
-		073F811B17F72DB2008A9EE4 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestScene.m; path = ../TestScene.m; sourceTree = "<group>"; };
+		073F811A17F72DB2008A9EE4 /* SongPlanetScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongPlanetScene.h; path = ../SongPlanetScene.h; sourceTree = "<group>"; };
+		073F811B17F72DB2008A9EE4 /* SongPlanetScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongPlanetScene.m; path = ../SongPlanetScene.m; sourceTree = "<group>"; };
 		073F811D17F73F86008A9EE4 /* choose-custom-music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "choose-custom-music.png"; path = "itunesGalaxy/choose-custom-music.png"; sourceTree = "<group>"; };
 		073F811F17F74229008A9EE4 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		073F812117F7424E008A9EE4 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
@@ -192,8 +192,8 @@
 		23149E3217F629F600B3E64F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				073F811A17F72DB2008A9EE4 /* TestScene.h */,
-				073F811B17F72DB2008A9EE4 /* TestScene.m */,
+				073F811A17F72DB2008A9EE4 /* SongPlanetScene.h */,
+				073F811B17F72DB2008A9EE4 /* SongPlanetScene.m */,
 				239DF82317F7858400F2607E /* AbstractSpaceScene.h */,
 				239DF82417F7858400F2607E /* AbstractSpaceScene.m */,
 				2397574F17F5103F008BA6F3 /* MainScene.h */,
@@ -393,7 +393,7 @@
 				ORGANIZATIONNAME = MTA;
 				TargetAttributes = {
 					2397573117F5103F008BA6F3 = {
-						DevelopmentTeam = 2S3D8J8M3T;
+						DevelopmentTeam = TUYN8E2Y7H;
 					};
 					2397575917F5103F008BA6F3 = {
 						TestTargetID = 2397573117F5103F008BA6F3;
@@ -477,7 +477,7 @@
 				07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */,
 				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
 				239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */,
-				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
+				073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

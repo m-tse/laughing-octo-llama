@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 MTA. All rights reserved.
 //
 
-#import "TestScene.h"
+#import "SongPlanetScene.h"
 #import <Firebase/Firebase.h>
 #import "Song.h"
 
-@implementation TestScene
+@implementation SongPlanetScene
 
 Firebase *firebase;
 SKShapeNode *innerCircle;

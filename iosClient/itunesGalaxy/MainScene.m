@@ -13,7 +13,7 @@
 #import "Sun.h"
 #import "Moon.h"
 #import "Planet.h"
-#import "TestScene.h"
+#import "SongPlanetScene.h"
 #import "Util.h"
 
 @implementation MainScene
