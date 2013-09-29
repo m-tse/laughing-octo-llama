@@ -18,7 +18,6 @@
 @implementation SuperClusterScene
 
 int NUMGALAXIES = 10;
-SKScene* myParent;
 
 - (void)didMoveToView:(SKView *)view {
     UIPinchGestureRecognizer *gestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
@@ -35,9 +34,8 @@ SKScene* myParent;
 
 
 
--(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent mediaType:(NSString *)mediaType {
+-(id)initWithSize:(CGSize)size mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
-        myParent = parent;
         NSString *firebaseUrl;
         if ([mediaType isEqualToString:@"Apps"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
@@ -57,13 +55,6 @@ SKScene* myParent;
                 galaxy.position = position;
             }
         }];
-//        SKEmitterNode * cluster;
-//        NSString *clusterPath = [[NSBundle mainBundle] pathForResource:@"MyParticle" ofType:@"sks"];
-//        cluster = [NSKeyedUnarchiver unarchiveObjectWithFile:clusterPath];
-//        cluster.position = CGPointMake(100, 100);
-//        cluster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50, 50)];
-//        cluster.physicsBody.angularVelocity = 5;
-//        [self addChild:cluster];
         
     }
     return self;
@@ -78,7 +69,7 @@ SKScene* myParent;
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"distant_galaxy"]){
-                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size withParentScene:self];
+                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
                 
                 

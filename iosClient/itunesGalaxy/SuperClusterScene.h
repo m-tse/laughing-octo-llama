@@ -11,7 +11,7 @@
 
 @interface SuperClusterScene : AbstractSpaceScene
 
--(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent mediaType:(NSString *)mediaType;
+-(id)initWithSize:(CGSize)size mediaType:(NSString *)mediaType;
 
 
 @end

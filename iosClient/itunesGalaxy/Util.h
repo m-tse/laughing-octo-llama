@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Util : NSObject
-//+ (CGFloat) skRandf;
 + (CGFloat) randFloatFrom:(CGFloat)low to:(CGFloat)high;
 + (int) randIntFrom:(int)low to:(int)high;
 @end
