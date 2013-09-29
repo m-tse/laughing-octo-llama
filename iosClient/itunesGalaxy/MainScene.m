@@ -36,8 +36,7 @@ static inline CGFloat skRandf() {
 
 static inline CGFloat skRand(CGFloat low, CGFloat high) {
     return skRandf() * (high - low) + low;
-}
-
+}   
 
 - (SKEmitterNode *)galaxy
 {
