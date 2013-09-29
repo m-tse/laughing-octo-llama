@@ -56,6 +56,16 @@
 		626DEDB517F7C8940002A34D /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DEDB417F7C8940002A34D /* Planet.m */; };
 		626DEDB717F7C8F60002A34D /* sun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDB617F7C8F60002A34D /* sun.atlas */; };
 		62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D0446B17F7EDA5001546B6 /* AbstractBody.m */; };
+		62D6639217F8BAC2003567C3 /* 1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638817F8BAC2003567C3 /* 1024x768.png */; };
+		62D6639317F8BAC2003567C3 /* 152.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638917F8BAC2003567C3 /* 152.png */; };
+		62D6639417F8BAC2003567C3 /* 1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638A17F8BAC2003567C3 /* 1536x2048.png */; };
+		62D6639517F8BAC2003567C3 /* 2048x1536.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638B17F8BAC2003567C3 /* 2048x1536.png */; };
+		62D6639617F8BAC2003567C3 /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638C17F8BAC2003567C3 /* 29.png */; };
+		62D6639717F8BAC2003567C3 /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638D17F8BAC2003567C3 /* 40.png */; };
+		62D6639817F8BAC2003567C3 /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638E17F8BAC2003567C3 /* 58.png */; };
+		62D6639917F8BAC2003567C3 /* 76.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6638F17F8BAC2003567C3 /* 76.png */; };
+		62D6639A17F8BAC2003567C3 /* 768x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6639017F8BAC2003567C3 /* 768x1024.png */; };
+		62D6639B17F8BAC2003567C3 /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D6639117F8BAC2003567C3 /* 80.png */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
 		A81BE79717F77E9300F4040F /* Sun.m in Sources */ = {isa = PBXBuildFile; fileRef = A81BE79617F77E9300F4040F /* Sun.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +153,16 @@
 		626DEDB617F7C8F60002A34D /* sun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sun.atlas; sourceTree = "<group>"; };
 		62D0446A17F7EDA5001546B6 /* AbstractBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractBody.h; path = iTunesGalaxy/AbstractBody.h; sourceTree = SOURCE_ROOT; };
 		62D0446B17F7EDA5001546B6 /* AbstractBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractBody.m; path = iTunesGalaxy/AbstractBody.m; sourceTree = SOURCE_ROOT; };
+		62D6638817F8BAC2003567C3 /* 1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x768.png; sourceTree = "<group>"; };
+		62D6638917F8BAC2003567C3 /* 152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 152.png; sourceTree = "<group>"; };
+		62D6638A17F8BAC2003567C3 /* 1536x2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1536x2048.png; sourceTree = "<group>"; };
+		62D6638B17F8BAC2003567C3 /* 2048x1536.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2048x1536.png; sourceTree = "<group>"; };
+		62D6638C17F8BAC2003567C3 /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29.png; sourceTree = "<group>"; };
+		62D6638D17F8BAC2003567C3 /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40.png; sourceTree = "<group>"; };
+		62D6638E17F8BAC2003567C3 /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
+		62D6638F17F8BAC2003567C3 /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 76.png; sourceTree = "<group>"; };
+		62D6639017F8BAC2003567C3 /* 768x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 768x1024.png; sourceTree = "<group>"; };
+		62D6639117F8BAC2003567C3 /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		A81BE79517F77E9300F4040F /* Sun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sun.h; sourceTree = "<group>"; };
 		A81BE79617F77E9300F4040F /* Sun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sun.m; sourceTree = "<group>"; };
@@ -230,6 +250,7 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				62D6638717F8BAC2003567C3 /* iTunes Galaxy Icons */,
 				626DEDB617F7C8F60002A34D /* sun.atlas */,
 				626DEDAE17F7C3D10002A34D /* galaxy.atlas */,
 				626DEDAC17F7C3AE0002A34D /* moon.atlas */,
@@ -354,6 +375,23 @@
 			name = Individuals;
 			sourceTree = "<group>";
 		};
+		62D6638717F8BAC2003567C3 /* iTunes Galaxy Icons */ = {
+			isa = PBXGroup;
+			children = (
+				62D6638817F8BAC2003567C3 /* 1024x768.png */,
+				62D6638917F8BAC2003567C3 /* 152.png */,
+				62D6638A17F8BAC2003567C3 /* 1536x2048.png */,
+				62D6638B17F8BAC2003567C3 /* 2048x1536.png */,
+				62D6638C17F8BAC2003567C3 /* 29.png */,
+				62D6638D17F8BAC2003567C3 /* 40.png */,
+				62D6638E17F8BAC2003567C3 /* 58.png */,
+				62D6638F17F8BAC2003567C3 /* 76.png */,
+				62D6639017F8BAC2003567C3 /* 768x1024.png */,
+				62D6639117F8BAC2003567C3 /* 80.png */,
+			);
+			path = "iTunes Galaxy Icons";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,7 +441,7 @@
 				ORGANIZATIONNAME = MTA;
 				TargetAttributes = {
 					2397573117F5103F008BA6F3 = {
-						DevelopmentTeam = TUYN8E2Y7H;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					2397575917F5103F008BA6F3 = {
 						TestTargetID = 2397573117F5103F008BA6F3;
@@ -434,20 +472,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D6639317F8BAC2003567C3 /* 152.png in Resources */,
 				2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */,
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
 				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
 				622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */,
+				62D6639217F8BAC2003567C3 /* 1024x768.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
 				626DEDAF17F7C3D10002A34D /* galaxy.atlas in Resources */,
+				62D6639817F8BAC2003567C3 /* 58.png in Resources */,
 				626DEDAB17F7C3960002A34D /* planet.atlas in Resources */,
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,
+				62D6639417F8BAC2003567C3 /* 1536x2048.png in Resources */,
+				62D6639717F8BAC2003567C3 /* 40.png in Resources */,
+				62D6639B17F8BAC2003567C3 /* 80.png in Resources */,
 				23149E2417F536F600B3E64F /* Sun.sks in Resources */,
+				62D6639917F8BAC2003567C3 /* 76.png in Resources */,
+				62D6639A17F8BAC2003567C3 /* 768x1024.png in Resources */,
 				2397575517F5103F008BA6F3 /* Images.xcassets in Resources */,
 				626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */,
 				07204B3417F771E900101F4D /* Galaxy.sks in Resources */,
+				62D6639617F8BAC2003567C3 /* 29.png in Resources */,
 				626DEDB717F7C8F60002A34D /* sun.atlas in Resources */,
 				A81BE79017F76DF900F4040F /* Background.sks in Resources */,
+				62D6639517F8BAC2003567C3 /* 2048x1536.png in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
 			);
