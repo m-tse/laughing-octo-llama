@@ -10,7 +10,7 @@ var appleLookupApi = {
   port: 80,
   path: '/lookup?'
 }
-var database = new Firebase('https://itunesgalaxy.firebaseio.com/');
+var database = new Firebase('https://igalaxy.firebaseio.com/');
 var songs = database.child('songs');
 var genres = database.child('genres');
 
@@ -69,13 +69,8 @@ if (true) {
             var newGenre = {};
             genres.push({name: data.primaryGenreName});
             genreArray.push(data.primaryGenreName);
-            console.log(genreArray);
+            console.log(genreArray.length);
           }
-          if (count > 100) {
-            return;
-          }
-          console.log(params)
-          console.log(data)
           songs.push(data)
         }
       });
