@@ -9,13 +9,16 @@
 #import "Song.h"
 
 @implementation Song
+@synthesize selected;
+@synthesize previewUrl;
 
 const float RADIUS = 200.0;
 
--(id) initSong:(NSString *)name index:(int)index {
+-(id) initSong:(NSString *)name index:(int)index previewUrl:(NSString *)previewUrl{
     if ([name length] > 20) {
         name = [[NSString alloc] initWithFormat:@"%@...",[name substringToIndex:20]]; 
     }
+    [self setPreviewUrl:previewUrl];
     self.angle = M_PI/5*index;
     self.songNode = [SKSpriteNode spriteNodeWithImageNamed:@"choose-custom-music"];
     float x = RADIUS * cosf(M_PI/5*(index));

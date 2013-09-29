@@ -38,6 +38,4 @@ static SKScene *previousScene;
     return previousScene;
 }
 
-
-
 @end

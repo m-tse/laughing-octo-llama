@@ -46,23 +46,32 @@ function appleLookup(params, attributes, count, callback) {
 }
 
 function readSongs() {
-  var genreArray = []
+  var genreArray = [];
+  var popularList = [
+    "Classical",
+    "Electronic",
+    "House",
+    "Rock",
+    "Alternative",
+    "Hip Hop",
+    "Pop"
+  ];
   fs.readFile('./appleData/song_popularity_per_genre', 'utf8', function (err, data) {
     if (err) {
       return console.log(err);
     } 
     var count = 0;
     data.toString().split('\n').forEach(function(line) {
-/*      if (count > 10) {*/
-        //return;
-/*      }*/
+      if (count > 300) {
+        return;
+      }
       attributes = line.toString().split(/\s+/)
-      count += 1;
 
+      count += 1;
       appleLookup({
         id: attributes[3]
       }, attributes, count, function(data, params, count) {
-        if (data.length > 0 && params.length > 1) {
+        if (data.length > 0 && params.length > 1) {// && _.contains(popularList, data.primaryGenre)) {
           data = data[0];
           data["id"] = params[3];
           data["genre"] = params[2];
@@ -74,7 +83,7 @@ function readSongs() {
             console.log(genreArray.length);
           }
           var songByGenre = songs.child(data.primaryGenreName);
-          songByGenre.push(data)
+          songByGenre.push(data.trackName: data);
         }
       });
     })
