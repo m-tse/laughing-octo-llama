@@ -31,14 +31,12 @@
 		2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2397574917F5103F008BA6F3 /* Main.storyboard */; };
 		2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */; };
 		2397575117F5103F008BA6F3 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397575017F5103F008BA6F3 /* MainScene.m */; };
-		2397575317F5103F008BA6F3 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397575217F5103F008BA6F3 /* Spaceship.png */; };
 		2397575517F5103F008BA6F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2397575417F5103F008BA6F3 /* Images.xcassets */; };
 		2397575C17F5103F008BA6F3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397575B17F5103F008BA6F3 /* XCTest.framework */; };
 		2397575D17F5103F008BA6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573517F5103F008BA6F3 /* Foundation.framework */; };
 		2397575E17F5103F008BA6F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2397573917F5103F008BA6F3 /* UIKit.framework */; };
 		2397576617F5103F008BA6F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2397576417F5103F008BA6F3 /* InfoPlist.strings */; };
 		2397576817F5103F008BA6F3 /* itunesGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397576717F5103F008BA6F3 /* itunesGalaxyTests.m */; };
-		2397577217F517F6008BA6F3 /* planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577117F517F6008BA6F3 /* planet.png */; };
 		2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2397577317F51E7F008BA6F3 /* MyParticle.sks */; };
 		2397577617F51E7F008BA6F3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2397577417F51E7F008BA6F3 /* spark.png */; };
 		239DF82217F764B500F2607E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82117F764B500F2607E /* Util.m */; };
@@ -48,8 +46,10 @@
 		239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83017F7BFF200F2607E /* SolarSystemScene.m */; };
 		239DF83417F7C04200F2607E /* ZoomedSolarSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */; };
 		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
+		626DEDAB17F7C3960002A34D /* planet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAA17F7C3960002A34D /* planet.atlas */; };
+		626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAC17F7C3AE0002A34D /* moon.atlas */; };
+		626DEDAF17F7C3D10002A34D /* galaxy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAE17F7C3D10002A34D /* galaxy.atlas */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
-		A81BE79217F7702700F4040F /* smoke_particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79117F7702700F4040F /* smoke_particle.png */; };
 		A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79317F7759E00F4040F /* sunImages.atlas */; };
 		A81BE79717F77E9300F4040F /* Sun.m in Sources */ = {isa = PBXBuildFile; fileRef = A81BE79617F77E9300F4040F /* Sun.m */; };
 /* End PBXBuildFile section */
@@ -100,14 +100,12 @@
 		2397574D17F5103F008BA6F3 /* iTunesGalaxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunesGalaxyViewController.m; sourceTree = "<group>"; };
 		2397574F17F5103F008BA6F3 /* MainScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		2397575017F5103F008BA6F3 /* MainScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
-		2397575217F5103F008BA6F3 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		2397575417F5103F008BA6F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2397575A17F5103F008BA6F3 /* itunesGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itunesGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2397575B17F5103F008BA6F3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2397576317F5103F008BA6F3 /* itunesGalaxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "itunesGalaxyTests-Info.plist"; sourceTree = "<group>"; };
 		2397576517F5103F008BA6F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2397576717F5103F008BA6F3 /* itunesGalaxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = itunesGalaxyTests.m; sourceTree = "<group>"; };
-		2397577117F517F6008BA6F3 /* planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet.png; sourceTree = "<group>"; };
 		2397577317F51E7F008BA6F3 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		2397577417F51E7F008BA6F3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		239DF82017F764B500F2607E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
@@ -123,8 +121,10 @@
 		239DF83217F7C04200F2607E /* ZoomedSolarSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedSolarSystem.h; sourceTree = "<group>"; };
 		239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedSolarSystem.m; sourceTree = "<group>"; };
 		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
+		626DEDAA17F7C3960002A34D /* planet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = planet.atlas; sourceTree = "<group>"; };
+		626DEDAC17F7C3AE0002A34D /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
+		626DEDAE17F7C3D10002A34D /* galaxy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = galaxy.atlas; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
-		A81BE79117F7702700F4040F /* smoke_particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke_particle.png; sourceTree = "<group>"; };
 		A81BE79317F7759E00F4040F /* sunImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sunImages.atlas; sourceTree = "<group>"; };
 		A81BE79517F77E9300F4040F /* Sun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sun.h; sourceTree = "<group>"; };
 		A81BE79617F77E9300F4040F /* Sun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sun.m; sourceTree = "<group>"; };
@@ -212,6 +212,9 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				626DEDAE17F7C3D10002A34D /* galaxy.atlas */,
+				626DEDAC17F7C3AE0002A34D /* moon.atlas */,
+				626DEDAA17F7C3960002A34D /* planet.atlas */,
 				622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */,
 				A81BE79317F7759E00F4040F /* sunImages.atlas */,
 				23149E3817F62D0500B3E64F /* Particles */,
@@ -254,7 +257,6 @@
 			children = (
 				073F810D17F6A543008A9EE4 /* iTunesCatalog */,
 				23149E3117F629DC00B3E64F /* HeavenlyBodies */,
-				2397577117F517F6008BA6F3 /* planet.png */,
 				2397574617F5103F008BA6F3 /* iTunesGalaxyAppDelegate.h */,
 				2397574717F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m */,
 				2397574917F5103F008BA6F3 /* Main.storyboard */,
@@ -263,8 +265,6 @@
 				239DF82017F764B500F2607E /* Util.h */,
 				239DF82117F764B500F2607E /* Util.m */,
 				23149E3217F629F600B3E64F /* Scenes */,
-				2397575217F5103F008BA6F3 /* Spaceship.png */,
-				A81BE79117F7702700F4040F /* smoke_particle.png */,
 				2397575417F5103F008BA6F3 /* Images.xcassets */,
 				2397573E17F5103F008BA6F3 /* Supporting Files */,
 			);
@@ -377,7 +377,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */;
+			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -405,15 +405,15 @@
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
 				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
 				622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */,
-				2397577217F517F6008BA6F3 /* planet.png in Resources */,
-				A81BE79217F7702700F4040F /* smoke_particle.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
+				626DEDAF17F7C3D10002A34D /* galaxy.atlas in Resources */,
+				626DEDAB17F7C3960002A34D /* planet.atlas in Resources */,
 				A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */,
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,
 				23149E2417F536F600B3E64F /* Sun.sks in Resources */,
 				2397575517F5103F008BA6F3 /* Images.xcassets in Resources */,
+				626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */,
 				07204B3417F771E900101F4D /* Galaxy.sks in Resources */,
-				2397575317F5103F008BA6F3 /* Spaceship.png in Resources */,
 				A81BE79017F76DF900F4040F /* Background.sks in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
@@ -665,7 +665,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */ = {
+		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2397576917F5103F008BA6F3 /* Debug */,
