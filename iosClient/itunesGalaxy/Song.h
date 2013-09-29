@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface Track : NSObject
+@interface Song : NSObject
 
 @property int rank;
 
@@ -20,5 +21,9 @@
 @property NSString *trackName;
 @property NSString *trackPrice;
 @property NSString *trackViewUrl;
+@property float angle;
+@property SKSpriteNode *songNode;
+
+-(id) initSong:(NSString *)name index:(int)index;
 
 @end
