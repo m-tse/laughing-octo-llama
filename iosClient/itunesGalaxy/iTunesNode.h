@@ -11,7 +11,6 @@
 
 @interface iTunesNode : NSObject
 
-@property iTunesNode *rootNode;
 @property NSArray *mediaTypes;
 @property iTunesNode *parent;
 @property NSMutableArray *children;
@@ -19,8 +18,8 @@
 @property NSString *myName;
 
 -(id) init:(SKScene *)scene name:(NSString *)name;
-+(id) iTunesRootNode;
--(id) createRootNode;
 -(void) addChild:(iTunesNode *)child;
+-(void) presentScene:(SKView *)view;
+
 
 @end

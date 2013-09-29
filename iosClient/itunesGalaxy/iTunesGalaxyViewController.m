@@ -9,6 +9,7 @@
 #import "iTunesGalaxyViewController.h"
 #import "MainScene.h"
 #import "SongPlanetScene.h"
+#import "iTunesRoot.h"
 
 @implementation iTunesGalaxyViewController
 
@@ -24,9 +25,9 @@
     // Create and configure the scene.
     SKScene * scene = [MainScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    
+    iTunesRoot *rootNode = [iTunesRoot iTunesRootNode:scene];
     // Present the scene.
-    [skView presentScene:scene];
+    [rootNode presentScene:skView];
 }
 
 - (BOOL)shouldAutorotate

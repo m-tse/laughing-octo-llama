@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
 		07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3617F7EDF500101F4D /* iTunesNode.m */; };
+		07204B3A17F7FE1600101F4D /* iTunesRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3917F7FE1600101F4D /* iTunesRoot.m */; };
 		073F811017F6A637008A9EE4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Song.m */; };
 		073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* SongPlanetScene.m */; };
 		073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 073F811D17F73F86008A9EE4 /* choose-custom-music.png */; };
@@ -72,6 +73,8 @@
 		07204B3317F771E900101F4D /* Galaxy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Galaxy.sks; sourceTree = "<group>"; };
 		07204B3517F7EDF500101F4D /* iTunesNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesNode.h; sourceTree = "<group>"; };
 		07204B3617F7EDF500101F4D /* iTunesNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNode.m; sourceTree = "<group>"; };
+		07204B3817F7FE1600101F4D /* iTunesRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesRoot.h; sourceTree = "<group>"; };
+		07204B3917F7FE1600101F4D /* iTunesRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesRoot.m; sourceTree = "<group>"; };
 		073F810E17F6A637008A9EE4 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		073F810F17F6A637008A9EE4 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		073F811A17F72DB2008A9EE4 /* SongPlanetScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongPlanetScene.h; path = ../SongPlanetScene.h; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				2397573E17F5103F008BA6F3 /* Supporting Files */,
 				07204B3517F7EDF500101F4D /* iTunesNode.h */,
 				07204B3617F7EDF500101F4D /* iTunesNode.m */,
+				07204B3817F7FE1600101F4D /* iTunesRoot.h */,
+				07204B3917F7FE1600101F4D /* iTunesRoot.m */,
 			);
 			path = itunesGalaxy;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
 				07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */,
+				07204B3A17F7FE1600101F4D /* iTunesRoot.m in Sources */,
 				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
 				239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */,

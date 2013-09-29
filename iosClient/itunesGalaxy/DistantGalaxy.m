@@ -50,8 +50,8 @@
 -(void)animateGalaxy
 {
     [_galaxy runAction:[SKAction repeatActionForever:
-                        [SKAction rotateByAngle:6.28
-                                       duration:5]]];
+                        [SKAction rotateByAngle:-3.14
+                                       duration:20]]];
     return;
 }
 

@@ -10,12 +10,10 @@
 
 @implementation iTunesNode
 
-@synthesize rootNode;
 @synthesize parent;
 @synthesize children;
 @synthesize myScene;
 @synthesize myName;
-
 
 -(id) init:(SKScene *)scene name:(NSString *)name {
     if (self = [super init]) {
@@ -27,20 +25,6 @@
     return nil;
 }
 
-+(id) iTunesRootNode {
-    static iTunesNode *singletonRootNode = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        singletonRootNode = [[self alloc] createRootNode];
-    });
-    return singletonRootNode;
-}
-
--(id) createRootNode {
-    rootNode = [[iTunesNode alloc] init];
-    
-    return rootNode;
-}
 
 -(void) initMediaTypesArray {
     self.mediaTypes = [[NSArray alloc] initWithObjects:@"Apps", @"Songs", @"TV Shows", nil];
@@ -49,6 +33,10 @@
 -(void) addChild:(iTunesNode *)child {
     [child setParent:self];
     [[self children] addObject:child];
+}
+
+-(void) presentScene:(SKView *)view {
+    [view presentScene:[self myScene]];
 }
 
 @end
