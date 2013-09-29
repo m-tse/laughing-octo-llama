@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
-		073F811017F6A637008A9EE4 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Track.m */; };
+		073F811017F6A637008A9EE4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Song.m */; };
 		073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* TestScene.m */; };
 		073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 073F811D17F73F86008A9EE4 /* choose-custom-music.png */; };
 		073F812017F74229008A9EE4 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073F811F17F74229008A9EE4 /* Firebase.framework */; };
@@ -44,6 +44,7 @@
 		239DF82217F764B500F2607E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82117F764B500F2607E /* Util.m */; };
 		239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82417F7858400F2607E /* AbstractSpaceScene.m */; };
 		239DF82817F7874800F2607E /* ZoomedSuperCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82717F7874800F2607E /* ZoomedSuperCluster.m */; };
+		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
 		A81BE79217F7702700F4040F /* smoke_particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79117F7702700F4040F /* smoke_particle.png */; };
 		A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79317F7759E00F4040F /* sunImages.atlas */; };
@@ -62,8 +63,8 @@
 
 /* Begin PBXFileReference section */
 		07204B3317F771E900101F4D /* Galaxy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Galaxy.sks; sourceTree = "<group>"; };
-		073F810E17F6A637008A9EE4 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
-		073F810F17F6A637008A9EE4 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		073F810E17F6A637008A9EE4 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		073F810F17F6A637008A9EE4 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		073F811A17F72DB2008A9EE4 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestScene.h; path = ../TestScene.h; sourceTree = "<group>"; };
 		073F811B17F72DB2008A9EE4 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestScene.m; path = ../TestScene.m; sourceTree = "<group>"; };
 		073F811D17F73F86008A9EE4 /* choose-custom-music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "choose-custom-music.png"; path = "itunesGalaxy/choose-custom-music.png"; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		239DF82417F7858400F2607E /* AbstractSpaceScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSpaceScene.m; sourceTree = "<group>"; };
 		239DF82617F7874800F2607E /* ZoomedSuperCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedSuperCluster.h; sourceTree = "<group>"; };
 		239DF82717F7874800F2607E /* ZoomedSuperCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedSuperCluster.m; sourceTree = "<group>"; };
+		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		A81BE79117F7702700F4040F /* smoke_particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke_particle.png; sourceTree = "<group>"; };
 		A81BE79317F7759E00F4040F /* sunImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sunImages.atlas; sourceTree = "<group>"; };
@@ -151,8 +153,8 @@
 		073F810D17F6A543008A9EE4 /* iTunesCatalog */ = {
 			isa = PBXGroup;
 			children = (
-				073F810E17F6A637008A9EE4 /* Track.h */,
-				073F810F17F6A637008A9EE4 /* Track.m */,
+				073F810E17F6A637008A9EE4 /* Song.h */,
+				073F810F17F6A637008A9EE4 /* Song.m */,
 			);
 			name = iTunesCatalog;
 			sourceTree = "<group>";
@@ -203,6 +205,7 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */,
 				A81BE79317F7759E00F4040F /* sunImages.atlas */,
 				23149E3817F62D0500B3E64F /* Particles */,
 				2397577417F51E7F008BA6F3 /* spark.png */,
@@ -343,7 +346,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */;
+			buildConfigurationList = 2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -370,6 +373,7 @@
 				2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */,
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
 				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
+				622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */,
 				2397577217F517F6008BA6F3 /* planet.png in Resources */,
 				A81BE79217F7702700F4040F /* smoke_particle.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
@@ -410,8 +414,8 @@
 				239DF82817F7874800F2607E /* ZoomedSuperCluster.m in Sources */,
 				2397575117F5103F008BA6F3 /* MainScene.m in Sources */,
 				23149E3517F62B1A00B3E64F /* Galaxy.m in Sources */,
+				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
-				073F811017F6A637008A9EE4 /* Track.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +543,7 @@
 		2397576C17F5103F008BA6F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -546,6 +551,7 @@
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
 					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
 					"/Users/challenge/Downloads/laughing-octo-llama/iosClient/**",
+					"/Users/ts133/Documents/WorkSpace/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
@@ -560,6 +566,7 @@
 		2397576D17F5103F008BA6F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -567,6 +574,7 @@
 					"/Users/ts3m/Development/attAppleHackathon/iosClient/**",
 					"/Users/ark5/Documents/Coding/laughing-octo-llama/iosClient/**",
 					"/Users/challenge/Downloads/laughing-octo-llama/iosClient/**",
+					"/Users/ts133/Documents/WorkSpace/laughing-octo-llama/iosClient/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
@@ -623,7 +631,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "itunesGalaxy" */ = {
+		2397572D17F5103F008BA6F3 /* Build configuration list for PBXProject "iTunesGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2397576917F5103F008BA6F3 /* Debug */,

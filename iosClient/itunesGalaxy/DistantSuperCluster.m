@@ -33,7 +33,7 @@ int CLUSTERPHYSICSBODYSIZE = 30;
 }
 
 - (SKNode*) clusterLabel:(NSString*) text {
-    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
     label.name = @"super_cluser_label";
     label.text = text;
     label.fontSize = 30;

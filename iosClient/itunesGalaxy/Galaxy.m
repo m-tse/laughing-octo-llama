@@ -21,7 +21,7 @@
     Sun.physicsBody = physBody;
     [self addChild:Sun];
     
-    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
     label.name = @"label_name";
     label.text = @"Apps";
     label.fontSize = 30;
