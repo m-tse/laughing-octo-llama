@@ -10,10 +10,10 @@
 #import <Firebase/Firebase.h>
 #import "Song.h"
 #import "iTunesCurrentNode.h"
+#import "SuperClusterScene.h"
 
 @implementation SongPlanetScene
 
-@synthesize myParent;
 @synthesize myGenre;
 
 Firebase *firebase;
@@ -23,9 +23,8 @@ NSMutableArray *invisibleSongNodes;
 NSMutableArray *visibleSongNodes;
 int rotationCount;
 
--(id)initWithSize:(CGSize)size withParentScene:(SKScene *)parent genreName:(NSString *)genreName {
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
     if (self = [super initWithSize:size]) {
-        [self setMyParent:parent];
         [self setMyGenre:genreName];
         self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.05 alpha:1.0];
         invisibleSongNodes = [[NSMutableArray alloc] init];
@@ -41,6 +40,10 @@ int rotationCount;
         SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
         mainScene.scaleMode = SKSceneScaleModeAspectFill;
         [self.scene.view presentScene:mainScene];
+        
+        SKScene * galaxyScene = [[SuperClusterScene alloc] initWithSize:self.frame.size mediaType:@"Songs"];
+        galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.scene.view presentScene:galaxyScene];
     }
 }
 

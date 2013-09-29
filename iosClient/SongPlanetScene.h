@@ -15,5 +15,5 @@
 @property NSString *myGenre;
 
 -(void) createSceneContents;
--(id) initWithSize:(CGSize)size withParentScene:(SKScene *)parent genreName:(NSString *)genreName;
+-(id) initWithSize:(CGSize)size genreName:(NSString *)genreName;
 @end

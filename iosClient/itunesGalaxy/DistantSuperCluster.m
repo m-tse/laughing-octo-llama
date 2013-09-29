@@ -47,7 +47,8 @@ int CLUSTERPHYSICSBODYSIZE = 30;
         self.name = @"BM_distantSuperCluster";
         SKPhysicsBody *cgPhysicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(COREPHYSICSBODYSIZE,COREPHYSICSBODYSIZE)];
         NSMutableArray * clusters;
-        clusters = [NSMutableArray arrayWithObjects:self, nil];
+        clusters = [[NSMutableArray alloc] init];
+        [clusters addObject:self];
 
         self.physicsBody=cgPhysicsBody;
         

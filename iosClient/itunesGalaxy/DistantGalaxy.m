@@ -27,19 +27,21 @@
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _galaxy.physicsBody = physBody;
         
-        _galaxy.xScale = 0.3;
-        _galaxy.yScale = 0.3;
+        _galaxy.xScale = 0.1;
+        _galaxy.yScale = 0.1;
         
         [self addChild:_galaxy];
         [self animateGalaxy];
         [self setMyGenreName:genreName];
+        
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
         label.text = genreName;
-        label.fontSize = 20;
+        label.fontSize = 5;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_galaxy.size.width * 0.6];
         label.physicsBody = physicsBody;
+        label.position = _galaxy.position;
         physicsBody.affectedByGravity = false;
         [self addChild:label];
         [scene addChild:self];
