@@ -10,5 +10,6 @@
 #import "AbstractSpaceScene.h"
 
 @interface SolarSystemScene : AbstractSpaceScene
+-(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent;
 
 @end

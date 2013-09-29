@@ -172,7 +172,8 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"BM_distantSuperCluster"]){
-                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size];
+                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParentScene:self];
+//                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParent:self];
                 clusterScene.scaleMode = SKSceneScaleModeAspectFill;
                 
 
