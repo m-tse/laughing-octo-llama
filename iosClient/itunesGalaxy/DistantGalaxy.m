@@ -10,6 +10,8 @@
 
 @implementation DistantGalaxy
 
+@synthesize myGenreName;
+
 -(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName {
     if(self = [super init]){
         self.name = @"distant_galaxy";
@@ -27,7 +29,7 @@
         
         [self addChild:_galaxy];
         [self animateGalaxy];
-        
+        [self setMyGenreName:genreName];
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
         label.text = genreName;
