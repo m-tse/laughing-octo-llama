@@ -48,6 +48,7 @@
 		239DF83417F7C04200F2607E /* ZoomedSolarSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */; };
 		239DF83917F7EF3200F2607E /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83817F7EF3200F2607E /* Label.m */; };
 		239DF83C17F7FB0C00F2607E /* ParticleSun.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83B17F7FB0C00F2607E /* ParticleSun.m */; };
+		6213F39117F8E20400483D3A /* galaxy_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39017F8E20400483D3A /* galaxy_large.png */; };
 		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		626DEDAB17F7C3960002A34D /* planet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAA17F7C3960002A34D /* planet.atlas */; };
 		626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAC17F7C3AE0002A34D /* moon.atlas */; };
@@ -142,6 +143,7 @@
 		239DF83817F7EF3200F2607E /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
 		239DF83A17F7FB0C00F2607E /* ParticleSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSun.h; sourceTree = "<group>"; };
 		239DF83B17F7FB0C00F2607E /* ParticleSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleSun.m; sourceTree = "<group>"; };
+		6213F39017F8E20400483D3A /* galaxy_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galaxy_large.png; sourceTree = "<group>"; };
 		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		626DEDAA17F7C3960002A34D /* planet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = planet.atlas; sourceTree = "<group>"; };
 		626DEDAC17F7C3AE0002A34D /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				6213F39017F8E20400483D3A /* galaxy_large.png */,
 				62D6638717F8BAC2003567C3 /* iTunes Galaxy Icons */,
 				626DEDB617F7C8F60002A34D /* sun.atlas */,
 				626DEDAE17F7C3D10002A34D /* galaxy.atlas */,
@@ -495,6 +498,7 @@
 				62D6639617F8BAC2003567C3 /* 29.png in Resources */,
 				626DEDB717F7C8F60002A34D /* sun.atlas in Resources */,
 				A81BE79017F76DF900F4040F /* Background.sks in Resources */,
+				6213F39117F8E20400483D3A /* galaxy_large.png in Resources */,
 				62D6639517F8BAC2003567C3 /* 2048x1536.png in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
@@ -679,6 +683,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
 				INFOPLIST_FILE = "itunesGalaxy/itunesGalaxy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ts133/Documents/WorkSpace/laughing-octo-llama/iosClient",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -705,6 +713,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "itunesGalaxy/itunesGalaxy-Prefix.pch";
 				INFOPLIST_FILE = "itunesGalaxy/itunesGalaxy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ts133/Documents/WorkSpace/laughing-octo-llama/iosClient",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
