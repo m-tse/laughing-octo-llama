@@ -7,6 +7,7 @@
 //
 
 #import "SuperClusterScene.h"
+#import "AbstractSpaceScene.h"
 
 @implementation SuperClusterScene
 
@@ -14,7 +15,7 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
 
-    self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.60 alpha:1.0];
+//    self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.60 alpha:1.0];
     }
     return self;
 }

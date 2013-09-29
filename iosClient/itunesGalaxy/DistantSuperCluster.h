@@ -10,4 +10,6 @@
 
 @interface DistantSuperCluster : SKNode
 
+- (id)initWithScene:(SKScene *)scene;
+
 @end
