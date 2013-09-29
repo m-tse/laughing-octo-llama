@@ -49,8 +49,10 @@
 		626DEDAB17F7C3960002A34D /* planet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAA17F7C3960002A34D /* planet.atlas */; };
 		626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAC17F7C3AE0002A34D /* moon.atlas */; };
 		626DEDAF17F7C3D10002A34D /* galaxy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAE17F7C3D10002A34D /* galaxy.atlas */; };
+		626DEDB217F7C5280002A34D /* Moon.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DEDB117F7C5280002A34D /* Moon.m */; };
+		626DEDB517F7C8940002A34D /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DEDB417F7C8940002A34D /* Planet.m */; };
+		626DEDB717F7C8F60002A34D /* sun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDB617F7C8F60002A34D /* sun.atlas */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
-		A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A81BE79317F7759E00F4040F /* sunImages.atlas */; };
 		A81BE79717F77E9300F4040F /* Sun.m in Sources */ = {isa = PBXBuildFile; fileRef = A81BE79617F77E9300F4040F /* Sun.m */; };
 /* End PBXBuildFile section */
 
@@ -124,8 +126,12 @@
 		626DEDAA17F7C3960002A34D /* planet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = planet.atlas; sourceTree = "<group>"; };
 		626DEDAC17F7C3AE0002A34D /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
 		626DEDAE17F7C3D10002A34D /* galaxy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = galaxy.atlas; sourceTree = "<group>"; };
+		626DEDB017F7C5280002A34D /* Moon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Moon.h; path = iTunesGalaxy/Moon.h; sourceTree = SOURCE_ROOT; };
+		626DEDB117F7C5280002A34D /* Moon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Moon.m; path = iTunesGalaxy/Moon.m; sourceTree = SOURCE_ROOT; };
+		626DEDB317F7C8940002A34D /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Planet.h; path = iTunesGalaxy/Planet.h; sourceTree = SOURCE_ROOT; };
+		626DEDB417F7C8940002A34D /* Planet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Planet.m; path = iTunesGalaxy/Planet.m; sourceTree = SOURCE_ROOT; };
+		626DEDB617F7C8F60002A34D /* sun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sun.atlas; sourceTree = "<group>"; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
-		A81BE79317F7759E00F4040F /* sunImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sunImages.atlas; sourceTree = "<group>"; };
 		A81BE79517F77E9300F4040F /* Sun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sun.h; sourceTree = "<group>"; };
 		A81BE79617F77E9300F4040F /* Sun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sun.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,11 +218,11 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
+				626DEDB617F7C8F60002A34D /* sun.atlas */,
 				626DEDAE17F7C3D10002A34D /* galaxy.atlas */,
 				626DEDAC17F7C3AE0002A34D /* moon.atlas */,
 				626DEDAA17F7C3960002A34D /* planet.atlas */,
 				622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */,
-				A81BE79317F7759E00F4040F /* sunImages.atlas */,
 				23149E3817F62D0500B3E64F /* Particles */,
 				2397577417F51E7F008BA6F3 /* spark.png */,
 				073F811D17F73F86008A9EE4 /* choose-custom-music.png */,
@@ -318,6 +324,10 @@
 		239DF83617F7C0D800F2607E /* Individuals */ = {
 			isa = PBXGroup;
 			children = (
+				626DEDB317F7C8940002A34D /* Planet.h */,
+				626DEDB417F7C8940002A34D /* Planet.m */,
+				626DEDB017F7C5280002A34D /* Moon.h */,
+				626DEDB117F7C5280002A34D /* Moon.m */,
 				A81BE79517F77E9300F4040F /* Sun.h */,
 				A81BE79617F77E9300F4040F /* Sun.m */,
 			);
@@ -408,12 +418,12 @@
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
 				626DEDAF17F7C3D10002A34D /* galaxy.atlas in Resources */,
 				626DEDAB17F7C3960002A34D /* planet.atlas in Resources */,
-				A81BE79417F7759E00F4040F /* sunImages.atlas in Resources */,
 				2397577617F51E7F008BA6F3 /* spark.png in Resources */,
 				23149E2417F536F600B3E64F /* Sun.sks in Resources */,
 				2397575517F5103F008BA6F3 /* Images.xcassets in Resources */,
 				626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */,
 				07204B3417F771E900101F4D /* Galaxy.sks in Resources */,
+				626DEDB717F7C8F60002A34D /* sun.atlas in Resources */,
 				A81BE79017F76DF900F4040F /* Background.sks in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
@@ -440,8 +450,10 @@
 				239DF83417F7C04200F2607E /* ZoomedSolarSystem.m in Sources */,
 				239DF82B17F7BCB600F2607E /* GalaxyScene.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
+				626DEDB517F7C8940002A34D /* Planet.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
+				626DEDB217F7C5280002A34D /* Moon.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
 				239DF82E17F7BD8900F2607E /* ZoomedGalaxy.m in Sources */,
 				239DF82217F764B500F2607E /* Util.m in Sources */,

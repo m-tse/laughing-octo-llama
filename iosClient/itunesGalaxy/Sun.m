@@ -15,7 +15,7 @@
         
         // Set up animation
         NSMutableArray *sunAnimationFrames = [NSMutableArray array];
-        SKTextureAtlas *sunAnimatedAtlas = [SKTextureAtlas atlasNamed:@"sunImages"];
+        SKTextureAtlas *sunAnimatedAtlas = [SKTextureAtlas atlasNamed:@"sun"];
         int numImages = sunAnimatedAtlas.textureNames.count;
         for (int i=1; i <= numImages; i++) {
             NSString *textureName = [NSString stringWithFormat:@"sun%d", i];
@@ -34,7 +34,7 @@
         
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
-        label.text = @"MUSIC";
+        label.text = @"Sun";
         label.fontSize = 20;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];

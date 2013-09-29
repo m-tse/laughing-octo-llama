@@ -11,41 +11,49 @@
 @implementation DistantGalaxy
 
 -(id)initWithScene:(SKScene *)scene {
-
-    
     if(self = [super init]){
         self.name = @"distant_galaxy";
-        SKEmitterNode * Sun;
-        NSString *galaxyPath = [[NSBundle mainBundle] pathForResource:@"Sun" ofType:@"sks"];
-        Sun = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyPath];
-        SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        Sun.physicsBody = physBody;
-        [self addChild:Sun];
+
+        // Set up animation
+        NSMutableArray *galaxyAnimationFrames = [NSMutableArray array];
+        SKTextureAtlas *galaxyAnimatedAtlas = [SKTextureAtlas atlasNamed:@"galaxy"];
+        int numImages = galaxyAnimatedAtlas.textureNames.count;
+        for (int i=1; i <= numImages; i++) {
+            NSString *textureName = [NSString stringWithFormat:@"galaxy%d", i];
+            SKTexture *temp = [galaxyAnimatedAtlas textureNamed:textureName];
+            [galaxyAnimationFrames addObject:temp];
+        }
+        _galaxyAnimation = galaxyAnimationFrames;
+        SKTexture *temp = galaxyAnimationFrames[0];
+        _galaxy = [SKSpriteNode spriteNodeWithTexture:temp];
         
-        SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
+        SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
+        _galaxy.physicsBody = physBody;
+        
+        [self addChild:_galaxy];
+        [self animateGalaxy];
+        
+        SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
-        label.text = @"Apps";
-        label.fontSize = 30;
+        label.text = @"Galaxy";
+        label.fontSize = 20;
+        
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         label.physicsBody = physicsBody;
         physicsBody.affectedByGravity = false;
         [self addChild:label];
-        
-        
-    //    SKEmitterNode *asdf;
-        
-        
-    //    SKEmitterNode * galaxyArm;
-    //    NSString *galaxyArmPath = [[NSBundle mainBundle] pathForResource:@"GalaxyArm" ofType:@"sks"];
-    //    galaxyArm = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyArmPath];
-    //    
-    //    SKPhysicsBody * GAphysBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(3,3)];
-    //    galaxyArm.physicsBody = GAphysBody;
-    //    [self addChild:galaxyArm];
-        [scene addChild:self];
-    
-    
     }
     return self;
 }
+
+-(void)animateGalaxy
+{
+    [_galaxy runAction:[SKAction repeatActionForever:
+                      [SKAction animateWithTextures:_galaxyAnimation
+                                       timePerFrame:0.4f
+                                             resize:NO
+                                            restore:YES]] withKey:@"galaxyAnimation"];
+    return;
+}
+
 @end
