@@ -8,7 +8,7 @@
 
 #import "AbstractSpaceScene.h"
 #import "Util.h"
-int PUSH_FROM_EDGE_IMPULSE=2;
+int PUSH_FROM_EDGE_IMPULSE=4;
 //int BROWNIAN_MOTION_IMPULSE = 1;
 
 
@@ -36,6 +36,7 @@ int PUSH_FROM_EDGE_IMPULSE=2;
         CGFloat xImpulse = 0;
         CGFloat yImpulse = 0;
         CGPoint nodePositionInScene = [node.scene convertPoint:node.position fromNode:node.parent];
+        NSLog(@"%f", nodePositionInScene.y);
         if(nodePositionInScene.x<50){
             xImpulse = (CGFloat) PUSH_FROM_EDGE_IMPULSE;
         }
@@ -45,7 +46,7 @@ int PUSH_FROM_EDGE_IMPULSE=2;
         if(nodePositionInScene.y<50){
             yImpulse = (CGFloat) PUSH_FROM_EDGE_IMPULSE;
         }
-        if(nodePositionInScene.y>self.scene.size.height-50){
+        if(nodePositionInScene.y>self.scene.size.height-100){
             yImpulse = (CGFloat) -PUSH_FROM_EDGE_IMPULSE;
         }
         
@@ -58,7 +59,6 @@ int PUSH_FROM_EDGE_IMPULSE=2;
 
 -(void)applyBrownianMotionInScene:(SKScene*) scene withNodeNames:(NSString*) name withImpulseRange:(float) impulse{
     [scene enumerateChildNodesWithName:name usingBlock:^(SKNode *node, BOOL *stop) {
-        NSLog(@"Hello");
         CGFloat xImpulse = [Util randFloatFrom:-impulse to:impulse];
         CGFloat yImpulse = [Util randFloatFrom:-impulse to:impulse];
         [node.physicsBody applyImpulse:CGVectorMake(xImpulse, yImpulse)];

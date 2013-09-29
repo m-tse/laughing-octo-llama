@@ -31,7 +31,7 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
         for (NSString *mediaType in mediaTypes) {
             DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self withLabel:mediaType];
             [distantCluster setMediaType:mediaType];
-            distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.frame.size.width-50],[Util randFloatFrom:50 to:self.frame.size.height-50]);
+            distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.frame.size.width-50],[Util randFloatFrom:50 to:self.frame.size.height-200]);
         }
     }
     return self;
