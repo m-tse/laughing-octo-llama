@@ -8,14 +8,9 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface DistantSuperCluster : SKNode {
-    NSString *_clusterLabel;
-    SKLabelNode *_labelNode;
-}
+@interface DistantSuperCluster : SKNode
 
+-(id)initWithScene:(SKScene *)scene withLabel:(NSString*) label;
 @property NSString *mediaType;
-
-- (id)initWithScene:(SKScene *)scene;
-- (void)setSetClusterLabel:(NSString *)label;
 
 @end

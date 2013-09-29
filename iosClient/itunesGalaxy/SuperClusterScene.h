@@ -13,6 +13,5 @@
 
 -(id)initWithSize:(CGSize)size mediaType:(NSString *)mediaType;
 
-
 @end
 

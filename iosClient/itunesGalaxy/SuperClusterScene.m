@@ -18,8 +18,6 @@
 
 @implementation SuperClusterScene
 
-int NUMGALAXIES = 10;
-
 - (void)didMoveToView:(SKView *)view {
     UIPinchGestureRecognizer *gestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
     [[self view] addGestureRecognizer:gestureRecognizer];
@@ -73,12 +71,11 @@ int NUMGALAXIES = 10;
         while(node != NULL){
             if([[node name] isEqual:@"distant_galaxy"]){
 
-//                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
-
                 DistantGalaxy *galaxy = (DistantGalaxy *)node;
                 NSString *genreName = [galaxy myGenreName];
                 SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genreName];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
+
                 [self.scene.view presentScene:galaxyScene];
                 break;
             }
