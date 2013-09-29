@@ -9,7 +9,10 @@
 #import "MainScene.h"
 #import "SuperClusterScene.h"
 #import "DistantSuperCluster.h"
+#import "DistantGalaxy.h"
 #import "Sun.h"
+#import "Moon.h"
+#import "Planet.h"
 #import "TestScene.h"
 #import "Util.h"
 
@@ -110,10 +113,25 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        supercluster.position = CGPointMake(500, 500);
 //        [self addChild:supercluster];
         
-        // Create supercluster
+        // Create sun
         SKNode * sun = [[Sun alloc] init];
-        sun.position = CGPointMake(500, 500);
+        sun.position = CGPointMake(300, 300);
         [self addChild:sun];
+        
+        // Create moon
+        SKNode * moon = [[Moon alloc] init];
+        moon.position = CGPointMake(500, 500);
+        [self addChild:moon];
+        
+        // Create planet
+        SKNode * planet = [[Planet alloc] init];
+        planet.position = CGPointMake(700, 700);
+        [self addChild:planet];
+        
+        // Create galaxy
+        SKNode * galaxy = [[DistantGalaxy alloc] init];
+        galaxy.position = CGPointMake(200, 600);
+        [self addChild:galaxy];
         
         for(int i=0;i<NUM_GALAXIES;i++)
         {

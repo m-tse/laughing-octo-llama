@@ -8,6 +8,11 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface DistantGalaxy : SKNode
+@interface DistantGalaxy : SKNode {
+    SKSpriteNode *_galaxy;
+    NSArray *_galaxyAnimation;
+}
+
 -(id)initWithScene:(SKScene *)scene;
+
 @end
