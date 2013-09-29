@@ -9,7 +9,8 @@
 #import "iTunesGalaxyViewController.h"
 #import "MainScene.h"
 #import "SongPlanetScene.h"
-#import "iTunesRoot.h"
+#import "iTunesCurrentNode.h"
+#import "SuperClusterScene.h"
 
 @implementation iTunesGalaxyViewController
 
@@ -25,9 +26,8 @@
     // Create and configure the scene.
     SKScene * scene = [MainScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    iTunesRoot *rootNode = [iTunesRoot iTunesRootNode:scene];
-    // Present the scene.
-    [rootNode presentScene:skView];
+    [iTunesCurrentNode setCurrentScene:scene];
+    [skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate
@@ -49,5 +49,6 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
+
 
 @end

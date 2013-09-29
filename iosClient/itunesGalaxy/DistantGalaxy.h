@@ -10,9 +10,9 @@
 
 @interface DistantGalaxy : SKNode {
     SKSpriteNode *_galaxy;
-    NSArray *_galaxyAnimation;
 }
 
--(id)initWithScene:(SKScene *)scene;
+-(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName;
+-(int)getRandomNumberBetween:(int)from to:(int)to;
 
 @end

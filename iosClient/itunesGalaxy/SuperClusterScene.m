@@ -12,6 +12,7 @@
 #import "Util.h"
 #import "GalaxyScene.h"
 #import "MainScene.h"
+#import <Firebase/Firebase.h>
 
 
 @implementation SuperClusterScene
@@ -34,15 +35,35 @@ SKScene* myParent;
 
 
 
--(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent{
+-(id)initWithSize:(CGSize)size withParentScene:(SKScene*)parent mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
         myParent = parent;
-
-        for(int i=0;i<NUMGALAXIES;i++){
-            SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self];
-            CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
-            galaxy.position = position;
+        NSString *firebaseUrl;
+        if ([mediaType isEqualToString:@"Apps"]) {
+            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
+        } else if ([mediaType isEqualToString:@"Songs"]) {
+            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/songs";
+        } else if ([mediaType isEqualToString:@"TV Shows"]) {
+            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/shows";
+        } else {
+            [NSException raise:@"Invalid media type" format:@"Type: %@\n", mediaType];
         }
+        Firebase *firebase = [[Firebase alloc] initWithUrl:firebaseUrl];
+        [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+            for (id key in snapshot.value) {
+                NSString *genreName = snapshot.value[key][@"name"];
+                SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName];
+                CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
+                galaxy.position = position;
+            }
+        }];
+//        SKEmitterNode * cluster;
+//        NSString *clusterPath = [[NSBundle mainBundle] pathForResource:@"MyParticle" ofType:@"sks"];
+//        cluster = [NSKeyedUnarchiver unarchiveObjectWithFile:clusterPath];
+//        cluster.position = CGPointMake(100, 100);
+//        cluster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50, 50)];
+//        cluster.physicsBody.angularVelocity = 5;
+//        [self addChild:cluster];
         
     }
     return self;

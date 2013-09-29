@@ -8,8 +8,11 @@
 
 #import "DistantSuperCluster.h"
 #import "Util.h"
+#import "Label.h"
 
 @implementation DistantSuperCluster
+
+@synthesize mediaType;
 
 int MAXRANDOMCLUSTERS = 20;
 int MINRAMDOMCLUSTERS = 10;
@@ -32,12 +35,14 @@ int CLUSTERPHYSICSBODYSIZE = 30;
     return cluster;
 }
 
+
 -(void)setSetClusterLabel:(NSString*) label {
     _labelNode.text = label;
 }
 
--(id)initWithScene:(SKScene *)scene {
 
+-(id)initWithScene:(SKScene *)scene {
+    
     if(self = [super init]){
         self.name = @"BM_distantSuperCluster";
         SKPhysicsBody *cgPhysicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(COREPHYSICSBODYSIZE,COREPHYSICSBODYSIZE)];
@@ -51,7 +56,6 @@ int CLUSTERPHYSICSBODYSIZE = 30;
         for(int i=0;i<numClusters;i++){
             int numClusters = [clusters count];
             int targetCluster = [Util randIntFrom:0 to:numClusters];
-            NSLog(@"%d", targetCluster);
             SKNode * connectedCluster = [clusters objectAtIndex:targetCluster];
             
             SKNode * cluster = [self cluster];
@@ -67,6 +71,7 @@ int CLUSTERPHYSICSBODYSIZE = 30;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];
         }
+
 
         _labelNode = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
         _labelNode.fontSize = 20;

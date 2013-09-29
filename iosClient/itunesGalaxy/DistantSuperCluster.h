@@ -13,6 +13,8 @@
     SKLabelNode *_labelNode;
 }
 
+@property NSString *mediaType;
+
 - (id)initWithScene:(SKScene *)scene;
 - (void)setSetClusterLabel:(NSString *)label;
 

@@ -10,21 +10,16 @@
 
 @implementation DistantGalaxy
 
--(id)initWithScene:(SKScene *)scene {
+-(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName {
     if(self = [super init]){
         self.name = @"distant_galaxy";
 
-        // Set up animation
-        NSMutableArray *galaxyAnimationFrames = [NSMutableArray array];
+        // Set up galaxy
+        int galaxyNumber = [self getRandomNumberBetween:1 to:10];
+        
         SKTextureAtlas *galaxyAnimatedAtlas = [SKTextureAtlas atlasNamed:@"galaxy"];
-        int numImages = galaxyAnimatedAtlas.textureNames.count;
-        for (int i=1; i <= numImages; i++) {
-            NSString *textureName = [NSString stringWithFormat:@"galaxy%d", i];
-            SKTexture *temp = [galaxyAnimatedAtlas textureNamed:textureName];
-            [galaxyAnimationFrames addObject:temp];
-        }
-        _galaxyAnimation = galaxyAnimationFrames;
-        SKTexture *temp = galaxyAnimationFrames[0];
+        NSString *textureName = [NSString stringWithFormat:@"galaxy%d", galaxyNumber];
+        SKTexture *temp = [galaxyAnimatedAtlas textureNamed:textureName];
         _galaxy = [SKSpriteNode spriteNodeWithTexture:temp];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
@@ -35,7 +30,7 @@
         
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
-        label.text = @"Galaxy";
+        label.text = genreName;
         label.fontSize = 20;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
@@ -47,11 +42,15 @@
     return self;
 }
 
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    return (int)from + arc4random() % (to-from+1);
+}
+
 -(void)animateGalaxy
 {
     [_galaxy runAction:[SKAction repeatActionForever:
-                        [SKAction rotateByAngle:-3.14
-                                       duration:20]]];
+                        [SKAction rotateByAngle:([self getRandomNumberBetween:0 to:3] - 1.5)
+                                       duration:25]]];
     return;
 }
 

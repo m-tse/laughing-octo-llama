@@ -14,6 +14,7 @@
 #import "Moon.h"
 #import "Planet.h"
 #import "SongPlanetScene.h"
+#import "iTunesCurrentNode.h"
 #import "Util.h"
 
 @implementation MainScene
@@ -63,23 +64,8 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
     label.fontSize = 30;
     SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
     label.physicsBody = physicsBody;
-    physicsBody.affectedByGravity = false;
     return label;
 }
-
-//- (SKEmitterNode *)sunEmitter
-//{
-//    SKEmitterNode * galaxySpawner;
-//    NSString *galaxyPath = [[NSBundle mainBundle] pathForResource:@"Sun" ofType:@"sks"];
-//    galaxySpawner = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyPath];
-//
-//    SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-//    galaxySpawner.physicsBody = physBody;
-//    
-//    physBody.affectedByGravity = false;
-//    
-//    return galaxySpawner;
-//}
 
 
 -(SKLabelNode *)createTestSceneButton {
@@ -123,42 +109,13 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 //        galaxy.position = CGPointMake(200, 600);
 //        [self addChild:galaxy];
         
-        for(int i=0;i<NUM_GALAXIES;i++)
-        {
-            DistantSuperCluster * distantCluster = [[DistantSuperCluster alloc] initWithScene:self];
-            [distantCluster setSetClusterLabel:@"Application"];
-            distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.scene.frame.size.width-50],[Util randFloatFrom:50 to:self.scene.frame.size.height-50]);
-            
-//            CGPoint position = CGPointMake(skRand(50, 900), skRand(50,900));
-//            SKEmitterNode *galaxySpawner = [self galaxy];
-//            galaxySpawner.position = position;
-//            [self addChild:galaxySpawner];
-//            SKLabelNode *galaxyLabel = [self galaxyLabel];
-//            galaxyLabel.position = CGPointMake(position.x, position.y-100);
-//            [self addChild:galaxyLabel];
-//            
-//            SKPhysicsJointLimit *fixedJoint = [SKPhysicsJointLimit jointWithBodyA:galaxySpawner.physicsBody bodyB:galaxyLabel.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
-//            fixedJoint.maxLength = 100;
-//            [self.physicsWorld addJoint:fixedJoint];
+        NSArray *mediaTypes = @[@"Apps", @"Songs", @"TV Shows"];
+        for (NSString *mediaType in mediaTypes) {
+            DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self];
+            [distantCluster setSetClusterLabel:mediaType];
+            [distantCluster setMediaType:mediaType];
+            distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.frame.size.width-50],[Util randFloatFrom:50 to:self.frame.size.height-50]);
         }
-        
-        
-
-        
-
-        
-
-//        SKLabelNode *testLabel = [self createTestSceneButton];
-//        testLabel.position = CGPointMake(400, 400);
-//        [self addChild:testLabel];
-        
-//        SKEmitterNode *sunEmitter = [self sunEmitter];
-//        sunEmitter.position = CGPointMake(150 , 150);
-//        [self addChild:sunEmitter];
-//        NSLog(self.children);
-
-        
-        
     }
     return self;
 }
@@ -175,33 +132,26 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-        
+    
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         SKPhysicsBody* body = [self.physicsWorld bodyAtPoint:location];
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"BM_distantSuperCluster"]){
-                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParentScene:self];
-//                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParent:self];
+                DistantSuperCluster *superCluster = (DistantSuperCluster *) node;
+                NSString *name = [superCluster mediaType];
+                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParentScene:self mediaType:name];
+                //                SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size withParent:self];
                 clusterScene.scaleMode = SKSceneScaleModeAspectFill;
-                
 
-                [self.scene.view presentScene:clusterScene];
+                [iTunesCurrentNode updateCurrentScene:clusterScene];
+                [self.view presentScene:clusterScene];
                 break;
             }
             node = node.parent;
             
         }
-
-
-//        if ([[node name] isEqual:@"testScene"]) {
-//            SKScene *testScene = [[TestScene alloc] initWithSize:self.size];
-//            testScene.scaleMode = SKSceneScaleModeAspectFit;
-//            [self.scene.view presentScene:testScene transition:[SKTransition fadeWithDuration:1.0]];
-//            return;
-//        }
-
     }
 }
 

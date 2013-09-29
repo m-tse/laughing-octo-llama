@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
-		07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3617F7EDF500101F4D /* iTunesNode.m */; };
-		07204B3A17F7FE1600101F4D /* iTunesRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3917F7FE1600101F4D /* iTunesRoot.m */; };
+		07204B3A17F7FE1600101F4D /* iTunesCurrentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3917F7FE1600101F4D /* iTunesCurrentNode.m */; };
 		073F811017F6A637008A9EE4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Song.m */; };
 		073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F811B17F72DB2008A9EE4 /* SongPlanetScene.m */; };
 		073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 073F811D17F73F86008A9EE4 /* choose-custom-music.png */; };
@@ -47,6 +46,8 @@
 		239DF82E17F7BD8900F2607E /* ZoomedGalaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF82D17F7BD8900F2607E /* ZoomedGalaxy.m */; };
 		239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83017F7BFF200F2607E /* SolarSystemScene.m */; };
 		239DF83417F7C04200F2607E /* ZoomedSolarSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */; };
+		239DF83917F7EF3200F2607E /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83817F7EF3200F2607E /* Label.m */; };
+		239DF83C17F7FB0C00F2607E /* ParticleSun.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83B17F7FB0C00F2607E /* ParticleSun.m */; };
 		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		626DEDAB17F7C3960002A34D /* planet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAA17F7C3960002A34D /* planet.atlas */; };
 		626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAC17F7C3AE0002A34D /* moon.atlas */; };
@@ -71,10 +72,8 @@
 
 /* Begin PBXFileReference section */
 		07204B3317F771E900101F4D /* Galaxy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Galaxy.sks; sourceTree = "<group>"; };
-		07204B3517F7EDF500101F4D /* iTunesNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesNode.h; sourceTree = "<group>"; };
-		07204B3617F7EDF500101F4D /* iTunesNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNode.m; sourceTree = "<group>"; };
-		07204B3817F7FE1600101F4D /* iTunesRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesRoot.h; sourceTree = "<group>"; };
-		07204B3917F7FE1600101F4D /* iTunesRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesRoot.m; sourceTree = "<group>"; };
+		07204B3817F7FE1600101F4D /* iTunesCurrentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesCurrentNode.h; sourceTree = "<group>"; };
+		07204B3917F7FE1600101F4D /* iTunesCurrentNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesCurrentNode.m; sourceTree = "<group>"; };
 		073F810E17F6A637008A9EE4 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		073F810F17F6A637008A9EE4 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		073F811A17F72DB2008A9EE4 /* SongPlanetScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongPlanetScene.h; path = ../SongPlanetScene.h; sourceTree = "<group>"; };
@@ -129,6 +128,10 @@
 		239DF83017F7BFF200F2607E /* SolarSystemScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolarSystemScene.m; sourceTree = "<group>"; };
 		239DF83217F7C04200F2607E /* ZoomedSolarSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedSolarSystem.h; sourceTree = "<group>"; };
 		239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedSolarSystem.m; sourceTree = "<group>"; };
+		239DF83717F7EF3200F2607E /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		239DF83817F7EF3200F2607E /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
+		239DF83A17F7FB0C00F2607E /* ParticleSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSun.h; sourceTree = "<group>"; };
+		239DF83B17F7FB0C00F2607E /* ParticleSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleSun.m; sourceTree = "<group>"; };
 		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		626DEDAA17F7C3960002A34D /* planet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = planet.atlas; sourceTree = "<group>"; };
 		626DEDAC17F7C3AE0002A34D /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
@@ -282,10 +285,8 @@
 				23149E3217F629F600B3E64F /* Scenes */,
 				2397575417F5103F008BA6F3 /* Images.xcassets */,
 				2397573E17F5103F008BA6F3 /* Supporting Files */,
-				07204B3517F7EDF500101F4D /* iTunesNode.h */,
-				07204B3617F7EDF500101F4D /* iTunesNode.m */,
-				07204B3817F7FE1600101F4D /* iTunesRoot.h */,
-				07204B3917F7FE1600101F4D /* iTunesRoot.m */,
+				07204B3817F7FE1600101F4D /* iTunesCurrentNode.h */,
+				07204B3917F7FE1600101F4D /* iTunesCurrentNode.m */,
 			);
 			path = itunesGalaxy;
 			sourceTree = "<group>";
@@ -345,6 +346,10 @@
 				626DEDB117F7C5280002A34D /* Moon.m */,
 				A81BE79517F77E9300F4040F /* Sun.h */,
 				A81BE79617F77E9300F4040F /* Sun.m */,
+				239DF83717F7EF3200F2607E /* Label.h */,
+				239DF83817F7EF3200F2607E /* Label.m */,
+				239DF83A17F7FB0C00F2607E /* ParticleSun.h */,
+				239DF83B17F7FB0C00F2607E /* ParticleSun.m */,
 			);
 			name = Individuals;
 			sourceTree = "<group>";
@@ -469,6 +474,8 @@
 				239DF82B17F7BCB600F2607E /* GalaxyScene.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
 				626DEDB517F7C8940002A34D /* Planet.m in Sources */,
+				239DF83C17F7FB0C00F2607E /* ParticleSun.m in Sources */,
+				239DF83917F7EF3200F2607E /* Label.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
 				626DEDB217F7C5280002A34D /* Moon.m in Sources */,
@@ -479,8 +486,7 @@
 				23149E3517F62B1A00B3E64F /* DistantGalaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
-				07204B3717F7EDF500101F4D /* iTunesNode.m in Sources */,
-				07204B3A17F7FE1600101F4D /* iTunesRoot.m in Sources */,
+				07204B3A17F7FE1600101F4D /* iTunesCurrentNode.m in Sources */,
 				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
 				239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */,
