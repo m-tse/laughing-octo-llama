@@ -49,6 +49,18 @@
 		239DF83917F7EF3200F2607E /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83817F7EF3200F2607E /* Label.m */; };
 		239DF83C17F7FB0C00F2607E /* ParticleSun.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83B17F7FB0C00F2607E /* ParticleSun.m */; };
 		6213F39117F8E20400483D3A /* galaxy_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39017F8E20400483D3A /* galaxy_large.png */; };
+		6213F39417F8E90E00483D3A /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6213F39217F8E90E00483D3A /* ATTSpeechKit.a */; };
+		6213F39D17F8E96500483D3A /* SimpleSpeechViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39617F8E96500483D3A /* SimpleSpeechViewController.xib */; };
+		6213F39E17F8E96500483D3A /* SimpleSpeechViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39717F8E96500483D3A /* SimpleSpeechViewController-iPad.xib */; };
+		6213F39F17F8E96500483D3A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39817F8E96500483D3A /* MainWindow.xib */; };
+		6213F3A017F8E96500483D3A /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39917F8E96500483D3A /* MainWindow-iPad.xib */; };
+		6213F3A117F8E96500483D3A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39A17F8E96500483D3A /* Default.png */; };
+		6213F3A217F8E96500483D3A /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39B17F8E96500483D3A /* Default-Portrait.png */; };
+		6213F3A317F8E96500483D3A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6213F39C17F8E96500483D3A /* Default-568h@2x.png */; };
+		6213F3AE17F8E99500483D3A /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6213F3A617F8E99500483D3A /* SpeechConfig.m */; };
+		6213F3AF17F8E99500483D3A /* SimpleSpeechAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6213F3A817F8E99500483D3A /* SimpleSpeechAppDelegate.m */; };
+		6213F3B017F8E99500483D3A /* SimpleSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6213F3AA17F8E99500483D3A /* SimpleSpeechViewController.m */; };
+		6213F3B117F8E99500483D3A /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 6213F3AC17F8E99500483D3A /* SpeechAuth.m */; };
 		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		626DEDAB17F7C3960002A34D /* planet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAA17F7C3960002A34D /* planet.atlas */; };
 		626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAC17F7C3AE0002A34D /* moon.atlas */; };
@@ -144,6 +156,24 @@
 		239DF83A17F7FB0C00F2607E /* ParticleSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSun.h; sourceTree = "<group>"; };
 		239DF83B17F7FB0C00F2607E /* ParticleSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleSun.m; sourceTree = "<group>"; };
 		6213F39017F8E20400483D3A /* galaxy_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galaxy_large.png; sourceTree = "<group>"; };
+		6213F39217F8E90E00483D3A /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ATTSpeechKit.a; sourceTree = "<group>"; };
+		6213F39317F8E90E00483D3A /* ATTSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTSpeechKit.h; sourceTree = "<group>"; };
+		6213F39617F8E96500483D3A /* SimpleSpeechViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleSpeechViewController.xib; sourceTree = "<group>"; };
+		6213F39717F8E96500483D3A /* SimpleSpeechViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SimpleSpeechViewController-iPad.xib"; sourceTree = "<group>"; };
+		6213F39817F8E96500483D3A /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		6213F39917F8E96500483D3A /* MainWindow-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		6213F39A17F8E96500483D3A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6213F39B17F8E96500483D3A /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		6213F39C17F8E96500483D3A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6213F3A517F8E99500483D3A /* SpeechConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechConfig.h; sourceTree = "<group>"; };
+		6213F3A617F8E99500483D3A /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechConfig.m; sourceTree = "<group>"; };
+		6213F3A717F8E99500483D3A /* SimpleSpeechAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSpeechAppDelegate.h; sourceTree = "<group>"; };
+		6213F3A817F8E99500483D3A /* SimpleSpeechAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSpeechAppDelegate.m; sourceTree = "<group>"; };
+		6213F3A917F8E99500483D3A /* SimpleSpeechViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSpeechViewController.h; sourceTree = "<group>"; };
+		6213F3AA17F8E99500483D3A /* SimpleSpeechViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSpeechViewController.m; sourceTree = "<group>"; };
+		6213F3AB17F8E99500483D3A /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
+		6213F3AC17F8E99500483D3A /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
+		6213F3AD17F8E99500483D3A /* SimpleSpeech_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSpeech_Prefix.pch; sourceTree = "<group>"; };
 		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		626DEDAA17F7C3960002A34D /* planet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = planet.atlas; sourceTree = "<group>"; };
 		626DEDAC17F7C3AE0002A34D /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
@@ -179,6 +209,7 @@
 				073F812617F7425C008A9EE4 /* Security.framework in Frameworks */,
 				073F812417F74256008A9EE4 /* CFNetwork.framework in Frameworks */,
 				073F812217F7424E008A9EE4 /* libicucore.dylib in Frameworks */,
+				6213F39417F8E90E00483D3A /* ATTSpeechKit.a in Frameworks */,
 				073F812017F74229008A9EE4 /* Firebase.framework in Frameworks */,
 				2397573817F5103F008BA6F3 /* CoreGraphics.framework in Frameworks */,
 				2397573A17F5103F008BA6F3 /* UIKit.framework in Frameworks */,
@@ -252,13 +283,16 @@
 		2397572917F5103F008BA6F3 = {
 			isa = PBXGroup;
 			children = (
-				6213F39017F8E20400483D3A /* galaxy_large.png */,
+				6213F39517F8E91400483D3A /* ATTSpeechKit */,
 				62D6638717F8BAC2003567C3 /* iTunes Galaxy Icons */,
 				626DEDB617F7C8F60002A34D /* sun.atlas */,
 				626DEDAE17F7C3D10002A34D /* galaxy.atlas */,
 				626DEDAC17F7C3AE0002A34D /* moon.atlas */,
 				626DEDAA17F7C3960002A34D /* planet.atlas */,
 				622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */,
+				6213F3B217F8E9A300483D3A /* SimpleSpeechToText */,
+				6213F3A417F8E96E00483D3A /* ATTResources */,
+				6213F39017F8E20400483D3A /* galaxy_large.png */,
 				23149E3817F62D0500B3E64F /* Particles */,
 				2397577417F51E7F008BA6F3 /* spark.png */,
 				073F811D17F73F86008A9EE4 /* choose-custom-music.png */,
@@ -378,6 +412,45 @@
 			name = Individuals;
 			sourceTree = "<group>";
 		};
+		6213F39517F8E91400483D3A /* ATTSpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				6213F39217F8E90E00483D3A /* ATTSpeechKit.a */,
+				6213F39317F8E90E00483D3A /* ATTSpeechKit.h */,
+			);
+			name = ATTSpeechKit;
+			sourceTree = "<group>";
+		};
+		6213F3A417F8E96E00483D3A /* ATTResources */ = {
+			isa = PBXGroup;
+			children = (
+				6213F39617F8E96500483D3A /* SimpleSpeechViewController.xib */,
+				6213F39717F8E96500483D3A /* SimpleSpeechViewController-iPad.xib */,
+				6213F39817F8E96500483D3A /* MainWindow.xib */,
+				6213F39917F8E96500483D3A /* MainWindow-iPad.xib */,
+				6213F39A17F8E96500483D3A /* Default.png */,
+				6213F39B17F8E96500483D3A /* Default-Portrait.png */,
+				6213F39C17F8E96500483D3A /* Default-568h@2x.png */,
+			);
+			name = ATTResources;
+			sourceTree = "<group>";
+		};
+		6213F3B217F8E9A300483D3A /* SimpleSpeechToText */ = {
+			isa = PBXGroup;
+			children = (
+				6213F3A517F8E99500483D3A /* SpeechConfig.h */,
+				6213F3A617F8E99500483D3A /* SpeechConfig.m */,
+				6213F3A717F8E99500483D3A /* SimpleSpeechAppDelegate.h */,
+				6213F3A817F8E99500483D3A /* SimpleSpeechAppDelegate.m */,
+				6213F3A917F8E99500483D3A /* SimpleSpeechViewController.h */,
+				6213F3AA17F8E99500483D3A /* SimpleSpeechViewController.m */,
+				6213F3AB17F8E99500483D3A /* SpeechAuth.h */,
+				6213F3AC17F8E99500483D3A /* SpeechAuth.m */,
+				6213F3AD17F8E99500483D3A /* SimpleSpeech_Prefix.pch */,
+			);
+			name = SimpleSpeechToText;
+			sourceTree = "<group>";
+		};
 		62D6638717F8BAC2003567C3 /* iTunes Galaxy Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,11 +548,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6213F39D17F8E96500483D3A /* SimpleSpeechViewController.xib in Resources */,
 				62D6639317F8BAC2003567C3 /* 152.png in Resources */,
 				2397574217F5103F008BA6F3 /* InfoPlist.strings in Resources */,
+				6213F3A117F8E96500483D3A /* Default.png in Resources */,
+				6213F39E17F8E96500483D3A /* SimpleSpeechViewController-iPad.xib in Resources */,
 				2397577517F51E7F008BA6F3 /* MyParticle.sks in Resources */,
+				6213F3A017F8E96500483D3A /* MainWindow-iPad.xib in Resources */,
 				23149E3A17F7603600B3E64F /* DistantCluster.sks in Resources */,
 				622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */,
+				6213F3A217F8E96500483D3A /* Default-Portrait.png in Resources */,
 				62D6639217F8BAC2003567C3 /* 1024x768.png in Resources */,
 				23149E3717F62D0000B3E64F /* GalaxyArm.sks in Resources */,
 				626DEDAF17F7C3D10002A34D /* galaxy.atlas in Resources */,
@@ -495,10 +573,12 @@
 				2397575517F5103F008BA6F3 /* Images.xcassets in Resources */,
 				626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */,
 				07204B3417F771E900101F4D /* Galaxy.sks in Resources */,
+				6213F3A317F8E96500483D3A /* Default-568h@2x.png in Resources */,
 				62D6639617F8BAC2003567C3 /* 29.png in Resources */,
 				626DEDB717F7C8F60002A34D /* sun.atlas in Resources */,
 				A81BE79017F76DF900F4040F /* Background.sks in Resources */,
 				6213F39117F8E20400483D3A /* galaxy_large.png in Resources */,
+				6213F39F17F8E96500483D3A /* MainWindow.xib in Resources */,
 				62D6639517F8BAC2003567C3 /* 2048x1536.png in Resources */,
 				2397574B17F5103F008BA6F3 /* Main.storyboard in Resources */,
 				073F811E17F73F86008A9EE4 /* choose-custom-music.png in Resources */,
@@ -523,6 +603,7 @@
 				A81BE79717F77E9300F4040F /* Sun.m in Sources */,
 				2397574E17F5103F008BA6F3 /* iTunesGalaxyViewController.m in Sources */,
 				239DF83417F7C04200F2607E /* ZoomedSolarSystem.m in Sources */,
+				6213F3B117F8E99500483D3A /* SpeechAuth.m in Sources */,
 				239DF82B17F7BCB600F2607E /* GalaxyScene.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
 				626DEDB517F7C8940002A34D /* Planet.m in Sources */,
@@ -530,6 +611,8 @@
 				239DF83917F7EF3200F2607E /* Label.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,
 				2397574817F5103F008BA6F3 /* iTunesGalaxyAppDelegate.m in Sources */,
+				6213F3AE17F8E99500483D3A /* SpeechConfig.m in Sources */,
+				6213F3B017F8E99500483D3A /* SimpleSpeechViewController.m in Sources */,
 				626DEDB217F7C5280002A34D /* Moon.m in Sources */,
 				23149E3017F6281200B3E64F /* DistantSuperCluster.m in Sources */,
 				239DF82E17F7BD8900F2607E /* ZoomedGalaxy.m in Sources */,
@@ -537,6 +620,7 @@
 				2397575117F5103F008BA6F3 /* MainScene.m in Sources */,
 				23149E3517F62B1A00B3E64F /* DistantGalaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
+				6213F3AF17F8E99500483D3A /* SimpleSpeechAppDelegate.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
 				07204B3A17F7FE1600101F4D /* iTunesCurrentNode.m in Sources */,
 				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
