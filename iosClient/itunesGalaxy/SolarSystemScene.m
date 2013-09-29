@@ -13,7 +13,7 @@
 
 -(id)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
-        
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         //        UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
         //        [self.view addGestureRecognizer:(pinchRecognizer)];

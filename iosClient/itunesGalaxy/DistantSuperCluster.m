@@ -49,6 +49,7 @@ int CLUSTERPHYSICSBODYSIZE = 30;
         self.physicsBody=cgPhysicsBody;
         
         [scene addChild:self];
+        
         int numClusters = [Util randIntFrom:MINRAMDOMCLUSTERS to:MAXRANDOMCLUSTERS];
         for(int i=0;i<numClusters;i++){
             int numClusters = [clusters count];

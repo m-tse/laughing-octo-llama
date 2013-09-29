@@ -25,6 +25,8 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        
         NSArray *mediaTypes = @[@"Apps", @"Songs", @"TV Shows"];
         for (NSString *mediaType in mediaTypes) {
             DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self withLabel:mediaType];

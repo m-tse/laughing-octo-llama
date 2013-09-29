@@ -18,7 +18,7 @@
         self.name = @"distant_galaxy";
 
         // Set up galaxy
-        int galaxyType = [Util randIntFrom:0 to:10];
+        int galaxyType = [Util randIntFrom:1 to:10];
         
         SKTextureAtlas *galaxyAnimatedAtlas = [SKTextureAtlas atlasNamed:@"galaxy"];
         NSString *textureName = [NSString stringWithFormat:@"galaxy%d", galaxyType];
@@ -28,13 +28,8 @@
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _galaxy.physicsBody = physBody;
         
-
-        int randomNum = [Util randIntFrom:3 to:5];
-        randomNum = randomNum/15.0;
-        
-        _galaxy.xScale = 0.1;
-        _galaxy.yScale = 0.1;
-
+        _galaxy.xScale = 0.4;
+        _galaxy.yScale = 0.4;
         
         [self addChild:_galaxy];
         [self animateGalaxy];
@@ -43,7 +38,9 @@
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
         label.text = genreName;
-        label.fontSize = 5;
+        label.fontSize = 10;
+        label.horizontalAlignmentMode = 0;
+        label.verticalAlignmentMode = 0;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_galaxy.size.width * 0.6];
         label.physicsBody = physicsBody;

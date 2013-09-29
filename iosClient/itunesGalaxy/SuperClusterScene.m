@@ -34,6 +34,8 @@
 
 -(id)initWithSize:(CGSize)size mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        
         NSString *firebaseUrl;
         if ([mediaType isEqualToString:@"Apps"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
