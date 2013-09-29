@@ -22,39 +22,37 @@
             SKTexture *temp = [planetAnimatedAtlas textureNamed:textureName];
             [planetAnimationFrames addObject:temp];
         }
-        _planetAnimation = planetAnimationFrames;
+        
+        _customAction = [SKAction repeatActionForever:
+                         [SKAction animateWithTextures:planetAnimationFrames
+                                          timePerFrame:0.1f
+                                                resize:NO
+                                               restore:YES]];
+        
         SKTexture *temp = planetAnimationFrames[0];
-        _planet = [SKSpriteNode spriteNodeWithTexture:temp];
+        _body = [SKSpriteNode spriteNodeWithTexture:temp];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        _planet.physicsBody = physBody;
-        _planet.xScale = 0.1;
-        _planet.yScale = 0.1;
+        _body.physicsBody = physBody;
         
-        [self addChild:_planet];
-        [self animatePlanet];
+        // Planet Size
+        _body.xScale = 0.1;
+        _body.yScale = 0.1;
         
-        SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
-        label.name = @"label_name";
-        label.text = @"planet";
-        label.fontSize = 20;
+        [self addChild:_body];
+        [self runCustomAction];
+        
+        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
+        _labelNode.name = @"label_name";
+        _labelNode.text = @"planet";
+        _labelNode.fontSize = 20;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        label.physicsBody = physicsBody;
+        _labelNode.physicsBody = physicsBody;
         physicsBody.affectedByGravity = false;
-        [self addChild:label];
+        [self addChild:_labelNode];
     }
     return self;
-}
-
--(void)animatePlanet
-{
-    [_planet runAction:[SKAction repeatActionForever:
-                      [SKAction animateWithTextures:_planetAnimation
-                                       timePerFrame:0.1f
-                                             resize:NO
-                                            restore:YES]] withKey:@"planetAnimation"];
-    return;
 }
 
 @end

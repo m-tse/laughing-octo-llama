@@ -7,10 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "AbstractBody.h"
 
-@interface Moon : SKNode {
-    SKSpriteNode *_moon;
-    NSArray *_moonAnimation;
-}
+@interface Moon : AbstractBody
 
 @end

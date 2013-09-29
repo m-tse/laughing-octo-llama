@@ -125,8 +125,10 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
         
         for(int i=0;i<NUM_GALAXIES;i++)
         {
-            SKNode * distantCluster = [[DistantSuperCluster alloc] initWithScene:self];
+            DistantSuperCluster * distantCluster = [[DistantSuperCluster alloc] initWithScene:self];
+            [distantCluster setSetClusterLabel:@"Application"];
             distantCluster.position = CGPointMake([Util randFloatFrom:50 to:self.scene.frame.size.width-50],[Util randFloatFrom:50 to:self.scene.frame.size.height-50]);
+            
 //            CGPoint position = CGPointMake(skRand(50, 900), skRand(50,900));
 //            SKEmitterNode *galaxySpawner = [self galaxy];
 //            galaxySpawner.position = position;
