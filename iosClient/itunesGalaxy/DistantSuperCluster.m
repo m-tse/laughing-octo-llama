@@ -57,13 +57,14 @@ int CLUSTERPHYSICSBODYSIZE = 15;
             SKNode * connectedCluster = [clusters objectAtIndex:targetCluster];
             
             SKNode * cluster = [self cluster];
-            SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(CLUSTERPHYSICSBODYSIZE,CLUSTERPHYSICSBODYSIZE)];
+            CGFloat randFloat = [Util randFloatFrom:5 to:30];
+            SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(randFloat,randFloat)];
             cluster.physicsBody = physBody;
             [connectedCluster addChild:cluster];
             cluster.position = CGPointMake(0, 0);
             
-            SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0,0) anchorB:CGPointMake(0,0)];
-            spring.frequency = 0.1;
+            SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
+            spring.frequency = 2;
             spring.damping = 50;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];
