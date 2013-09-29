@@ -75,7 +75,7 @@
 
                 DistantGalaxy *galaxy = (DistantGalaxy *)node;
                 NSString *genreName = [galaxy myGenreName];
-                SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genreName];
+                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
 
                 [self.scene.view presentScene:galaxyScene];

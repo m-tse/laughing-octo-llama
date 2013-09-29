@@ -11,6 +11,7 @@
 #import "SuperClusterScene.h"
 #import "iTunesCurrentNode.h"
 #import "SolarSystemScene.h"
+#import "DistantSolarSystem.h"
 
 @implementation GalaxyScene
 
@@ -32,9 +33,11 @@
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
         SKNode* galaxy = [[ZoomedGalaxy alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-50);
         galaxy.position = position;
+     
         
+        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] initWithScene:self.scene];
     }
     return self;
 }
@@ -62,4 +65,15 @@
         
     }
 }
+
+-(void)update:(CFTimeInterval)currentTime {
+    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
+        if([node.name  isEqual: @"ZoomedGalaxy"]){
+            node.physicsBody.angularVelocity = -0.05;
+
+        }
+    }];
+
+}
+
 @end

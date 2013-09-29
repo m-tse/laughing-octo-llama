@@ -48,6 +48,7 @@
 		239DF83417F7C04200F2607E /* ZoomedSolarSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */; };
 		239DF83917F7EF3200F2607E /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83817F7EF3200F2607E /* Label.m */; };
 		239DF83C17F7FB0C00F2607E /* ParticleSun.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DF83B17F7FB0C00F2607E /* ParticleSun.m */; };
+		23B2046417F8E4AE009DFFB9 /* DistantSolarSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B2046317F8E4AE009DFFB9 /* DistantSolarSystem.m */; };
 		622B27F117F7A3BE0012FBC7 /* bebasneue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */; };
 		626DEDAB17F7C3960002A34D /* planet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAA17F7C3960002A34D /* planet.atlas */; };
 		626DEDAD17F7C3AE0002A34D /* moon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDAC17F7C3AE0002A34D /* moon.atlas */; };
@@ -142,6 +143,8 @@
 		239DF83817F7EF3200F2607E /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
 		239DF83A17F7FB0C00F2607E /* ParticleSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSun.h; sourceTree = "<group>"; };
 		239DF83B17F7FB0C00F2607E /* ParticleSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleSun.m; sourceTree = "<group>"; };
+		23B2046217F8E4AE009DFFB9 /* DistantSolarSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistantSolarSystem.h; sourceTree = "<group>"; };
+		23B2046317F8E4AE009DFFB9 /* DistantSolarSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistantSolarSystem.m; sourceTree = "<group>"; };
 		622B27F017F7A3BE0012FBC7 /* bebasneue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bebasneue.ttf; sourceTree = "<group>"; };
 		626DEDAA17F7C3960002A34D /* planet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = planet.atlas; sourceTree = "<group>"; };
 		626DEDAC17F7C3AE0002A34D /* moon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moon.atlas; sourceTree = "<group>"; };
@@ -352,6 +355,8 @@
 				239DF82D17F7BD8900F2607E /* ZoomedGalaxy.m */,
 				239DF83217F7C04200F2607E /* ZoomedSolarSystem.h */,
 				239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */,
+				23B2046217F8E4AE009DFFB9 /* DistantSolarSystem.h */,
+				23B2046317F8E4AE009DFFB9 /* DistantSolarSystem.m */,
 			);
 			name = Systems;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				239DF82B17F7BCB600F2607E /* GalaxyScene.m in Sources */,
 				23149E2A17F61F7800B3E64F /* SuperClusterScene.m in Sources */,
 				626DEDB517F7C8940002A34D /* Planet.m in Sources */,
+				23B2046417F8E4AE009DFFB9 /* DistantSolarSystem.m in Sources */,
 				239DF83C17F7FB0C00F2607E /* ParticleSun.m in Sources */,
 				239DF83917F7EF3200F2607E /* Label.m in Sources */,
 				2397574417F5103F008BA6F3 /* main.m in Sources */,

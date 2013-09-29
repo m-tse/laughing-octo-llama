@@ -9,8 +9,6 @@
 #import "AbstractSpaceScene.h"
 #import "Util.h"
 int PUSH_FROM_EDGE_IMPULSE=4;
-//int BROWNIAN_MOTION_IMPULSE = 1;
-
 
 @implementation AbstractSpaceScene
 -(id)initWithSize:(CGSize) size {
@@ -36,7 +34,6 @@ int PUSH_FROM_EDGE_IMPULSE=4;
         CGFloat xImpulse = 0;
         CGFloat yImpulse = 0;
         CGPoint nodePositionInScene = [node.scene convertPoint:node.position fromNode:node.parent];
-//        NSLog(@"%f", nodePositionInScene.y);
         if(nodePositionInScene.x<50){
             xImpulse = (CGFloat) PUSH_FROM_EDGE_IMPULSE;
         }
@@ -52,8 +49,6 @@ int PUSH_FROM_EDGE_IMPULSE=4;
         
         [node.physicsBody applyImpulse:CGVectorMake(xImpulse,yImpulse)];
     }];
-    
-    
 
 }
 
