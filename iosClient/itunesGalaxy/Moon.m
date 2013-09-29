@@ -22,40 +22,34 @@
             SKTexture *temp = [moonAnimatedAtlas textureNamed:textureName];
             [moonAnimationFrames addObject:temp];
         }
-        _moonAnimation = moonAnimationFrames;
+        
+        _customAction = [SKAction repeatActionForever:
+                         [SKAction animateWithTextures:moonAnimationFrames
+                                          timePerFrame:0.2f
+                                                resize:NO
+                                               restore:YES]];
         SKTexture *temp = moonAnimationFrames[0];
-        _moon = [SKSpriteNode spriteNodeWithTexture:temp];
+        _body = [SKSpriteNode spriteNodeWithTexture:temp];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        _moon.physicsBody = physBody;
-        _moon.xScale = 0.075;
-        _moon.yScale = 0.075;
+        _body.physicsBody = physBody;
+        _body.xScale = 0.075;
+        _body.yScale = 0.075;
         
-        [self addChild:_moon];
-        [self animateMoon];
+        [self addChild:_body];
+        [self runCustomAction];
         
-        SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
-        label.name = @"label_name";
-        label.text = @"Moon";
-        label.fontSize = 20;
+        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
+        _labelNode.name = @"label_name";
+        _labelNode.text = @"Moon";
+        _labelNode.fontSize = 20;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        label.physicsBody = physicsBody;
+        _labelNode.physicsBody = physicsBody;
         physicsBody.affectedByGravity = false;
-        [self addChild:label];
+        [self addChild:_labelNode];
     }
     return self;
 }
-
--(void)animateMoon
-{
-    [_moon runAction:[SKAction repeatActionForever:
-                     [SKAction animateWithTextures:_moonAnimation
-                                      timePerFrame:0.2f
-                                            resize:NO
-                                           restore:YES]] withKey:@"moonAnimation"];
-    return;
-}
-
 
 @end

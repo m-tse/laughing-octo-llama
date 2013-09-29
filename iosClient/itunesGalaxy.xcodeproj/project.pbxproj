@@ -52,6 +52,7 @@
 		626DEDB217F7C5280002A34D /* Moon.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DEDB117F7C5280002A34D /* Moon.m */; };
 		626DEDB517F7C8940002A34D /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DEDB417F7C8940002A34D /* Planet.m */; };
 		626DEDB717F7C8F60002A34D /* sun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 626DEDB617F7C8F60002A34D /* sun.atlas */; };
+		62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D0446B17F7EDA5001546B6 /* AbstractBody.m */; };
 		A81BE79017F76DF900F4040F /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = A81BE78F17F76DF800F4040F /* Background.sks */; };
 		A81BE79717F77E9300F4040F /* Sun.m in Sources */ = {isa = PBXBuildFile; fileRef = A81BE79617F77E9300F4040F /* Sun.m */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,8 @@
 		626DEDB317F7C8940002A34D /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Planet.h; path = iTunesGalaxy/Planet.h; sourceTree = SOURCE_ROOT; };
 		626DEDB417F7C8940002A34D /* Planet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Planet.m; path = iTunesGalaxy/Planet.m; sourceTree = SOURCE_ROOT; };
 		626DEDB617F7C8F60002A34D /* sun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sun.atlas; sourceTree = "<group>"; };
+		62D0446A17F7EDA5001546B6 /* AbstractBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractBody.h; path = iTunesGalaxy/AbstractBody.h; sourceTree = SOURCE_ROOT; };
+		62D0446B17F7EDA5001546B6 /* AbstractBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractBody.m; path = iTunesGalaxy/AbstractBody.m; sourceTree = SOURCE_ROOT; };
 		A81BE78F17F76DF800F4040F /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		A81BE79517F77E9300F4040F /* Sun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sun.h; sourceTree = "<group>"; };
 		A81BE79617F77E9300F4040F /* Sun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sun.m; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 		239DF83617F7C0D800F2607E /* Individuals */ = {
 			isa = PBXGroup;
 			children = (
+				62D0446A17F7EDA5001546B6 /* AbstractBody.h */,
+				62D0446B17F7EDA5001546B6 /* AbstractBody.m */,
 				626DEDB317F7C8940002A34D /* Planet.h */,
 				626DEDB417F7C8940002A34D /* Planet.m */,
 				626DEDB017F7C5280002A34D /* Moon.h */,
@@ -461,6 +466,7 @@
 				23149E3517F62B1A00B3E64F /* DistantGalaxy.m in Sources */,
 				073F811017F6A637008A9EE4 /* Song.m in Sources */,
 				239DF82517F7858400F2607E /* AbstractSpaceScene.m in Sources */,
+				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
 				239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* TestScene.m in Sources */,
 			);

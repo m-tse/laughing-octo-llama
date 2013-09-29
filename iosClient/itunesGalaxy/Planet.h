@@ -7,10 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "AbstractBody.h"
 
-@interface Planet : SKNode {
-    SKSpriteNode *_planet;
-    NSArray *_planetAnimation;
-}
+@interface Planet : AbstractBody
 
 @end

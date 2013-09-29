@@ -7,10 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "AbstractBody.h"
 
-@interface Sun : SKNode {
-    SKSpriteNode *_sun;
-    NSArray *_sunAnimation;
-}
+@interface Sun : AbstractBody
 
 @end

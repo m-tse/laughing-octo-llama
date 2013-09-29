@@ -32,16 +32,8 @@ int CLUSTERPHYSICSBODYSIZE = 30;
     return cluster;
 }
 
-- (SKNode*) clusterLabel:(NSString*) text {
-    SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
-    label.name = @"super_cluser_label";
-    label.text = text;
-    label.fontSize = 30;
-    SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-    label.physicsBody = physicsBody;
-    physicsBody.affectedByGravity = false;
-    return label;
-    
+-(void)setSetClusterLabel:(NSString*) label {
+    _labelNode.text = label;
 }
 
 -(id)initWithScene:(SKScene *)scene {
@@ -75,9 +67,14 @@ int CLUSTERPHYSICSBODYSIZE = 30;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];
         }
-        SKNode* label = [self clusterLabel:@"Apps"];
-        [self addChild:label];
 
+        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
+        _labelNode.fontSize = 20;
+        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
+        _labelNode.physicsBody = physicsBody;
+        physicsBody.affectedByGravity = false;
+        
+        [self addChild:_labelNode];
     }
     return self;
 }

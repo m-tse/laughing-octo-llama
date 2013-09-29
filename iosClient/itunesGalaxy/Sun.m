@@ -22,37 +22,32 @@
             SKTexture *temp = [sunAnimatedAtlas textureNamed:textureName];
             [sunAnimationFrames addObject:temp];
         }
-        _sunAnimation = sunAnimationFrames;
+        _customAction = [SKAction repeatActionForever:
+                         [SKAction animateWithTextures:sunAnimationFrames
+                                          timePerFrame:0.2f
+                                                resize:NO
+                                               restore:YES]];;
+        
         SKTexture *temp = sunAnimationFrames[0];
-        _sun = [SKSpriteNode spriteNodeWithTexture:temp];
+        _body = [SKSpriteNode spriteNodeWithTexture:temp];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        _sun.physicsBody = physBody;
+        _body.physicsBody = physBody;
         
-        [self addChild:_sun];
-        [self animateSun];
+        [self addChild:_body];
+        [self runCustomAction];
         
-        SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
-        label.name = @"label_name";
-        label.text = @"Sun";
-        label.fontSize = 20;
+        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
+        _labelNode.name = @"label_name";
+        _labelNode.text = @"Sun";
+        _labelNode.fontSize = 20;
         
         SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        label.physicsBody = physicsBody;
+        _labelNode.physicsBody = physicsBody;
         physicsBody.affectedByGravity = false;
-        [self addChild:label];
+        [self addChild:_labelNode];
     }
     return self;
-}
-
--(void)animateSun
-{
-    [_sun runAction:[SKAction repeatActionForever:
-                      [SKAction animateWithTextures:_sunAnimation
-                                       timePerFrame:0.2f
-                                             resize:NO
-                                            restore:YES]] withKey:@"sunAnimation"];
-    return;
 }
 
 @end
