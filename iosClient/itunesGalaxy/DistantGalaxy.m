@@ -27,6 +27,9 @@
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _galaxy.physicsBody = physBody;
         
+        _galaxy.xScale = 0.3;
+        _galaxy.yScale = 0.3;
+        
         [self addChild:_galaxy];
         [self animateGalaxy];
         [self setMyGenreName:genreName];
@@ -35,7 +38,7 @@
         label.text = genreName;
         label.fontSize = 20;
         
-        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
+        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_galaxy.size.width * 0.6];
         label.physicsBody = physicsBody;
         physicsBody.affectedByGravity = false;
         [self addChild:label];
