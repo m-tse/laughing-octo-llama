@@ -25,9 +25,13 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+<<<<<<< HEAD
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         NSArray *mediaTypes = @[@"Apps", @"Songs", @"TV Shows"];
+=======
+        NSArray *mediaTypes = @[@"Apps", @"Songs"];
+>>>>>>> 0db17584073cfc05934446d841c235ef3c10133b
         for (NSString *mediaType in mediaTypes) {
             DistantSuperCluster *distantCluster = [[DistantSuperCluster alloc] initWithScene:self withLabel:mediaType];
             [distantCluster setMediaType:mediaType];
@@ -36,7 +40,6 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
     }
     return self;
 }
-
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
