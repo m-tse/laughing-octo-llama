@@ -85,5 +85,10 @@
     }
 }
 
+-(void)update:(CFTimeInterval)currentTime {
+    [super update:currentTime];
+    [self applyBrownianMotionInScene:self withNodeNames:@"distant_galaxy"];
+}
+
 
 @end

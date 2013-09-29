@@ -7,6 +7,7 @@
 //
 
 #import "ZoomedGalaxy.h"
+#import "Label.h"
 
 @implementation ZoomedGalaxy
 -(id)initWithScene:(SKScene *)scene {
@@ -18,6 +19,15 @@
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         Sun.physicsBody = physBody;
         [self addChild:Sun];
+        
+        
+        
+        
+//        SKLabelNode * label = [[Label alloc] initWithFontSize:30 onNode:self inScene:scene withText:@"Apps"];
+        
+        
+        
+        
         
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"BebasNeue"];
         label.name = @"label_name";
