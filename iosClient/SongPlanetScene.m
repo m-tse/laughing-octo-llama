@@ -78,7 +78,7 @@ UIImage *songUIImage;
     NSURL *url = [NSURL URLWithString:imageUrl];
     NSData *data = [NSData dataWithContentsOfURL:url];
     songUIImage = [[UIImage alloc] initWithData:data];
-    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75+50, 150, 150)];
+    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75-20, 150, 150)];
     [songPicture setImage:songUIImage];
     [songArtistLabel setText:[song artistName]];
     [songNameLabel setText:[song songName]];
@@ -88,13 +88,13 @@ UIImage *songUIImage;
 
 -(void) setUpSongLabels {
     songNameLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
-    [songNameLabel setPosition:CGPointMake(768/2, 1024/2-180)];
+    [songNameLabel setPosition:CGPointMake(768/2, 1024/2-100)];
     [songNameLabel setFontSize:40.0];
     [self addChild:songNameLabel];
     
 
     songArtistLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
-    [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-200)];
+    [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-120)];
     [songArtistLabel setFontSize:20.0];
     [self addChild:songArtistLabel];
 }
