@@ -37,15 +37,9 @@
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
         SKNode* galaxy = [[ZoomedGalaxy alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-50);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-80);
         galaxy.position = position;
      
-        
-//        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] initWithScene:self.scene];
-//        
-//        SKPhysicsJointLimit *spring = [SKPhysicsJointLimit jointWithBodyA:self.physicsBody bodyB:distantSolarSystem.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
-////        spring.maxLength = 100;
-////        [self.scene.physicsWorld addJoint:spring];
     
     }
     return self;

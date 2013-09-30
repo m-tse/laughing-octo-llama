@@ -22,6 +22,7 @@
         NSString *textureName = [NSString stringWithFormat:@"planet%d", planetType];
         SKTexture *temp = [planetAtlas textureNamed:textureName];
         _body = [SKSpriteNode spriteNodeWithTexture:temp];
+        _body.name = @"planet";
         
         _customAction = [SKAction repeatActionForever:
                          [SKAction rotateByAngle:3.14 duration:speed]];

@@ -9,16 +9,13 @@
 #import "ZoomedSolarSystem.h"
 #import "Sun.h"
 #import "Planet.h"
+#import "Util.h"
 
 @implementation ZoomedSolarSystem
 -(id)initWithScene:(SKScene *)scene {
     if(self = [super init]){
         
-        
-//        SKNode* sun = [[Sun alloc] init];
-//        sun.position = CGPointMake(0.5, 0.5);
-//        [self addChild:sun];
-        
+
         
         SKEmitterNode * Sun;
         NSString *galaxyPath = [[NSBundle mainBundle] pathForResource:@"Sun" ofType:@"sks"];
@@ -27,12 +24,18 @@
         Sun.physicsBody = physBody;
         [self addChild:Sun];
 
-        SKNode* planet = [[Planet alloc] init];
-        [self addChild:planet];
         
+        for(int i = 0;i<5;i++){
+            SKNode* planet = [[SKSpriteNode alloc] initWithImageNamed:@"planet6.png"];
+            CGFloat randomScale = [Util randFloatFrom:0.1 to:0.5];
+            [planet setScale:randomScale];
+            int maxDistance = 385;
+            CGPoint randPosition = CGPointMake([Util randFloatFrom:-maxDistance to:maxDistance],[Util randFloatFrom:-maxDistance to:maxDistance]);
+            planet.position = randPosition;
+            [self addChild:planet];
+
+        }
         [scene addChild:self];
-        
-        
     }
     return self;
 }
