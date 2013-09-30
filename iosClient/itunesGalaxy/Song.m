@@ -18,13 +18,14 @@
 
 const float RADIUS = 200.0;
 
--(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist {
+-(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist collectionView:(NSString *)collectionView {
     if ([name length] > 20) {
         name = [[NSString alloc] initWithFormat:@"%@...",[name substringToIndex:20]]; 
     }
     [self setPreviewUrl:prevUrl];
     [self setImageUrl:imUrl];
     [self setArtistName:artist];
+    [self setCollectionViewUrl:collectionView];
     self.angle = M_PI/5*index;
     self.songNode = [SKSpriteNode spriteNodeWithImageNamed:@"choose-custom-music"];
     float x = RADIUS * cosf(M_PI/5*(index));

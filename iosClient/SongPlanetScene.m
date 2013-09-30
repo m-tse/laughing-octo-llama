@@ -30,6 +30,7 @@ NSMutableArray *invisibleSongNodes;
 NSMutableArray *visibleSongNodes;
 Song *current;
 int rotationCount;
+UIImage *songUIImage;
 
 -(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
     if (self = [super initWithSize:size]) {
@@ -53,28 +54,33 @@ int rotationCount;
     return nil;
 }
 
+-(void) goToSongInfo:(Song *)song {
+    NSLog(@"working - %@\n", [song collectionViewUrl]);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: [song collectionViewUrl]]];
+}
+
 -(void) getSongImage:(Song *)song {
     NSString *imageUrl = [song imageUrl];
     NSURL *url = [NSURL URLWithString:imageUrl];
     NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *img = [[UIImage alloc] initWithData:data];
-    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75-20, 150, 150)];
-    [songPicture setImage:img];
+    songUIImage = [[UIImage alloc] initWithData:data];
+    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75+20, 150, 150)];
+    [songPicture setImage:songUIImage];
     [songArtistLabel setText:[song artistName]];
     [songNameLabel setText:[song songName]];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.google.co.uk"]];
+
     [self.view addSubview:songPicture];
 }
 
 -(void) setUpSongLabels {
     songNameLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
-    [songNameLabel setPosition:CGPointMake(768/2, 1024/2-100)];
+    [songNameLabel setPosition:CGPointMake(768/2, 1024/2-180)];
     [songNameLabel setFontSize:40.0];
     [self addChild:songNameLabel];
     
 
     songArtistLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
-    [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-120)];
+    [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-200)];
     [songArtistLabel setFontSize:20.0];
     [self addChild:songArtistLabel];
     
@@ -97,10 +103,29 @@ int rotationCount;
     }
 }
 
+CGPoint lastTappedLocation;
+
 -(void) didMoveToView:(SKView *)view {
     if (!self.contentCreated) {
         [self createSceneContents];
+        UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+        doubleTapRecognizer.numberOfTapsRequired = 2;
+        [[self view] addGestureRecognizer:doubleTapRecognizer];
+        
         self.contentCreated = YES;
+    }
+}
+
+
+-(void) handleDoubleTap:(UITapGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateRecognized) {
+        NSLog(@"working");
+
+//        NSLog(@"(%f, %f) ==== (%f, %f)\n", currentLocation.x, currentLocation.y, songNode.position.x, songNode.position.y);
+        if (current) {
+            [self goToSongInfo:current];
+        }
+
     }
 }
 
@@ -153,9 +178,8 @@ int rotationCount;
             NSString *previewUrl = snapshot.value[[self myGenre]][song][@"previewUrl"];
             NSString *imageUrl = snapshot.value[[self myGenre]][song][@"artworkUrl100"];
             NSString *artistName = snapshot.value[[self myGenre]][song][@"artistName"];
-            Song *song = [[Song alloc] initSong:songName index:count prevUrl:previewUrl imUrl:imageUrl artist:artistName];
-            [song setCollectionViewUrl:snapshot.value[[self myGenre]][song][@"collectionViewUrl"]];
- 
+            NSString *collectionView = snapshot.value[[self myGenre]][song][@"collectionViewUrl"];
+            Song *song = [[Song alloc] initSong:songName index:count prevUrl:previewUrl imUrl:imageUrl artist:artistName collectionView:collectionView];
             if (count >= 10) {
                 [invisibleSongNodes addObject:song];
             } else {
@@ -200,7 +224,6 @@ CGPoint previousLocation;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-
     NSObject * obj = [touches anyObject];
     
     if (obj != nil) {
@@ -209,7 +232,7 @@ CGPoint previousLocation;
         for (Song *song in visibleSongNodes) {
             if ([[song songNode] isEqual:node]) {
                 current = song;
-//                [self playAudioUrl:[song previewUrl]];
+                [self playAudioUrl:[song previewUrl]];
                 [self getSongImage:song];
                 break;
             }

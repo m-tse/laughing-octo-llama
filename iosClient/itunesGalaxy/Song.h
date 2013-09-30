@@ -29,6 +29,6 @@
 @property NSString *previewUrl;
 @property NSString *imageUrl;
 
--(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist;
+-(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist collectionView:(NSString *)collectionView;
 
 @end
