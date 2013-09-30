@@ -45,7 +45,7 @@ UIImage *songUIImage;
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         
         SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2+10, self.frame.size.height/2-85);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
         galaxy.position = position;
         
         
@@ -140,7 +140,7 @@ CGPoint lastTappedLocation;
 
 -(void) drawSongCircle {
     outerCircle = [[SKSpriteNode alloc] init];
-    outerCircle.position = CGPointMake(768/2, 1024/2-80);
+    outerCircle.position = CGPointMake(768/2, 1024/2);
     [self addChild:outerCircle];
     [self drawCircleScroll];
 }
