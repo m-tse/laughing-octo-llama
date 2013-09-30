@@ -96,8 +96,13 @@
 - (void) handleRecognition: (NSString*) recognizedText
 {
     if([recognizedText isEqualToString:@"play"]) {
-        
+        [SongPlanetScene playMySong];
     }
+    
+    else if([recognizedText isEqualToString:@"play demons"]) {
+        [SongPlanetScene playDemons];
+    }
+    
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self

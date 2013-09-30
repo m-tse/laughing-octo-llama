@@ -20,6 +20,8 @@
 @property SKLabelNode *songArtistLabel;
 @property SKSpriteNode *songImage;
 
++(void) playMySong;
++(void) playDemons;
 -(void) createSceneContents;
 -(id) initWithSize:(CGSize)size genreName:(NSString *)genreName mediaType:(NSString*) mediaType;
 @end
