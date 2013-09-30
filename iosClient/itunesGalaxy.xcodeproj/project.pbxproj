@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071590B517F9182700CB15B5 /* AppPlanetScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 071590B417F9182700CB15B5 /* AppPlanetScene.m */; };
 		07204B3417F771E900101F4D /* Galaxy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07204B3317F771E900101F4D /* Galaxy.sks */; };
 		07204B3A17F7FE1600101F4D /* iTunesCurrentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07204B3917F7FE1600101F4D /* iTunesCurrentNode.m */; };
 		073F811017F6A637008A9EE4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F810F17F6A637008A9EE4 /* Song.m */; };
@@ -94,6 +95,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071590B317F9182700CB15B5 /* AppPlanetScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPlanetScene.h; sourceTree = "<group>"; };
+		071590B417F9182700CB15B5 /* AppPlanetScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPlanetScene.m; sourceTree = "<group>"; };
 		07204B3317F771E900101F4D /* Galaxy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Galaxy.sks; sourceTree = "<group>"; };
 		07204B3817F7FE1600101F4D /* iTunesCurrentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesCurrentNode.h; sourceTree = "<group>"; };
 		07204B3917F7FE1600101F4D /* iTunesCurrentNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesCurrentNode.m; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				239DF82A17F7BCB600F2607E /* GalaxyScene.m */,
 				239DF82F17F7BFF200F2607E /* SolarSystemScene.h */,
 				239DF83017F7BFF200F2607E /* SolarSystemScene.m */,
+				071590B317F9182700CB15B5 /* AppPlanetScene.h */,
+				071590B417F9182700CB15B5 /* AppPlanetScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -627,6 +632,7 @@
 				07204B3A17F7FE1600101F4D /* iTunesCurrentNode.m in Sources */,
 				62D0446C17F7EDA5001546B6 /* AbstractBody.m in Sources */,
 				239DF83117F7BFF200F2607E /* SolarSystemScene.m in Sources */,
+				071590B517F9182700CB15B5 /* AppPlanetScene.m in Sources */,
 				073F811C17F72DB2008A9EE4 /* SongPlanetScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

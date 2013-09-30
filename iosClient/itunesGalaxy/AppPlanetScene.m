@@ -1,21 +1,18 @@
 //
-//  TestScene.m
+//  AppPlanetScene.m
 //  itunesGalaxy
 //
-//  Created by Andrew Shim on 9/28/13.
+//  Created by Andrew Shim on 9/29/13.
 //  Copyright (c) 2013 MTA. All rights reserved.
 //
 
-#import "SongPlanetScene.h"
+#import "AppPlanetScene.h"
+#import "ZoomedSolarSystem.h"
 #import <Firebase/Firebase.h>
 #import "Song.h"
-#import "iTunesCurrentNode.h"
-#import "SuperClusterScene.h"
-#import <AVFoundation/AVFoundation.h>
-#import "ZoomedSolarSystem.h"
-#import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
-@implementation SongPlanetScene
+@implementation AppPlanetScene
 
 @synthesize myGenre;
 @synthesize myGenreId;
@@ -64,11 +61,11 @@ UIImage *songUIImage;
     NSURL *url = [NSURL URLWithString:imageUrl];
     NSData *data = [NSData dataWithContentsOfURL:url];
     songUIImage = [[UIImage alloc] initWithData:data];
-    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75+50, 150, 150)];
+    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75+20, 150, 150)];
     [songPicture setImage:songUIImage];
     [songArtistLabel setText:[song artistName]];
     [songNameLabel setText:[song songName]];
-
+    
     [self.view addSubview:songPicture];
 }
 
@@ -78,22 +75,22 @@ UIImage *songUIImage;
     [songNameLabel setFontSize:40.0];
     [self addChild:songNameLabel];
     
-
+    
     songArtistLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
     [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-200)];
     [songArtistLabel setFontSize:20.0];
     [self addChild:songArtistLabel];
+    
+    songImage = [[SKSpriteNode alloc] init];
+    [songImage setPosition:CGPointMake(768/2, 1024/2+20)];
+    [songImage setSize:CGSizeMake(150, 150)];
+    [songImage setColor:[UIColor clearColor]];
+    //    [self addChild:songImage];
 }
 
 - (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
 	if (recognizer.state == UIGestureRecognizerStateEnded) {
-        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
-        mainScene.scaleMode = SKSceneScaleModeAspectFill;
-        [self.scene.view presentScene:mainScene];
-        
-        SKScene * galaxyScene = [[SuperClusterScene alloc] initWithSize:self.frame.size mediaType:@"Songs"];
-        galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
-        [self.scene.view presentScene:galaxyScene];
+
     }
 }
 
@@ -102,6 +99,7 @@ CGPoint lastTappedLocation;
 -(void) didMoveToView:(SKView *)view {
     if (!self.contentCreated) {
         [self createSceneContents];
+        NSLog(@"working");
         UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
         doubleTapRecognizer.numberOfTapsRequired = 2;
         [[self view] addGestureRecognizer:doubleTapRecognizer];
@@ -113,12 +111,10 @@ CGPoint lastTappedLocation;
 
 -(void) handleDoubleTap:(UITapGestureRecognizer *)recognizer {
     if (recognizer.state == UIGestureRecognizerStateRecognized) {
-
-//        NSLog(@"(%f, %f) ==== (%f, %f)\n", currentLocation.x, currentLocation.y, songNode.position.x, songNode.position.y);
         if (current) {
             [self goToSongInfo:current];
         }
-
+        
     }
 }
 
@@ -147,7 +143,7 @@ CGPoint lastTappedLocation;
 }
 
 -(void) getGenreId {
-    NSString *firebaseGenreUrl = @"https://igalaxy.firebaseio.com/genres/songs";
+    NSString *firebaseGenreUrl = @"https://igalaxy.firebaseio.com/genres/apps";
     Firebase *firebaseGenre = [[Firebase alloc] initWithUrl:firebaseGenreUrl];
     [firebaseGenre observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
@@ -162,17 +158,18 @@ CGPoint lastTappedLocation;
 }
 
 -(void) createSongNode {
-    NSString *firebaseUrl = @"https://igalaxy.firebaseio.com/songs";
+    NSString *firebaseUrl = @"https://igalaxy.firebaseio.com/apps";
     firebase = [[Firebase alloc] initWithUrl:firebaseUrl];
     [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot){
         int count = 0;
+        NSLog(@"Genre: %@\n", [self myGenre]);
         for (id song in snapshot.value[[self myGenre]]) {
             NSString *songName = snapshot.value[[self myGenre]][song][@"trackName"];
-            NSString *previewUrl = snapshot.value[[self myGenre]][song][@"previewUrl"];
+
             NSString *imageUrl = snapshot.value[[self myGenre]][song][@"artworkUrl100"];
             NSString *artistName = snapshot.value[[self myGenre]][song][@"artistName"];
             NSString *collectionView = snapshot.value[[self myGenre]][song][@"trackViewUrl"];
-            Song *song = [[Song alloc] initSong:songName index:count prevUrl:previewUrl imUrl:imageUrl artist:artistName collectionView:collectionView];
+            Song *song = [[Song alloc] initSong:songName index:count prevUrl:@"" imUrl:imageUrl artist:artistName collectionView:collectionView];
             if (count >= 10) {
                 [invisibleSongNodes addObject:song];
             } else {
@@ -204,9 +201,9 @@ CGPoint previousLocation;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     cumulativeDeltaY = 0;
     lastFrameOriginY = self.frame.origin.y;
-
+    
     startTime = CACurrentMediaTime();
-
+    
     NSObject * obj = [touches anyObject];
     if (obj != nil) {
         previousLocation = [(UITouch *)obj locationInNode:self];
@@ -225,7 +222,6 @@ CGPoint previousLocation;
         for (Song *song in visibleSongNodes) {
             if ([[song songNode] isEqual:node]) {
                 current = song;
-                [self playAudioUrl:[song previewUrl]];
                 [self getSongImage:song];
                 break;
             }
@@ -252,8 +248,8 @@ CGPoint previousLocation;
             moveToVisible = (Song *)[invisibleSongNodes firstObject];
             [invisibleSongNodes removeObject:moveToVisible];
             [invisibleSongNodes addObject:song];
-
-//            moveToVisible.angle
+            
+            //            moveToVisible.angle
             current = moveToVisible;
             float x = 200.0 * cosf(M_PI/5*(3+rotationCount));
             float y = 200.0 * sinf(M_PI/5*(3+rotationCount));
@@ -265,8 +261,8 @@ CGPoint previousLocation;
             if (rotationCount > 9) {
                 rotationCount = 0;
             }
-
-
+            
+            
         } else {
             current.angle -= M_PI/5;
             current.songIndex -= 1;
@@ -274,7 +270,7 @@ CGPoint previousLocation;
         if (current.songIndex < 0) {
             current.songIndex = 9;
         }
-    
+        
         SKAction *rotate = [SKAction rotateByAngle:M_PI/5 duration:0.5];
         [current.songNode runAction:rotate];
     }
@@ -288,25 +284,5 @@ CGPoint previousLocation;
     
 }
 
-AVPlayer *player;
-
--(void) playAudioUrl:(NSString *)urlString {
-    NSURL *url = [NSURL URLWithString:urlString];
-    player = [AVPlayer playerWithURL:url];
-    [player play];
-}
-
--(void)update:(CFTimeInterval)currentTime {
-    //Send things away from the edges
-    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
-        if([node.name isEqual: @"planet"]){
-//            CGFloat xImpulse = 50;
-//            CGFloat yImpulse = 50;
-//            [node.physicsBody applyImpulse:CGVectorMake(xImpulse, yImpulse)];
-        }
-    }];
-    
-    
-}
 
 @end

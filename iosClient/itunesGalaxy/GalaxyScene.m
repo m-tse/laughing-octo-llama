@@ -13,6 +13,7 @@
 #import "SolarSystemScene.h"
 #import "DistantSolarSystem.h"
 #import "SongPlanetScene.h"
+#import "AppPlanetScene.h"
 
 @implementation GalaxyScene
 
@@ -54,7 +55,12 @@
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"ZoomedGalaxy"]){
-                SKScene * solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
+                SKScene *solarSystemScene;
+                if ([genre isEqualToString:@"Apps"]) {
+                    solarSystemScene = [[AppPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
+                } else {
+                    solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
+                }
                 solarSystemScene.scaleMode = SKSceneScaleModeAspectFill;
                 
                 SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];

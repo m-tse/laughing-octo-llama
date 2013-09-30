@@ -19,7 +19,7 @@
 const float RADIUS = 200.0;
 
 -(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist collectionView:(NSString *)collectionView {
-    if ([name length] > 20) {
+    if ([name length] > 15) {
         name = [[NSString alloc] initWithFormat:@"%@...",[name substringToIndex:20]]; 
     }
     [self setPreviewUrl:prevUrl];
