@@ -221,26 +221,26 @@ CGPoint previousLocation;
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSObject * obj = [touches anyObject];
     
-    if (obj != nil) {
-        CGPoint currentLocation = [(UITouch *)obj locationInNode:self];
-        SKSpriteNode * node = (SKSpriteNode *)[self nodeAtPoint:currentLocation];
-        for (Song *song in visibleSongNodes) {
-            if ([[song songNode] isEqual:node]) {
-                current = song;
-                [self playAudioUrl:[song previewUrl]];
-                [self getSongImage:song];
-                break;
-            }
-        }
-        
-        NSLog(@"%f - %f\n", currentLocation.x, previousLocation.x);
-        if (currentLocation.x - previousLocation.x < 14) {
-            return;
+    CGPoint currentLocation = [(UITouch *)obj locationInNode:self];
+    SKSpriteNode * node = (SKSpriteNode *)[self nodeAtPoint:currentLocation];
+    for (Song *song in visibleSongNodes) {
+        if ([[song songNode] isEqual:node]) {
+            current = song;
+            [self playAudioUrl:[song previewUrl]];
+            [self getSongImage:song];
+            break;
         }
     }
     
-    if ([invisibleSongNodes count] <
-        1) {
+    NSLog(@"%f - %f\n", currentLocation.x, previousLocation.x);
+    bool goRight = true;
+    if (previousLocation.x - currentLocation.x > 14) {
+        goRight = false;
+    } else if (currentLocation.x - previousLocation.x < 14) {
+        return;
+    }
+    
+    if ([invisibleSongNodes count] < 1) {
         return;
     }
     
@@ -262,7 +262,11 @@ CGPoint previousLocation;
             current.songNode.position = CGPointMake(x, y);
             current.songIndex = 2;
             [outerCircle addChild:current.songNode];
-            [current.songNode runAction:[SKAction rotateToAngle:M_PI/5*rotationCount duration:0]];
+            if (goRight) {
+                [current.songNode runAction:[SKAction rotateToAngle:M_PI/5*rotationCount duration:0]];
+            } else {
+                [current.songNode runAction:[SKAction rotateToAngle:-M_PI/5*rotationCount duration:0]];
+            }
             ++rotationCount;
             if (rotationCount > 9) {
                 rotationCount = 0;
@@ -276,13 +280,23 @@ CGPoint previousLocation;
         if (current.songIndex < 0) {
             current.songIndex = 9;
         }
-    
-        SKAction *rotate = [SKAction rotateByAngle:M_PI/5 duration:0.5];
+        SKAction *rotate;
+        if (goRight) {
+            rotate = [SKAction rotateByAngle:M_PI/5 duration:0.5];
+        } else {
+            rotate = [SKAction rotateByAngle:-M_PI/5 duration:0.5];
+        }
+
         [current.songNode runAction:rotate];
     }
     [visibleSongNodes removeObject:moveToInvisible];
     [visibleSongNodes addObject:moveToVisible];
-    SKAction *rotate = [SKAction rotateByAngle:-M_PI/5 duration:0.5];
+    SKAction *rotate;
+    if (goRight) {
+       rotate = [SKAction rotateByAngle:-M_PI/5 duration:0.5];
+    } else {
+        rotate = [SKAction rotateByAngle:M_PI/5 duration:0.5];
+    }
     [outerCircle runAction:rotate];
 }
 
