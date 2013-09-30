@@ -12,17 +12,23 @@
 #import "iTunesCurrentNode.h"
 #import "SuperClusterScene.h"
 #import <AVFoundation/AVFoundation.h>
+#import "ZoomedSolarSystem.h"
+#import <UIKit/UIKit.h>
 
 @implementation SongPlanetScene
 
 @synthesize myGenre;
 @synthesize myGenreId;
+@synthesize songArtistLabel;
+@synthesize songNameLabel;
+@synthesize songImage;
 
 Firebase *firebase;
 SKShapeNode *innerCircle;
 SKNode *outerCircle;
 NSMutableArray *invisibleSongNodes;
 NSMutableArray *visibleSongNodes;
+Song *current;
 int rotationCount;
 
 -(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
@@ -33,9 +39,50 @@ int rotationCount;
         visibleSongNodes = [[NSMutableArray alloc] init];
         rotationCount = 0;
         [self getGenreId];
+        [self setUpSongLabels];
+        
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        
+        SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-80);
+        galaxy.position = position;
+        
+        
         return self;
     }
     return nil;
+}
+
+-(void) getSongImage:(Song *)song {
+    NSString *imageUrl = [song imageUrl];
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    UIImageView *songPicture = [[UIImageView alloc] initWithFrame:CGRectMake(768/2-75, 1024/2-75-20, 150, 150)];
+    [songPicture setImage:img];
+    [songArtistLabel setText:[song artistName]];
+    [songNameLabel setText:[song songName]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.google.co.uk"]];
+    [self.view addSubview:songPicture];
+}
+
+-(void) setUpSongLabels {
+    songNameLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
+    [songNameLabel setPosition:CGPointMake(768/2, 1024/2-100)];
+    [songNameLabel setFontSize:40.0];
+    [self addChild:songNameLabel];
+    
+
+    songArtistLabel = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
+    [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-120)];
+    [songArtistLabel setFontSize:20.0];
+    [self addChild:songArtistLabel];
+    
+    songImage = [[SKSpriteNode alloc] init];
+    [songImage setPosition:CGPointMake(768/2, 1024/2+20)];
+    [songImage setSize:CGSizeMake(150, 150)];
+    [songImage setColor:[UIColor clearColor]];
+//    [self addChild:songImage];
 }
 
 - (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
@@ -50,7 +97,6 @@ int rotationCount;
     }
 }
 
-
 -(void) didMoveToView:(SKView *)view {
     if (!self.contentCreated) {
         [self createSceneContents];
@@ -60,10 +106,6 @@ int rotationCount;
 
 -(void) createSceneContents {
     [self createSongNode];
-    NSString *galaxyParticlePath = [[NSBundle mainBundle] pathForResource:@"Galaxy" ofType:@"sks"];
-    SKEmitterNode *galaxyParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyParticlePath];
-    [galaxyParticle setPosition:CGPointMake(200, 200)];
-    [self addChild:galaxyParticle];
     [self drawSongCircle];
 }
 
@@ -109,7 +151,11 @@ int rotationCount;
         for (id song in snapshot.value[[self myGenre]]) {
             NSString *songName = snapshot.value[[self myGenre]][song][@"trackName"];
             NSString *previewUrl = snapshot.value[[self myGenre]][song][@"previewUrl"];
-            Song *song = [[Song alloc] initSong:songName index:count previewUrl:previewUrl];
+            NSString *imageUrl = snapshot.value[[self myGenre]][song][@"artworkUrl100"];
+            NSString *artistName = snapshot.value[[self myGenre]][song][@"artistName"];
+            Song *song = [[Song alloc] initSong:songName index:count prevUrl:previewUrl imUrl:imageUrl artist:artistName];
+            [song setCollectionViewUrl:snapshot.value[[self myGenre]][song][@"collectionViewUrl"]];
+ 
             if (count >= 10) {
                 [invisibleSongNodes addObject:song];
             } else {
@@ -134,6 +180,10 @@ float lastFrameOriginY;
 CFTimeInterval startTime, endTime;
 CGPoint previousLocation;
 
+- (void) updateCenter {
+    
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     cumulativeDeltaY = 0;
     lastFrameOriginY = self.frame.origin.y;
@@ -150,10 +200,7 @@ CGPoint previousLocation;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    if ([invisibleSongNodes count] <
-        1) {
-        return;
-    }
+
     NSObject * obj = [touches anyObject];
     
     if (obj != nil) {
@@ -161,9 +208,9 @@ CGPoint previousLocation;
         SKSpriteNode * node = (SKSpriteNode *)[self nodeAtPoint:currentLocation];
         for (Song *song in visibleSongNodes) {
             if ([[song songNode] isEqual:node]) {
-                NSLog(@"SONG: %@\n", [song songName]);
-                [song setSelected:true];
-                [self playAudioUrl:[song previewUrl]];
+                current = song;
+//                [self playAudioUrl:[song previewUrl]];
+                [self getSongImage:song];
                 break;
             }
         }
@@ -172,6 +219,11 @@ CGPoint previousLocation;
         if (currentLocation.x - previousLocation.x < 14) {
             return;
         }
+    }
+    
+    if ([invisibleSongNodes count] <
+        1) {
+        return;
     }
     
     Song *moveToInvisible, *moveToVisible;

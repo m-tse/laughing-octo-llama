@@ -11,6 +11,8 @@
 
 @interface GalaxyScene : AbstractSpaceScene
 
--(id)initWithSize:(CGSize)size;
+@property NSString *genre;
+
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName;
 
 @end

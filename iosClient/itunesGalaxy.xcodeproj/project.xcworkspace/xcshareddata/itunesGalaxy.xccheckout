@@ -10,29 +10,29 @@
 	<string>itunesGalaxy</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C40E17C8-2548-4D9E-A901-93CB3990B2C8</key>
-		<string>https://github.com/mattse/laughing-octo-llama</string>
+		<key>D8B78026-FB20-4086-A356-2A65F02FC1AC</key>
+		<string>https://github.com/mattse/laughing-octo-llama.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iosClient/itunesGalaxy.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C40E17C8-2548-4D9E-A901-93CB3990B2C8</key>
+		<key>D8B78026-FB20-4086-A356-2A65F02FC1AC</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mattse/laughing-octo-llama</string>
+	<string>https://github.com/mattse/laughing-octo-llama.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C40E17C8-2548-4D9E-A901-93CB3990B2C8</string>
+	<string>D8B78026-FB20-4086-A356-2A65F02FC1AC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C40E17C8-2548-4D9E-A901-93CB3990B2C8</string>
+			<string>D8B78026-FB20-4086-A356-2A65F02FC1AC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>laughing-octo-llama</string>
 		</dict>
