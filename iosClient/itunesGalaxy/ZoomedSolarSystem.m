@@ -26,7 +26,9 @@
 
         
         for(int i = 0;i<5;i++){
-            SKNode* planet = [[SKSpriteNode alloc] initWithImageNamed:@"planet6.png"];
+            SKSpriteNode* planet = [[SKSpriteNode alloc] initWithImageNamed:@"planet6.png"];
+            planet.color = [SKColor redColor];
+            planet.colorBlendFactor = 0.5;
             CGFloat randomScale = [Util randFloatFrom:0.1 to:0.5];
             [planet setScale:randomScale];
             int maxDistance = 385;
