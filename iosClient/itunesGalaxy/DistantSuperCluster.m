@@ -14,8 +14,8 @@
 
 @synthesize mediaType;
 
-int MAXRANDOMCLUSTERS = 40;
-int MINRAMDOMCLUSTERS = 20;
+int MAXRANDOMCLUSTERS = 50;
+int MINRAMDOMCLUSTERS = 30;
 float MAXCLUSTERSIZE = 0.1;
 float MINCLUSTERSIZE = 0.01;
 int CLUSTERSCALESPEEDFACTOR = 5;
@@ -57,7 +57,7 @@ int CLUSTERPHYSICSBODYSIZE = 15;
             SKNode * connectedCluster = [clusters objectAtIndex:targetCluster];
             
             SKNode * cluster = [self cluster];
-            CGFloat randFloat = [Util randFloatFrom:5 to:30];
+            CGFloat randFloat = [Util randFloatFrom:5 to:50];
             SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(randFloat,randFloat)];
             cluster.physicsBody = physBody;
             [connectedCluster addChild:cluster];
@@ -65,7 +65,7 @@ int CLUSTERPHYSICSBODYSIZE = 15;
             
             SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
             spring.frequency = 2;
-            spring.damping = 50;
+            spring.damping = 30;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];
         }
