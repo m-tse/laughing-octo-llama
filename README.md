@@ -35,3 +35,10 @@ Levels to zoom in:
 - a. Artists
 - b. songs
 
+
+For Submission:
+Name: iTunesGalaxy
+Description: The iTunes store experience has remained almost the same since its first inception, a list based organizer of apps, music, movies, etc.  iTunesGalaxy is a new method of exploring the iTunes Universe.  Intuitively explore iTunes content like you would explore our Universe.
+
+APIs, SKD's Datasets:
+XCode and iOS7, SpriteKit in iOS7, FireBase
