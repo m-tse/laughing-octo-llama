@@ -12,8 +12,11 @@
 #import "iTunesCurrentNode.h"
 #import "SolarSystemScene.h"
 #import "DistantSolarSystem.h"
+#import "SongPlanetScene.h"
 
 @implementation GalaxyScene
+
+@synthesize genre;
 
 - (void)didMoveToView:(SKView *)view {
     UIPinchGestureRecognizer *gestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
@@ -28,8 +31,9 @@
     }
 }
 
--(id)initWithSize:(CGSize)size {
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
     if (self = [super initWithSize:size]) {
+        [self setGenre:genreName];
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
         SKNode* galaxy = [[ZoomedGalaxy alloc] initWithScene:self];
@@ -56,7 +60,7 @@
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"ZoomedGalaxy"]){
-                SKScene * solarSystemScene = [[SolarSystemScene alloc] initWithSize:self.frame.size];
+                SKScene * solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
                 solarSystemScene.scaleMode = SKSceneScaleModeAspectFill;
                 
                 

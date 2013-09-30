@@ -12,6 +12,7 @@
 #import "iTunesCurrentNode.h"
 #import "SuperClusterScene.h"
 #import <AVFoundation/AVFoundation.h>
+#import "ZoomedSolarSystem.h"
 #import <UIKit/UIKit.h>
 
 @implementation SongPlanetScene
@@ -39,6 +40,14 @@ int rotationCount;
         rotationCount = 0;
         [self getGenreId];
         [self setUpSongLabels];
+        
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        
+        SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-80);
+        galaxy.position = position;
+        
+        
         return self;
     }
     return nil;
@@ -97,10 +106,6 @@ int rotationCount;
 
 -(void) createSceneContents {
     [self createSongNode];
-    NSString *galaxyParticlePath = [[NSBundle mainBundle] pathForResource:@"Galaxy" ofType:@"sks"];
-    SKEmitterNode *galaxyParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:galaxyParticlePath];
-    [galaxyParticle setPosition:CGPointMake(200, 200)];
-    [self addChild:galaxyParticle];
     [self drawSongCircle];
 }
 
