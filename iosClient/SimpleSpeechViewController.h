@@ -7,8 +7,8 @@
 // For more information contact developer.support@att.com http://developer.att.com
 
 #import <UIKit/UIViewController.h>
+#import <UIKit/UIApplication.h>
 #import "ATTSpeechKit.h"
-
 
 @interface SimpleSpeechViewController : UIViewController <ATTSpeechServiceDelegate>
 
