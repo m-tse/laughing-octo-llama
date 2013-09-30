@@ -36,8 +36,8 @@
         int randomNum = [Util randIntFrom:3 to:5];
         randomNum = randomNum/15.0;
         
-        galaxy.xScale = 0.4;
-        galaxy.yScale = 0.4;
+        galaxy.xScale = 0.6;
+        galaxy.yScale = 0.6;
         
         [self addChild:galaxy];
         [scene addChild:self];
@@ -52,7 +52,7 @@
         SKLabelNode * label = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
         label.name = @"label_name";
         label.text = genreName;
-        label.fontSize = 10;
+        label.fontSize = 15;
         label.horizontalAlignmentMode = 0;
         label.verticalAlignmentMode = 0;
         

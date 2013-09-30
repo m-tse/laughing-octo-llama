@@ -59,14 +59,14 @@
                 SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName mediaType:mediaType];
                 
                 if([a containsObject:genreName]) {
-                    galaxy.xScale = 2;
-                    galaxy.yScale = 2;
+                    galaxy.xScale = 4;
+                    galaxy.yScale = 4;
                 } else if ([b containsObject:genreName]) {
                     galaxy.xScale = 4;
                     galaxy.yScale = 4;
                 }
                 
-                CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
+                CGPoint position = CGPointMake([Util randIntFrom:200 to:self.frame.size.width-200], [Util randIntFrom:200 to:self.frame.size.height-200]);
                 galaxy.position = position;
                 ++count;
             }
