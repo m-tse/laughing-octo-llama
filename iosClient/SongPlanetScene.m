@@ -123,7 +123,7 @@ int rotationCount;
 
 -(void) drawSongCircle {
     outerCircle = [[SKSpriteNode alloc] init];
-    outerCircle.position = CGPointMake(768/2, 1024/2);
+    outerCircle.position = CGPointMake(768/2, 1024/2-80);
     [self addChild:outerCircle];
     [self drawCircleScroll];
 }
