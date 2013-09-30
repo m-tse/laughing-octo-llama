@@ -15,12 +15,8 @@
     if (self = [super initWithSize:size]) {
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
-        //        UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
-        //        [self.view addGestureRecognizer:(pinchRecognizer)];
-        //    self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.60 alpha:1.0];
-        
         SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-80);
         galaxy.position = position;
         
     }

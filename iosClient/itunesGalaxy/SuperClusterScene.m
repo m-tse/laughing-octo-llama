@@ -89,7 +89,7 @@
 
                 DistantGalaxy *galaxy = (DistantGalaxy *)node;
                 NSString *genreName = [galaxy myGenreName];
-                SKScene * galaxyScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genreName];
+                SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
                 SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];
                 SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];

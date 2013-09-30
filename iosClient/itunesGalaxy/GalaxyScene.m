@@ -11,6 +11,7 @@
 #import "SuperClusterScene.h"
 #import "iTunesCurrentNode.h"
 #import "SolarSystemScene.h"
+#import "DistantSolarSystem.h"
 
 @implementation GalaxyScene
 
@@ -32,9 +33,16 @@
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
         SKNode* galaxy = [[ZoomedGalaxy alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-50);
         galaxy.position = position;
+     
         
+//        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] initWithScene:self.scene];
+//        
+//        SKPhysicsJointLimit *spring = [SKPhysicsJointLimit jointWithBodyA:self.physicsBody bodyB:distantSolarSystem.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
+////        spring.maxLength = 100;
+////        [self.scene.physicsWorld addJoint:spring];
+    
     }
     return self;
 }
@@ -47,7 +55,7 @@
         SKPhysicsBody* body = [self.physicsWorld bodyAtPoint:location];
         SKNode * node = body.node;
         while(node != NULL){
-            if([[node name] isEqual:@"distant_galaxy"]){
+            if([[node name] isEqual:@"ZoomedGalaxy"]){
                 SKScene * solarSystemScene = [[SolarSystemScene alloc] initWithSize:self.frame.size];
                 solarSystemScene.scaleMode = SKSceneScaleModeAspectFill;
                 
@@ -62,4 +70,21 @@
         
     }
 }
+
+-(void)update:(CFTimeInterval)currentTime {
+    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
+        if([node.name  isEqual: @"ZoomedGalaxy"]){
+            node.physicsBody.angularVelocity = -0.05;
+
+        }
+    }];
+//    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
+//        if([node.name  isEqual: @"galaxyLabel"]){
+//            node.physicsBody.angularVelocity = 0.05;
+//            
+//        }
+//    }];
+
+}
+
 @end
