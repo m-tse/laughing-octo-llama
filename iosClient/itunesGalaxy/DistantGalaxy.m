@@ -14,8 +14,9 @@
 
 @synthesize myGenreName;
 
--(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName {
+-(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName mediaType:(NSString *)mediaType{
     if(self = [super init]){
+        
         SKSpriteNode *galaxy;
 
         self.name = @"distant_galaxy";
@@ -43,6 +44,7 @@
         
         [self animateGalaxy:galaxy];
         [self setMyGenreName:genreName];
+        [self setMyMediaType:mediaType];
         
 
 //        Label* label = [[Label alloc] initWithFontSize:5 onNode:self inScene:scene withText:genreName];

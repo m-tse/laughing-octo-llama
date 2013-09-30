@@ -17,6 +17,7 @@
 @implementation GalaxyScene
 
 @synthesize genre;
+@synthesize mediaType;
 
 - (void)didMoveToView:(SKView *)view {
     UIPinchGestureRecognizer *gestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
@@ -25,15 +26,17 @@
 
 - (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
 	if (recognizer.state == UIGestureRecognizerStateEnded) {
-        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
-        mainScene.scaleMode = SKSceneScaleModeAspectFill;
-        [self.scene.view presentScene:mainScene];
+//        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
+        SKScene * superClusterScene = [[SuperClusterScene alloc] initWithSize:self.scene.size mediaType:[self mediaType]];
+        superClusterScene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.scene.view presentScene:superClusterScene];
     }
 }
 
--(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName mediaType:(NSString *) mediaType{
     if (self = [super initWithSize:size]) {
         [self setGenre:genreName];
+        [self setMediaType:mediaType];
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
 
         SKNode* galaxy = [[ZoomedGalaxy alloc] initWithScene:self];
@@ -54,7 +57,8 @@
         SKNode * node = body.node;
         while(node != NULL){
             if([[node name] isEqual:@"ZoomedGalaxy"]){
-                SKScene * solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
+//                SKScene * solarSystemScene = [[SongPlanetScene alloc] init]
+                SKScene * solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre mediaType:[self mediaType]];
                 solarSystemScene.scaleMode = SKSceneScaleModeAspectFill;
                 
                 SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];

@@ -65,7 +65,7 @@ int CLUSTERPHYSICSBODYSIZE = 15;
             
             SKPhysicsJointSpring *spring = [SKPhysicsJointSpring jointWithBodyA:connectedCluster.physicsBody bodyB:cluster.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
             spring.frequency = 2;
-            spring.damping = 30;
+            spring.damping = 100;
             [scene.physicsWorld addJoint:spring];
             [clusters addObject:(cluster)];
         }
