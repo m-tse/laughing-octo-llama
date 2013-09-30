@@ -25,7 +25,9 @@
 @property SKSpriteNode *songNode;
 @property NSString *songName;
 @property int songIndex;
+@property bool selected;
+@property NSString *previewUrl;
 
--(id) initSong:(NSString *)name index:(int)index;
+-(id) initSong:(NSString *)name index:(int)index previewUrl:(NSString *)previewUrl;
 
 @end

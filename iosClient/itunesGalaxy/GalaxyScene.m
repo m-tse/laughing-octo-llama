@@ -37,7 +37,12 @@
         galaxy.position = position;
      
         
-        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] initWithScene:self.scene];
+//        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] initWithScene:self.scene];
+//        
+//        SKPhysicsJointLimit *spring = [SKPhysicsJointLimit jointWithBodyA:self.physicsBody bodyB:distantSolarSystem.physicsBody anchorA:CGPointMake(0.5,0.5) anchorB:CGPointMake(0.5,0.5)];
+////        spring.maxLength = 100;
+////        [self.scene.physicsWorld addJoint:spring];
+    
     }
     return self;
 }
@@ -73,6 +78,12 @@
 
         }
     }];
+//    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
+//        if([node.name  isEqual: @"galaxyLabel"]){
+//            node.physicsBody.angularVelocity = 0.05;
+//            
+//        }
+//    }];
 
 }
 

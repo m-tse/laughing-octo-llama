@@ -33,13 +33,18 @@
 
 -(id)initWithSize:(CGSize)size mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
+        
+        NSArray *a = [NSArray arrayWithObjects:@"Classical", @"Electronic", @"House", @"Rock", @"Alternative", nil];
+        NSArray *b = [NSArray arrayWithObjects:@"Hip Hop", @"Pop", nil];
+        
+        
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         NSString *firebaseUrl;
         if ([mediaType isEqualToString:@"Apps"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
         } else if ([mediaType isEqualToString:@"Songs"]) {
-            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/songs";
+            firebaseUrl = @"https://igalaxy.firebaseio.com/songs";
         } else if ([mediaType isEqualToString:@"TV Shows"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/genres/shows";
         } else {
@@ -52,8 +57,17 @@
                 if (count > 10) {
                     break;
                 }
-                NSString *genreName = snapshot.value[key][@"name"];
+                NSString *genreName = key;
                 SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName];
+                
+                if([a containsObject:genreName]) {
+                    galaxy.xScale = 2;
+                    galaxy.yScale = 2;
+                } else if ([b containsObject:genreName]) {
+                    galaxy.xScale = 4;
+                    galaxy.yScale = 4;
+                }
+                
                 CGPoint position = CGPointMake([Util randIntFrom:50 to:self.frame.size.width-50], [Util randIntFrom:50 to:self.frame.size.height-50]);
                 galaxy.position = position;
                 ++count;
@@ -77,8 +91,12 @@
                 NSString *genreName = [galaxy myGenreName];
                 SKScene * galaxyScene = [[GalaxyScene alloc] initWithSize:self.frame.size];
                 galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
-
-                [self.scene.view presentScene:galaxyScene];
+                SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];
+                SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];
+                SKAction *group = [SKAction group:@[zoom, fadeOut]];
+                [self runAction:group completion:^{
+                    [self.scene.view presentScene:galaxyScene];
+                }];
                 break;
             }
             node = node.parent;

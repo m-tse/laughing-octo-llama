@@ -11,10 +11,12 @@
 #import "Song.h"
 #import "iTunesCurrentNode.h"
 #import "SuperClusterScene.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation SongPlanetScene
 
 @synthesize myGenre;
+@synthesize myGenreId;
 
 Firebase *firebase;
 SKShapeNode *innerCircle;
@@ -30,6 +32,7 @@ int rotationCount;
         invisibleSongNodes = [[NSMutableArray alloc] init];
         visibleSongNodes = [[NSMutableArray alloc] init];
         rotationCount = 0;
+        [self getGenreId];
         return self;
     }
     return nil;
@@ -83,16 +86,30 @@ int rotationCount;
     [self drawCircleScroll];
 }
 
--(void) createSongNode {
-    NSString *firebaseUrl = @"https://itunesgalaxy.firebaseio.com/songs";
+-(void) getGenreId {
+    NSString *firebaseGenreUrl = @"https://igalaxy.firebaseio.com/genres/songs";
+    Firebase *firebaseGenre = [[Firebase alloc] initWithUrl:firebaseGenreUrl];
+    [firebaseGenre observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        for (id key in snapshot.value) {
+            NSString *genreName = snapshot.value[key][@"name"];
+            if ([genreName isEqualToString:[self myGenre]]) {
+                NSString *id = snapshot.value[key][@"id"];
+                [self setMyGenreId:id];
+            }
+        }
+    }];
+}
 
+-(void) createSongNode {
+    NSString *firebaseUrl = @"https://igalaxy.firebaseio.com/songs";
     firebase = [[Firebase alloc] initWithUrl:firebaseUrl];
     [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot){
         int count = 0;
-        for (id key in snapshot.value) {
-
-            NSString *songName = snapshot.value[key][@"trackName"];
-            Song *song = [[Song alloc] initSong:songName index:count];
+        for (id song in snapshot.value[[self myGenre]]) {
+            NSString *songName = snapshot.value[[self myGenre]][song][@"trackName"];
+            NSString *previewUrl = snapshot.value[[self myGenre]][song][@"previewUrl"];
+            Song *song = [[Song alloc] initSong:songName index:count previewUrl:previewUrl];
             if (count >= 10) {
                 [invisibleSongNodes addObject:song];
             } else {
@@ -100,6 +117,7 @@ int rotationCount;
                 [outerCircle addChild:song.songNode];
             }
             ++count;
+            
         }
     }];
 }
@@ -132,6 +150,30 @@ CGPoint previousLocation;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if ([invisibleSongNodes count] <
+        1) {
+        return;
+    }
+    NSObject * obj = [touches anyObject];
+    
+    if (obj != nil) {
+        CGPoint currentLocation = [(UITouch *)obj locationInNode:self];
+        SKSpriteNode * node = (SKSpriteNode *)[self nodeAtPoint:currentLocation];
+        for (Song *song in visibleSongNodes) {
+            if ([[song songNode] isEqual:node]) {
+                NSLog(@"SONG: %@\n", [song songName]);
+                [song setSelected:true];
+                [self playAudioUrl:[song previewUrl]];
+                break;
+            }
+        }
+        
+        NSLog(@"%f - %f\n", currentLocation.x, previousLocation.x);
+        if (currentLocation.x - previousLocation.x < 14) {
+            return;
+        }
+    }
+    
     Song *moveToInvisible, *moveToVisible;
     for (Song *song in visibleSongNodes) {
         Song *current = song;
@@ -144,13 +186,11 @@ CGPoint previousLocation;
             [invisibleSongNodes addObject:song];
 
 //            moveToVisible.angle
-//            NSLog(@"%@\n", moveToVisible.songName);
             current = moveToVisible;
             float x = 200.0 * cosf(M_PI/5*(3+rotationCount));
             float y = 200.0 * sinf(M_PI/5*(3+rotationCount));
             current.songNode.position = CGPointMake(x, y);
             current.songIndex = 2;
-//            NSLog(@"position: %f - %f\n", current.songNode.position.x, current.songNode.position.y);
             [outerCircle addChild:current.songNode];
             [current.songNode runAction:[SKAction rotateToAngle:M_PI/5*rotationCount duration:0]];
             ++rotationCount;
@@ -179,5 +219,22 @@ CGPoint previousLocation;
 -(void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     
 }
+
+-(void) playAudioUrl:(NSString *)url {
+    NSString* resourcePath = url; //your url
+    NSData *_objectData = [NSData dataWithContentsOfURL:[NSURL URLWithString:resourcePath]];
+    NSError *error;
+    
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithData:_objectData error:&error];
+    audioPlayer.numberOfLoops = 0;
+    audioPlayer.volume = 1.0f;
+    [audioPlayer prepareToPlay];
+    
+    if (audioPlayer == nil)
+        NSLog(@"%@", [error description]);
+    else
+        [audioPlayer play];
+}
+
 
 @end
