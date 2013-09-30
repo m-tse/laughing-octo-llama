@@ -55,7 +55,7 @@
         SKPhysicsBody* body = [self.physicsWorld bodyAtPoint:location];
         SKNode * node = body.node;
         while(node != NULL){
-            if([[node name] isEqual:@"distant_galaxy"]){
+            if([[node name] isEqual:@"ZoomedGalaxy"]){
                 SKScene * solarSystemScene = [[SolarSystemScene alloc] initWithSize:self.frame.size];
                 solarSystemScene.scaleMode = SKSceneScaleModeAspectFill;
                 

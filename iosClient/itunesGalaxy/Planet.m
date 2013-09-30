@@ -42,15 +42,15 @@
         [self addChild:_body];
         [self runCustomAction];
         
-        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
-        _labelNode.name = @"label_name";
-        _labelNode.text = @"planet";
-        _labelNode.fontSize = 20;
+//        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
+//        _labelNode.name = @"label_name";
+//        _labelNode.text = @"planet";
+//        _labelNode.fontSize = 20;
         
-        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-        _labelNode.physicsBody = physicsBody;
-        physicsBody.affectedByGravity = false;
-        [self addChild:_labelNode];
+//        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
+//        _labelNode.physicsBody = physicsBody;
+//        physicsBody.affectedByGravity = false;
+//        [self addChild:_labelNode];
     }
     return self;
 }

@@ -9,16 +9,17 @@
 #import "ZoomedGalaxy.h"
 #import "Label.h"
 #import "DistantSolarSystem.h"
+#import "Util.h"
 
 @implementation ZoomedGalaxy
 -(id)initWithScene:(SKScene *)scene {
     if(self = [super init]){
         
-        SKSpriteNode* galaxy = [[SKSpriteNode alloc] initWithImageNamed:@"galaxy1.png"];
+        SKSpriteNode* galaxy = [[SKSpriteNode alloc] initWithImageNamed:@"galaxy_large.png"];
         galaxy.name = @"ZoomedGalaxy";
-        galaxy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:20];
-        galaxy.xScale = 2.5;
-        galaxy.yScale = 2.5;
+        galaxy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:350];
+        galaxy.xScale = 0.6;
+        galaxy.yScale = 0.6;
         
 //        SKEmitterNode * Sun;
 //        NSString *galaxyPath = [[NSBundle mainBundle] pathForResource:@"Sun" ofType:@"sks"];
@@ -41,14 +42,20 @@
         
 
 //        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] init];
-        SKLabelNode* label = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
-        label.fontSize = 5;
-        label.name = @"galaxyLabel";
-        label.text= @"asdfasfasdf";
-        label.position = CGPointMake(100, 0);
-//        label.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:1];
-        [galaxy addChild:label];
-
+        for(int i = 0;i<6;i++){
+            SKLabelNode* label = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
+            label.fontSize = 23;
+            NSString *myText = @"Cluster ";
+            int randNum = [Util randIntFrom:1 to:10000];
+            NSString *myTextWithNum = [myText stringByAppendingString:[NSString stringWithFormat:@"%d", randNum]];
+            label.name = @"galaxyLabel";
+            label.text= myTextWithNum;
+            int range = 350;
+            CGPoint randomPosition = CGPointMake([Util randIntFrom:-range to:range], [Util randIntFrom:-range to:range]);
+            label.position = randomPosition;
+    //        label.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:1];
+            [galaxy addChild:label];
+        }
         //        spring.maxLength = 100;
         //        [self.scene.physicsWorld addJoint:spring];
         

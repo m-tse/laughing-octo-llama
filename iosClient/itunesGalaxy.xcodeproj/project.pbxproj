@@ -390,10 +390,10 @@
 				23149E3417F62B1A00B3E64F /* DistantGalaxy.m */,
 				239DF82C17F7BD8900F2607E /* ZoomedGalaxy.h */,
 				239DF82D17F7BD8900F2607E /* ZoomedGalaxy.m */,
-				239DF83217F7C04200F2607E /* ZoomedSolarSystem.h */,
-				239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */,
 				23B2046217F8E4AE009DFFB9 /* DistantSolarSystem.h */,
 				23B2046317F8E4AE009DFFB9 /* DistantSolarSystem.m */,
+				239DF83217F7C04200F2607E /* ZoomedSolarSystem.h */,
+				239DF83317F7C04200F2607E /* ZoomedSolarSystem.m */,
 			);
 			name = Systems;
 			sourceTree = "<group>";

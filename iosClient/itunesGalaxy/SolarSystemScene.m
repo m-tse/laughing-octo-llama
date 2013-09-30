@@ -16,7 +16,7 @@
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-80);
         galaxy.position = position;
         
     }
