@@ -14,6 +14,9 @@
 @property SKScene *myParent;
 @property NSString *myGenre;
 @property NSString *myGenreId;
+@property SKLabelNode *songNameLabel;
+@property SKLabelNode *songArtistLabel;
+@property SKSpriteNode *songImage;
 
 -(void) createSceneContents;
 -(id) initWithSize:(CGSize)size genreName:(NSString *)genreName;

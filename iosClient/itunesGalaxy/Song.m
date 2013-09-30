@@ -11,14 +11,20 @@
 @implementation Song
 @synthesize selected;
 @synthesize previewUrl;
+@synthesize imageUrl;
+@synthesize artistName;
+@synthesize collectionViewUrl;
+@synthesize songName;
 
 const float RADIUS = 200.0;
 
--(id) initSong:(NSString *)name index:(int)index previewUrl:(NSString *)previewUrl{
+-(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist {
     if ([name length] > 20) {
         name = [[NSString alloc] initWithFormat:@"%@...",[name substringToIndex:20]]; 
     }
-    [self setPreviewUrl:previewUrl];
+    [self setPreviewUrl:prevUrl];
+    [self setImageUrl:imUrl];
+    [self setArtistName:artist];
     self.angle = M_PI/5*index;
     self.songNode = [SKSpriteNode spriteNodeWithImageNamed:@"choose-custom-music"];
     float x = RADIUS * cosf(M_PI/5*(index));

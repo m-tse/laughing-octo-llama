@@ -27,7 +27,8 @@
 @property int songIndex;
 @property bool selected;
 @property NSString *previewUrl;
+@property NSString *imageUrl;
 
--(id) initSong:(NSString *)name index:(int)index previewUrl:(NSString *)previewUrl;
+-(id) initSong:(NSString *)name index:(int)index prevUrl:(NSString *)prevUrl imUrl:(NSString *)imUrl artist:(NSString *)artist;
 
 @end
