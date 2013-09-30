@@ -7,30 +7,24 @@
 //
 
 #import "Planet.h"
+#import "Util.h"
 
 @implementation Planet
 
 -(id)init {
     if(self = [super init]){
         
-        // Set up animation
-        NSMutableArray *planetAnimationFrames = [NSMutableArray array];
-        SKTextureAtlas *planetAnimatedAtlas = [SKTextureAtlas atlasNamed:@"planet"];
-        int numImages = planetAnimatedAtlas.textureNames.count;
-        for (int i=1; i <= numImages; i++) {
-            NSString *textureName = [NSString stringWithFormat:@"planet%d", i];
-            SKTexture *temp = [planetAnimatedAtlas textureNamed:textureName];
-            [planetAnimationFrames addObject:temp];
-        }
+        // Set up galaxy
+        int planetType = [Util randIntFrom:1 to:14];
+        int speed = [Util randIntFrom:10 to:30];
+        
+        SKTextureAtlas *planetAtlas = [SKTextureAtlas atlasNamed:@"planet"];
+        NSString *textureName = [NSString stringWithFormat:@"planet%d", planetType];
+        SKTexture *temp = [planetAtlas textureNamed:textureName];
+        _body = [SKSpriteNode spriteNodeWithTexture:temp];
         
         _customAction = [SKAction repeatActionForever:
-                         [SKAction animateWithTextures:planetAnimationFrames
-                                          timePerFrame:0.1f
-                                                resize:NO
-                                               restore:YES]];
-        
-        SKTexture *temp = planetAnimationFrames[0];
-        _body = [SKSpriteNode spriteNodeWithTexture:temp];
+                         [SKAction rotateByAngle:3.14 duration:speed]];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _body.physicsBody = physBody;
@@ -41,16 +35,6 @@
         
         [self addChild:_body];
         [self runCustomAction];
-        
-//        _labelNode = [SKLabelNode labelNodeWithFontNamed:@"bebasneue"];
-//        _labelNode.name = @"label_name";
-//        _labelNode.text = @"planet";
-//        _labelNode.fontSize = 20;
-        
-//        SKPhysicsBody *physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
-//        _labelNode.physicsBody = physicsBody;
-//        physicsBody.affectedByGravity = false;
-//        [self addChild:_labelNode];
     }
     return self;
 }
