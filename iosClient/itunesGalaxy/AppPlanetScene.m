@@ -19,6 +19,7 @@
 @synthesize songArtistLabel;
 @synthesize songNameLabel;
 @synthesize songImage;
+@synthesize myMediaType;
 
 Firebase *firebase;
 SKShapeNode *innerCircle;
@@ -29,9 +30,10 @@ Song *current;
 int rotationCount;
 UIImage *songUIImage;
 
--(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName mediaType:(NSString *)mediaType {
     if (self = [super initWithSize:size]) {
         [self setMyGenre:genreName];
+        [self setMyMediaType:mediaType];
         self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.05 alpha:1.0];
         invisibleSongNodes = [[NSMutableArray alloc] init];
         visibleSongNodes = [[NSMutableArray alloc] init];
@@ -40,6 +42,7 @@ UIImage *songUIImage;
         [self setUpSongLabels];
         
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
         
         SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
         CGPoint position = CGPointMake(self.frame.size.width/2+10, self.frame.size.height/2-85);
@@ -170,6 +173,8 @@ CGPoint lastTappedLocation;
             NSString *artistName = snapshot.value[[self myGenre]][song][@"artistName"];
             NSString *collectionView = snapshot.value[[self myGenre]][song][@"trackViewUrl"];
             Song *song = [[Song alloc] initSong:songName index:count prevUrl:@"" imUrl:imageUrl artist:artistName collectionView:collectionView];
+//            [NSException raise:@"Hello\n" format:@""];
+
             if (count >= 10) {
                 [invisibleSongNodes addObject:song];
             } else {

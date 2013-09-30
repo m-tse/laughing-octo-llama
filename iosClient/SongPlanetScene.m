@@ -291,11 +291,20 @@ CGPoint previousLocation;
 }
 
 AVPlayer *player;
+bool isPlaying = false;
+NSString *lastPlayedUrl = @"";
 
 -(void) playAudioUrl:(NSString *)urlString {
-    NSURL *url = [NSURL URLWithString:urlString];
-    player = [AVPlayer playerWithURL:url];
-    [player play];
+    if (isPlaying && [urlString isEqualToString:lastPlayedUrl]) {
+        [player pause];
+        isPlaying = false;
+    } else {
+        NSURL *url = [NSURL URLWithString:urlString];
+        player = [AVPlayer playerWithURL:url];
+        [player play];
+        isPlaying = true;
+        lastPlayedUrl = urlString;
+    }
 }
 
 //-(void)update:(CFTimeInterval)currentTime {

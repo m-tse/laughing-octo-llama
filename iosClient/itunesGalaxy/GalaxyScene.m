@@ -59,8 +59,8 @@
         while(node != NULL){
             if([[node name] isEqual:@"ZoomedGalaxy"]){
                 SKScene *solarSystemScene;
-                if ([genre isEqualToString:@"Apps"]) {
-                    solarSystemScene = [[AppPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
+                if ([mediaType isEqualToString:@"Apps"]) {
+                    solarSystemScene = [[AppPlanetScene alloc] initWithSize:self.frame.size genreName:genre mediaType:[self mediaType]];
                 } else {
                      solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre mediaType:[self mediaType]];
                 }
