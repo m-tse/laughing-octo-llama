@@ -59,8 +59,8 @@
                 SKNode* galaxy = [[DistantGalaxy alloc] initWithScene:self genreName:genreName mediaType:mediaType];
                 
                 if([a containsObject:genreName]) {
-                    galaxy.xScale = 4;
-                    galaxy.yScale = 4;
+                    galaxy.xScale = 2;
+                    galaxy.yScale = 2;
                 } else if ([b containsObject:genreName]) {
                     galaxy.xScale = 4;
                     galaxy.yScale = 4;
