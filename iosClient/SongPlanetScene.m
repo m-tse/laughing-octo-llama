@@ -47,7 +47,7 @@ UIImage *songUIImage;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2+10, self.frame.size.height/2-85);
+        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
         galaxy.position = position;
         
         
@@ -89,9 +89,9 @@ UIImage *songUIImage;
 
 - (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
 	if (recognizer.state == UIGestureRecognizerStateEnded) {
-        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
-        mainScene.scaleMode = SKSceneScaleModeAspectFill;
-        [self.scene.view presentScene:mainScene];
+//        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
+//        mainScene.scaleMode = SKSceneScaleModeAspectFill;
+//        [self.scene.view presentScene:mainScene];
         
         SKScene * galaxyScene = [[SuperClusterScene alloc] initWithSize:self.frame.size mediaType:@"Songs"];
         galaxyScene.scaleMode = SKSceneScaleModeAspectFill;
@@ -143,7 +143,7 @@ CGPoint lastTappedLocation;
 
 -(void) drawSongCircle {
     outerCircle = [[SKSpriteNode alloc] init];
-    outerCircle.position = CGPointMake(768/2, 1024/2-80);
+    outerCircle.position = CGPointMake(768/2, 1024/2);
     [self addChild:outerCircle];
     [self drawCircleScroll];
 }
