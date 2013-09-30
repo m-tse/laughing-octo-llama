@@ -220,21 +220,12 @@ CGPoint previousLocation;
     
 }
 
--(void) playAudioUrl:(NSString *)url {
-    NSString* resourcePath = url; //your url
-    NSData *_objectData = [NSData dataWithContentsOfURL:[NSURL URLWithString:resourcePath]];
-    NSError *error;
-    
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithData:_objectData error:&error];
-    audioPlayer.numberOfLoops = 0;
-    audioPlayer.volume = 1.0f;
-    [audioPlayer prepareToPlay];
-    
-    if (audioPlayer == nil)
-        NSLog(@"%@", [error description]);
-    else
-        [audioPlayer play];
-}
+AVPlayer *player;
 
+-(void) playAudioUrl:(NSString *)urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
+    player = [AVPlayer playerWithURL:url];
+    [player play];
+}
 
 @end
