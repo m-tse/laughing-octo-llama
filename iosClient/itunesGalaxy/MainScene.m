@@ -14,7 +14,7 @@
 #import "Moon.h"
 #import "Planet.h"
 #import "SongPlanetScene.h"
-#import "iTunesCurrentNode.h"
+//#import "iTunesCurrentNode.h"
 #import "Util.h"
 
 @implementation MainScene
@@ -52,7 +52,7 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
                 SKScene * clusterScene = [[SuperClusterScene alloc] initWithSize:self.frame.size mediaType:name];
                 clusterScene.scaleMode = SKSceneScaleModeAspectFill;
 
-                [iTunesCurrentNode updateCurrentScene:clusterScene];
+//                [iTunesCurrentNode updateCurrentScene:clusterScene];
                 SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];
                 SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];
                 SKAction *group = [SKAction group:@[zoom, fadeOut]];
