@@ -19,5 +19,7 @@
 - (void)setLabel:(NSString *)label;
 - (void)runCustomAction;
 - (void)setxScale:(CGFloat)xScale yScale:(CGFloat)yScale;
+- (void)setColor:(UIColor*)color;
+- (void)setColorScaleFactor:(CGFloat)fl;
 
 @end

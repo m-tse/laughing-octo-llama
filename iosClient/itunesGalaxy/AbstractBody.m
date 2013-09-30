@@ -25,4 +25,10 @@
     _body.yScale = yScale;
 }
 
+- (void)setColor:(UIColor*)color{
+    _body.color = color;
+}
+- (void)setColorScaleFactor:(CGFloat)fl{
+    _body.colorBlendFactor = fl;
+}
 @end

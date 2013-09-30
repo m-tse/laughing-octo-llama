@@ -7,15 +7,34 @@
 //
 
 #import "iTunesGalaxyAppDelegate.h"
+#import "iTunesGalaxyViewController.h"
+//#import "MDMasterViewController.h"
 
 @implementation iTunesGalaxyAppDelegate
 
+@synthesize window;
+@synthesize viewController;
+
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    [self.window makeKeyAndVisible];
+//    self.window.rootViewController = self.viewController;
+//    return YES;
+//}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    iTunesGalaxyViewController *masterViewController = [[iTunesGalaxyViewController alloc] init];
+    self.window.rootViewController = masterViewController;
+    self.viewController = masterViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -36,6 +55,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [viewController prepareSpeech];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

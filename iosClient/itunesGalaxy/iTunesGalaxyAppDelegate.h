@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class iTunesGalaxyViewController;
+
 @interface iTunesGalaxyAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) IBOutlet iTunesGalaxyViewController *viewController;
 
 @end

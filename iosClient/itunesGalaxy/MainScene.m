@@ -53,7 +53,13 @@ float RANDOM_MOTION_IMPLUSE = 0.3;
                 clusterScene.scaleMode = SKSceneScaleModeAspectFill;
 
                 [iTunesCurrentNode updateCurrentScene:clusterScene];
-                [self.view presentScene:clusterScene];
+                SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];
+                SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];
+                SKAction *group = [SKAction group:@[zoom, fadeOut]];
+                [self runAction:group completion:^{
+                    [self.view presentScene:clusterScene];
+                }];
+//                [self.view presentScene:clusterScene];
                 break;
             }
             node = node.parent;
