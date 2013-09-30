@@ -42,6 +42,16 @@
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [iTunesCurrentNode setCurrentScene:scene];
     [skView presentScene:scene];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self
+               action:@selector(listen:)
+     forControlEvents:UIControlEventTouchDown];
+    [button setTitle:@"Press to Talk" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    button.backgroundColor = [SKColor blackColor];
+    button.center = CGPointMake(75, 1000);
+    [self.view addSubview:button];
 }
 
 
@@ -85,8 +95,17 @@
 // Make use of the recognition text in this app.
 - (void) handleRecognition: (NSString*) recognizedText
 {
-    // Display the recognized text.
-    [self.textLabel setText: recognizedText];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self
+               action:@selector(listen:)
+     forControlEvents:UIControlEventTouchDown];
+    [button setTitle:recognizedText forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    button.backgroundColor = [SKColor blackColor];
+    button.center = CGPointMake(200, 1000);
+    [self.view addSubview:button];
+    
+//    [self.textLabel setText: recognizedText];
     
     // Load a website using the recognized text.
     // First make the recognizedText safe for use as a search term in a URL.
