@@ -12,7 +12,7 @@
 
 -(id)init {
     if(self = [super init]){
-        
+//        self.name = @"planet";
         // Set up animation
         NSMutableArray *planetAnimationFrames = [NSMutableArray array];
         SKTextureAtlas *planetAnimatedAtlas = [SKTextureAtlas atlasNamed:@"planet"];
@@ -31,6 +31,7 @@
         
         SKTexture *temp = planetAnimationFrames[0];
         _body = [SKSpriteNode spriteNodeWithTexture:temp];
+        _body.name = @"planet";
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _body.physicsBody = physBody;

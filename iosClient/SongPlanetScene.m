@@ -44,7 +44,7 @@ int rotationCount;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         
         SKNode* galaxy = [[ZoomedSolarSystem alloc] initWithScene:self];
-        CGPoint position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-80);
+        CGPoint position = CGPointMake(self.frame.size.width/2+10, self.frame.size.height/2-85);
         galaxy.position = position;
         
         
@@ -278,6 +278,19 @@ AVPlayer *player;
     NSURL *url = [NSURL URLWithString:urlString];
     player = [AVPlayer playerWithURL:url];
     [player play];
+}
+
+-(void)update:(CFTimeInterval)currentTime {
+    //Send things away from the edges
+    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
+        if([node.name isEqual: @"planet"]){
+//            CGFloat xImpulse = 50;
+//            CGFloat yImpulse = 50;
+//            [node.physicsBody applyImpulse:CGVectorMake(xImpulse, yImpulse)];
+        }
+    }];
+    
+    
 }
 
 @end

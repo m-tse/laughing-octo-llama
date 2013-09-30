@@ -26,10 +26,10 @@
 
         
         for(int i = 0;i<5;i++){
-            SKNode* planet = [[Planet alloc] init];
+            SKNode* planet = [[SKSpriteNode alloc] initWithImageNamed:@"planet6.png"];
             CGFloat randomScale = [Util randFloatFrom:0.5 to:2];
             [planet setScale:randomScale];
-            int maxDistance = 300;
+            int maxDistance = 385;
             CGPoint randPosition = CGPointMake([Util randFloatFrom:-maxDistance to:maxDistance],[Util randFloatFrom:-maxDistance to:maxDistance]);
             planet.position = randPosition;
             [self addChild:planet];
