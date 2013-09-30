@@ -293,7 +293,7 @@ CGPoint previousLocation;
     [visibleSongNodes addObject:moveToVisible];
     SKAction *rotate;
     if (goRight) {
-       rotate = [SKAction rotateByAngle:-M_PI/5 duration:0.5];
+        rotate = [SKAction rotateByAngle:-M_PI/5 duration:0.5];
     } else {
         rotate = [SKAction rotateByAngle:M_PI/5 duration:0.5];
     }
