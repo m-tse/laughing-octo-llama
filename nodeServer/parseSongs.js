@@ -62,7 +62,7 @@ function readSongs() {
     } 
     var count = 0;
     data.toString().split('\n').forEach(function(line) {
-      if (count > 300) {
+      if (count > 30) {
         return;
       }
       attributes = line.toString().split(/\s+/)
@@ -83,7 +83,7 @@ function readSongs() {
             console.log(genreArray.length);
           }
           var songByGenre = songs.child(data.primaryGenreName);
-          songByGenre.push(data.trackName: data);
+          songByGenre.push(data);
         }
       });
     })
