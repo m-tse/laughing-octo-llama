@@ -42,11 +42,9 @@
         
         NSString *firebaseUrl;
         if ([mediaType isEqualToString:@"Apps"]) {
-            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/apps";
+            firebaseUrl = @"https://igalaxy.firebaseio.com/apps";
         } else if ([mediaType isEqualToString:@"Songs"]) {
             firebaseUrl = @"https://igalaxy.firebaseio.com/songs";
-        } else if ([mediaType isEqualToString:@"TV Shows"]) {
-            firebaseUrl = @"https://igalaxy.firebaseio.com/genres/shows";
         } else {
             [NSException raise:@"Invalid media type" format:@"Type: %@\n", mediaType];
         }
