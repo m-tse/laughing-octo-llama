@@ -14,11 +14,12 @@
 @property bool contentCreated;
 @property SKScene *myParent;
 @property NSString *myGenre;
+@property NSString *mediaType;
 @property NSString *myGenreId;
 @property SKLabelNode *songNameLabel;
 @property SKLabelNode *songArtistLabel;
 @property SKSpriteNode *songImage;
 
 -(void) createSceneContents;
--(id) initWithSize:(CGSize)size genreName:(NSString *)genreName;
+-(id) initWithSize:(CGSize)size genreName:(NSString *)genreName mediaType:(NSString*) mediaType;
 @end

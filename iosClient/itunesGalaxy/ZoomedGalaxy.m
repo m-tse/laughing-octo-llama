@@ -42,7 +42,7 @@
         
 
 //        SKNode* distantSolarSystem = [[DistantSolarSystem alloc] init];
-        for(int i = 0;i<6;i++){
+        for(int i = 0;i<8;i++){
             SKLabelNode* label = [[SKLabelNode alloc] initWithFontNamed:@"bebasneue"];
             label.fontSize = 23;
             NSString *myText = @"Cluster ";

@@ -8,10 +8,25 @@
 
 #import "SolarSystemScene.h"
 #import "ZoomedSolarSystem.h"
+#import "GalaxyScene.h"
 
 @implementation SolarSystemScene
 
--(id)initWithSize:(CGSize)size{
+- (void)didMoveToView:(SKView *)view {
+    UIPinchGestureRecognizer *gestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
+    [[self view] addGestureRecognizer:gestureRecognizer];
+}
+
+- (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
+	if (recognizer.state == UIGestureRecognizerStateEnded) {
+
+//        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
+//        mainScene.scaleMode = SKSceneScaleModeAspectFill;
+//        [self.scene.view presentScene:mainScene];
+    }
+}
+
+-(id)initWithSize:(CGSize)size genre:(NSString*) genre mediaType:(NSString*)mediaType{
     if (self = [super initWithSize:size]) {
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         

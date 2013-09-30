@@ -11,7 +11,8 @@
 @interface DistantGalaxy : SKNode
 
 @property NSString *myGenreName;
+@property NSString *myMediaType;
 
--(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName;
+-(id)initWithScene:(SKScene *)scene genreName:(NSString *)genreName mediaType:(NSString *)mediaType;
 
 @end

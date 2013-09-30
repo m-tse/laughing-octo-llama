@@ -18,6 +18,7 @@
 @implementation SongPlanetScene
 
 @synthesize myGenre;
+@synthesize mediaType;
 @synthesize myGenreId;
 @synthesize songArtistLabel;
 @synthesize songNameLabel;
@@ -32,9 +33,10 @@ Song *current;
 int rotationCount;
 UIImage *songUIImage;
 
--(id)initWithSize:(CGSize)size genreName:(NSString *)genreName {
+-(id)initWithSize:(CGSize)size genreName:(NSString *)genreName mediaType:(NSString*) mediaType{
     if (self = [super initWithSize:size]) {
         [self setMyGenre:genreName];
+        [self setMediaType:mediaType];
         self.backgroundColor = [SKColor colorWithRed:0.05 green:0.05 blue:0.05 alpha:1.0];
         invisibleSongNodes = [[NSMutableArray alloc] init];
         visibleSongNodes = [[NSMutableArray alloc] init];
@@ -296,17 +298,32 @@ AVPlayer *player;
     [player play];
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    //Send things away from the edges
-    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
-        if([node.name isEqual: @"planet"]){
-//            CGFloat xImpulse = 50;
-//            CGFloat yImpulse = 50;
-//            [node.physicsBody applyImpulse:CGVectorMake(xImpulse, yImpulse)];
-        }
-    }];
-    
-    
-}
+//-(void)update:(CFTimeInterval)currentTime {
+//    //Send things away from the edges
+//    [self.scene enumerateChildNodesWithName:@"//*" usingBlock:^(SKNode *node, BOOL *stop) {
+//        if([node.name isEqual: @"planet"]){
+////            CGFloat xImpulse = 50;
+////            CGFloat yImpulse = 50;
+////            [node.physicsBody applyImpulse:CGVectorMake(xImpulse, yImpulse)];
+//        }
+//    }];
+//    
+//    
+//}
+
+
+//- (void)didMoveToView:(SKView *)view {
+//    UIPinchGestureRecognizer *gestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
+//    [[self view] addGestureRecognizer:gestureRecognizer];
+//}
+//
+//- (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
+//	if (recognizer.state == UIGestureRecognizerStateEnded) {
+//        SKScene * prevScene = [[GalaxyScene alloc] initWithSize:<#(CGSize)#> genreName:<#(NSString *)#> mediaType:<#(NSString *)#>
+////        SKScene * mainScene = [iTunesCurrentNode getCurrentScene];
+//        mainScene.scaleMode = SKSceneScaleModeAspectFill;
+//                               [self.scene.view presentScene:mainScene];
+//                               }
+//}
 
 @end
