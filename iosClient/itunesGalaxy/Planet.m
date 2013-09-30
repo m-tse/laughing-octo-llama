@@ -24,8 +24,9 @@
         _body = [SKSpriteNode spriteNodeWithTexture:temp];
         _body.name = @"planet";
         
+        CGFloat angle = [Util randFloatFrom:-5 to:5];
         _customAction = [SKAction repeatActionForever:
-                         [SKAction rotateByAngle:3.14 duration:speed]];
+                         [SKAction rotateByAngle:angle duration:speed]];
         
         SKPhysicsBody * physBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50,50)];
         _body.physicsBody = physBody;

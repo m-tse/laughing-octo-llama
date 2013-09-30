@@ -57,8 +57,14 @@
                 SKScene * solarSystemScene = [[SongPlanetScene alloc] initWithSize:self.frame.size genreName:genre];
                 solarSystemScene.scaleMode = SKSceneScaleModeAspectFill;
                 
+                SKAction *zoom = [SKAction scaleBy:2.0 duration:1.0];
+                SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];
+                SKAction *group = [SKAction group:@[zoom, fadeOut]];
+                [self runAction:group completion:^{
+                    [self.scene.view presentScene:solarSystemScene];
+                }];
                 
-                [self.scene.view presentScene:solarSystemScene];
+                
                 break;
             }
             node = node.parent;
