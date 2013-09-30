@@ -83,12 +83,7 @@ UIImage *songUIImage;
     [songArtistLabel setPosition:CGPointMake(768/2, 1024/2-120)];
     [songArtistLabel setFontSize:20.0];
     [self addChild:songArtistLabel];
-    
-    songImage = [[SKSpriteNode alloc] init];
-    [songImage setPosition:CGPointMake(768/2, 1024/2+20)];
-    [songImage setSize:CGSizeMake(150, 150)];
-    [songImage setColor:[UIColor clearColor]];
-    //    [self addChild:songImage];
+  
 }
 
 - (void)handlePanFrom:(UIPinchGestureRecognizer *)recognizer {
