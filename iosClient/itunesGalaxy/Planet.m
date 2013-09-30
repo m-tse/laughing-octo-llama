@@ -31,8 +31,8 @@
         _body.physicsBody = physBody;
         
         // Planet Size
-        _body.xScale = 0.1;
-        _body.yScale = 0.1;
+        _body.xScale = 0.75;
+        _body.yScale = 0.75;
         
         [self addChild:_body];
         [self runCustomAction];
