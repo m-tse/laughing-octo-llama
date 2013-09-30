@@ -95,6 +95,10 @@
 // Make use of the recognition text in this app.
 - (void) handleRecognition: (NSString*) recognizedText
 {
+    if([recognizedText isEqualToString:@"play"]) {
+        
+    }
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self
                action:@selector(listen:)
