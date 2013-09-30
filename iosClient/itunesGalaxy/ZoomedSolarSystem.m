@@ -10,6 +10,7 @@
 #import "Sun.h"
 #import "Planet.h"
 #import "Util.h"
+#import "AbstractBody.h"
 
 @implementation ZoomedSolarSystem
 -(id)initWithScene:(SKScene *)scene {
@@ -26,10 +27,15 @@
 
         
         for(int i = 0;i<5;i++){
-            SKSpriteNode* planet = [[SKSpriteNode alloc] initWithImageNamed:@"planet6.png"];
-            planet.color = [SKColor redColor];
-            planet.colorBlendFactor = 0.5;
+//            SKSpriteNode* planet = [[SKSpriteNode alloc] initWithImageNamed:@"planet6.png"];
+//            planet.color = [SKColor redColor];
+//            planet.colorBlendFactor = 0.5;
+
+            AbstractBody* planet = [[Planet alloc] init];
             CGFloat randomScale = [Util randFloatFrom:0.1 to:0.5];
+            [planet setColor:[SKColor colorWithRed:[Util randFloatFrom:0 to:1] green:[Util randFloatFrom:0 to:1] blue:[Util randFloatFrom:0 to:1] alpha:[Util randFloatFrom:0 to:1]]];
+            [planet setColorScaleFactor:[Util randFloatFrom:0 to:1]];
+
             [planet setScale:randomScale];
             int maxDistance = 385;
             CGPoint randPosition = CGPointMake([Util randFloatFrom:-maxDistance to:maxDistance],[Util randFloatFrom:-maxDistance to:maxDistance]);
