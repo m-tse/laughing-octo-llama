@@ -33,6 +33,18 @@ Song *current;
 int rotationCount;
 UIImage *songUIImage;
 
+
++(void) playMySong {
+    SongPlanetScene *songScene = [[SongPlanetScene alloc] init];
+    [songScene playAudioUrl:@"http://a1934.phobos.apple.com/us/r1000/120/Music/v4/3e/06/15/3e06155f-49ce-4704-7fca-0b46034daa79/mzaf_757850183412465295.aac.m4a"];
+}
+
++(void) playDemons {
+    SongPlanetScene *songScene = [[SongPlanetScene alloc] init];
+    [songScene playAudioUrl:@"http://a1630.phobos.apple.com/us/r1000/120/Music/d4/6b/aa/mzi.celfzkmf.aac.p.m4a"];
+}
+
+
 -(id)initWithSize:(CGSize)size genreName:(NSString *)genreName mediaType:(NSString*) mediaType{
     if (self = [super initWithSize:size]) {
         [self setMyGenre:genreName];

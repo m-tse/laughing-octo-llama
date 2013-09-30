@@ -55,12 +55,11 @@ function readApps() {
     } 
     var count = 0;
     data.toString().split('\n').forEach(function(line) {
-      if (count > 30) {
+      if (count > 3000 || count % 30 != 0) {
         return;
       }
       attributes = line.toString().split(/\s+/)
       count += 1;
-
       appleLookup({
         id: attributes[3]
       }, attributes, count, function(data, params, count) {
